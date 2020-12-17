@@ -13,3 +13,7 @@ Presenting the user with demographic, climatic, geographical and other data abou
   - Install using the template: https://leafletjs.com/
   - Add CartoDBVoyager NoLabels basemap: https://leaflet-extras.github.io/leaflet-providers/preview/
   
+- JQuery
+
+- Boostrap
+

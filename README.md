@@ -12,6 +12,7 @@ Presenting the user with demographic, climatic, geographical and other data abou
 - LeafletJS Map Integration
   - Install using the template: https://leafletjs.com/
   - Add CartoDBVoyager NoLabels basemap: https://leaflet-extras.github.io/leaflet-providers/preview/
+  - Ensure that pan restraints to boundaries of map are implemented.
   
 - JQuery
   - Add JQuery to project

@@ -1,0 +1,8 @@
+.leaflet-bar {
+    box-shadow: 0 0px 3px lightsteelblue;
+    border-radius: 4px;
+}
+
+.leaflet-touch .leaflet-control-layers, .leaflet-touch .leaflet-bar {
+    border: 0px solid rgba(0,0,0,0.2); 
+}

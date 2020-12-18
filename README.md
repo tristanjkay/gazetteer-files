@@ -14,6 +14,8 @@ Presenting the user with demographic, climatic, geographical and other data abou
   - Add CartoDBVoyager NoLabels basemap: https://leaflet-extras.github.io/leaflet-providers/preview/
   
 - JQuery
+  - Add JQuery to project
 
 - Boostrap
+  - Add Bootstrap to project
 

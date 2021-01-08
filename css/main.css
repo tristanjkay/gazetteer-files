@@ -6,3 +6,92 @@
 .leaflet-touch .leaflet-control-layers, .leaflet-touch .leaflet-bar {
     border: 0px solid rgba(0,0,0,0.2); 
 }
+
+input {
+    border:0; 
+    padding:10px; 
+    font-size:1.3em; 
+    font-family:"Ubuntu Light","Ubuntu","Ubuntu Mono","Segoe Print","Segoe UI";
+    color:black; 
+    border:solid 1px #ccc; 
+    margin:0 0 20px; 
+    width:300px;
+    -webkit-border-radius: 3px; 
+    -moz-border-radius: 3px; 
+    border-radius: 3px;
+    
+    }
+    input:focus { 
+        outline: none !important;
+        border-color: #719ECE;
+    }
+
+    * {
+        box-sizing: border-box;
+      }
+      
+      #myInput {
+        /*background-image: url('/css/searchicon.png');*/
+        background-position: 10px 12px;
+        background-repeat: no-repeat;
+        width: 99vw;
+        font-size: 16px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        border: 1px solid #ddd;
+        margin-bottom: 12px;
+        position: absolute;
+        left:10px;
+        top: 10px;
+        z-index: 1000;
+      }
+  
+  
+  
+      .leaflet-left {
+      right: 0 !important;
+      }
+  
+      .leaflet-top {
+      bottom: 0;
+      }
+      
+      #myUL {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        z-index: 1000;
+        top:70px;
+        left:10px;
+        width: 99vw;
+        overflow: auto;
+        display: none;
+      }
+      
+      #myUL li a {
+        border: 1px solid #ddd;
+        margin-top: -1px; /* Prevent double borders */
+        background-color: #f6f6f6;
+        padding: 12px;
+        text-decoration: none;
+        font-size: 18px;
+        color: black;
+        display: block
+      }
+      
+      #myUL li a:hover:not(.header) {
+        background-color: #eee;
+      }
+      
+      #myUL li, .leaflet-control-attribution{
+        display:none;
+      }
+  
+      .leaflet-touch .leaflet-control-layers, .leaflet-touch .leaflet-bar {
+      position: absolute;
+      bottom: 30px;
+      right: 30px;
+  }

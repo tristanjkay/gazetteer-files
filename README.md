@@ -20,3 +20,16 @@ Presenting the user with demographic, climatic, geographical and other data abou
 - Boostrap
   - Add Bootstrap to project
 
+
+- Country Boundaries
+  - Step 1: Get all JSON data for country boundaries
+  - Step 2: Test a random boundary for a country using a layer
+  - Step 3: Create a function that takes the current country you are in and passes this to the boundary function
+  - Step 4: Create a function that takes the current country and looks up the JSON data to create a boundary layer
+
+- Modal Popup
+  - Use the current function that grabs the country and use this to activate a modal
+  - Create a UI for the modal and decide what information will go inside the modal
+  - Create the UI and incorporate it into a modal
+
+

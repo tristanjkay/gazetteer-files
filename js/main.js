@@ -55,7 +55,7 @@ function myFunction() {
     filter = input.value.toUpperCase();
     ul = document.getElementById("myUL");
     li = ul.getElementsByTagName("li");
-    for (i = 0; i < li.length; i++) {
+    for (i = 0; i < li.length; i++) {  
         a = li[i].getElementsByTagName("a")[0];
         txtValue = a.textContent || a.innerText;
         if (txtValue.toUpperCase().indexOf(filter) > -1 && document.getElementById("myInput").value.length >= 3){
@@ -68,6 +68,7 @@ function myFunction() {
             
         }
     }
+    
 }
 //------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -111,6 +112,8 @@ function goToCountry(innerText){
     //GET SELECTED COUNTRY
     
     var url = "https://restcountries.eu/rest/v2/name/" + encodeURIComponent(innerText);
+    var url2 = "http://api.weatherstack.com/current?access_key=914ab290b5a067d72efa4d6c510059ef&query=";
+    var selectedCapital = "Boston";
     try{fetch(url)
   
   .then(response =>{
@@ -123,16 +126,24 @@ function goToCountry(innerText){
     mymap.setView([countrydata[0].latlng[0], countrydata[0].latlng[1]], 6);
     var marker = L.marker([countrydata[0].latlng[0], countrydata[0].latlng[1]], {icon: mario2}).addTo(mymap);
     marker.icon
+
+    var initialContent = '<div id = "cname"><h5><b>' + countrydata[0].name + '</h5></b></div>' + '<div id = "ccapital">\n Capital: ' + countrydata[0].capital + '</div>' + '<div id = "cpopulation">\n Population: ' + countrydata[0].population + '</div>' + '<div id = "clanguage">\n Language: ' + countrydata[0].languages[0].name + '<br><br></div>' + '<svg>' +       
+    '<image xlink:href="' + countrydata[0].flag + '" src="unknownflag.png" width="100%" height="100%"/></svg><div id = "photos"></div>' + '<br><br><br><div><h4>Click for further information:</h4></div>' + '<div class="row"><div id = "cclimate" onclick="console.log(this)")><h5>Climate</h5></div>' + '<br><div id = "cdemographic" onclick="console.log(this)")><h5>Demographic</h5></div></div>' + '<br><div class="row"><div id = "ceconomic" onclick="console.log(this)")><h5>Economic</h5><p>' + countrydata[0].currencies[0].symbol + countrydata[0].currencies[0].name + '</p></div>' + '<br><div id = "cother" onclick="console.log(this)")><h5>Other</h5></div></div>';
+    
     var popup = L.popup()
     .setLatLng([countrydata[0].latlng[0], countrydata[0].latlng[1]])
-    .setContent( "\n <b>Name:</b> " + countrydata[0].name + "\n <b>Capital:</b> " + countrydata[0].capital + "\n <b>Population:</b> " + countrydata[0].population)
+    .setContent( )
     .openOn(mymap)
     marker.bindPopup(popup).openPopup();
+    popup.setContent(initialContent);
+    //return selectedCapital = countrydata[0].capital;
   });
 }
 catch (err) {
     console.log("Error: " + err)
 }
+
+
 
 //DRAW BOUNDARY
 
@@ -140,7 +151,7 @@ fetch('https://raw.githubusercontent.com/tristanjkay/gazetteer/main/js/countryBo
   .then(response => response.json())
   //.then(data => console.log(data["features"][0]));
   .then(data => data["features"].forEach(element => {
-    if (element.properties.name == innerText){
+    if (element.properties.name == innerText){  
       console.log("JSON returned: " + element.properties.name);
       var selectedCountryBoundaryData = [element];
       console.log(selectedCountryBoundaryData);
@@ -148,20 +159,26 @@ fetch('https://raw.githubusercontent.com/tristanjkay/gazetteer/main/js/countryBo
       selectedCountryBoundary.addData(selectedCountryBoundaryData);
       //TODO: Remove layer if another country is selected after  
       //mymap.removeLayer(selectedCountryBoundary);
+
         }}
         )
-      );
+      )
       };
+
+
+
+
+      
 
 //MAP FUNCTIONS ----------------------------------------------------------------------------------------------------------------------------
                                                        
 
 	var mymap = L.map('mapid').fitWorld();
 
-	L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}{r}.png', {
-	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+	L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}', {
+	attribution: 'Tiles &copy; Esri &mdash; National Geographic, Esri, DeLorme, NAVTEQ, UNEP-WCMC, USGS, NASA, ESA, METI, NRCAN, GEBCO, NOAA, iPC',
   subdomains: 'abcd',
-  maxZoom: 19,
+  maxZoom: 10,
   minZoom: 3
 }).addTo(mymap);
 

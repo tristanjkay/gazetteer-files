@@ -1,42 +1,35 @@
+var posts, users;
 
+fetch('https://jsonplaceholder.typicode.com/posts')
+	.then(function (response) {
+		// Get a JSON object from the response
+		// This is a weird quirk of Fetch
+		return response.json();
+	}).then(function (data) {
 
-        /*
-        const layer = L.tileLayer("http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-  maxZoom: 19,
-  attribution:
-    '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-});
+		// Log the data to the console
+ 		console.log(data);
 
-const map = L.map("map", {
-  layers: [layer]
-}).setView([52.8203934, -4.5700609], 6);
-applyCountryBorder(map, "United Kingdom");
+ 		// Cache the data to a variable
+ 		posts = data;
 
-function applyCountryBorder(map, countryname) {
-  jQuery
-    .ajax({
-      type: "GET",
-      dataType: "json",
-      url:
-        "https://nominatim.openstreetmap.org/search?country=" +
-        countryname.trim() +
-        "&polygon_geojson=1&format=json"
-    })
-    .then(function(data) {
-      /*const latLngs = L.GeoJSON.coordsToLatLngs(data[0].geojson.coordinates,2) 
-      L.polyline(latLngs, {
-        color: "green",
-        weight: 14,
-        opacity: 1
-      }).addTo(map);
+ 		// Make another API call and pass it into the stream
+ 		return fetch('https://jsonplaceholder.typicode.com/users');
 
-      L.geoJSON(data[0].geojson, {
-        color: "green",
-        weight: 14,
-        opacity: 1,
-        fillOpacity: 0.0 
-      }).addTo(map);
-    });
-}*/
-        
-  
+	}).then(function (response) {
+		// Get a JSON object from the response
+		return response.json();
+	}).then(function (data) {
+
+		// Log the data to the console
+		console.log(data);
+
+		// Cache the data to a variable
+		users = data;
+
+		// Now that you have both APIs back, you can do something with the data
+
+	}).catch(function (error) {
+		// if there's an error, log it
+		console.log(error);
+	});

@@ -1,0 +1,299 @@
+
+
+.bs-canvas-overlay {
+    opacity: 0;
+ z-index: -1;
+}
+
+.bs-canvas-overlay.show {
+    opacity: 0.85;
+ z-index: 1100;
+}
+
+.bs-canvas-overlay, .bs-canvas {
+ transition: all .4s ease-out;
+ -webkit-transition: all .4s ease-out;
+ -moz-transition: all .4s ease-out;
+ -ms-transition: all .4s ease-out;
+}
+
+.bs-canvas {
+ top: 0;
+ z-index: 1110;
+ overflow-x: hidden;
+ overflow-y: auto;
+ width: 330px;		
+}
+
+.bs-canvas-left {
+ left: 0;
+ margin-left: -330px;
+}
+
+.bs-canvas-right {
+ right: 0;
+ margin-right: -330px;
+}
+
+/* Only for demo */
+
+
+.form-inline {
+width: 100%;
+}
+.form-inline .form-control {width: 100%;}
+#navbarSupportedContent > form > button {display: none;}	
+
+.navbar {
+    /*background-color: #183153 !important; */
+    background-color: white !important;
+    box-shadow: 0 2px 4px -1px rgba(0,0,0,0.25)
+}
+
+.btn-warning {
+    background-color: #183153;
+    color:white;
+    border: none;
+}
+
+.btn-warning:hover {
+    background-color: #183153;
+    color:white;
+    border-color: grey
+}
+
+.bs-canvas-overlay.show {
+    opacity: 0.0
+}
+
+.bg-danger {
+    background-color: #183153 !important;
+}
+
+.leaflet-bar {
+    box-shadow: 0 0px 3px lightsteelblue;
+    border-radius: 4px;
+}
+
+.leaflet-touch .leaflet-control-layers, .leaflet-touch .leaflet-bar {
+    border: 0px solid rgba(0,0,0,0.2); 
+}
+
+
+
+    input:focus { 
+        outline: none !important;
+        border-color: #719ECE;
+    }
+
+    * {
+        box-sizing: border-box;
+      }
+      
+  
+  
+
+      
+
+
+
+
+  .row {
+    display: flex;
+    margin: 0 0 auto;
+  }
+
+  #cclimate, #cdemographic, #ceconomic, #cother {
+    flex: 100%;
+    /*border: 1px solid black; */
+    margin: 2px;
+    max-width: 100%;
+    max-height: 100px;
+
+  }
+
+  * { box-sizing: border-box; }
+
+.autocomplete {
+  /*the container must be positioned relative:*/
+  position: relative;
+  display: inline-block;
+}
+input {
+  border: 1px solid transparent;
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-size: 16px;
+}
+input[type=text] {
+  background-color: #f1f1f1;
+  width: 100%;
+}
+input[type=submit] {
+  background-color: DodgerBlue;
+  color: #fff;
+}
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  border-bottom: 1px solid #d4d4d4;
+}
+.autocomplete-items div:hover {
+  /*when hovering an item:*/
+  background-color: #f3f6f6;
+}
+.autocomplete-active {
+  /*when navigating through the items using the arrow keys:*/
+  background-color: DodgerBlue !important;
+  color: #ffffff;
+}
+
+#clickme {display: none;}
+
+.close {
+  font-size: 2.5rem;
+}
+
+.bg-danger {
+  background-color: transparent !important;
+}
+
+.bs-canvas-right {
+  background-color: #fcfdff !important;
+  box-shadow: 0 2px 4px -1px rgba(0,0,0,0.25)
+}
+
+/* 'X' button on sidebar */
+#bs-canvas-right > header > button > span {
+  color:#738aa9 !important;
+}
+
+#sidebarHeader > h4 {
+  color:#183153 !important;
+  margin: 5 5 auto;
+
+}
+
+button {
+  text-align: start;
+
+}
+
+/* COLOURS
+
+- Font light grey #738aa9
+- Font dark grey #1d293f
+
+
+- Background light blue #f0fafc
+
+- Colour middle blue #5497c2
+- Color dark blue #183153
+
+-Color purple #6C5DD3
+-Color blue #A0D7E7
+-color green #6FCF97
+-color pink #F5A3BD
+
+
+
+
+*/
+
+body, h4 {font: "Roboto", sans-serif !important;}
+
+.h5, h5 {
+  font-size: 1.1.rem !important;
+}
+
+#ccapital, #clanguage, #cpopulation {
+  padding: .5rem;
+}
+
+
+
+#ccapital {
+  margin-top: 2rem !important;
+}
+
+#cclimate, #cdemographic, #ceconomic, #cother {
+  /*border-radius: 10px;
+  background: #5397c2;
+  border: 0px solid;*/
+  padding: .5rem;
+  height: 5rem;
+  width: 12rem;
+}
+
+#cclimate:hover, #cdemographic:hover, #ceconomic:hover, #cother:hover {
+background: #F1F3F4;
+}
+
+#flag > svg {
+  overflow: visible;
+  vertical-align: none;
+  height: 197.5px;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: 3rem;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #f3f6f6;
+  background-clip: padding-box;
+  border: 0px;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.form-control:focus {
+  display: block;
+  width: 100%;
+  height: 3rem;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #f3f6f6;
+  background-clip: padding-box;
+  border: 0px;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+/*NEW MAP IDEA*/
+#map {
+  height: 90vh !important;
+  width: 96vw !important;
+  border-radius: .25rem !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-top: .5rem !important;
+  margin-bottom: auto !important;
+}
+
+.navbar {
+  /* background-color: #183153 !important; */
+  background-color: white !important;
+  box-shadow: 0 0px 0px 0px rgba(0,0,0,0.25) !important;
+}
+
+#clickme {opacity: 0;}

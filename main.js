@@ -540,6 +540,7 @@ mymap.setMaxBounds([[-90,-180],[90,180]]);
 
 
 //-----MOVE MAP TO CURRENT LOCATION
+//TEST
 
 navigator.geolocation.getCurrentPosition(function(location) {
 	fetch('http://api.geonames.org/countryCodeJSON?lat=' + location.coords.latitude.toString() + '&lng=' + location.coords.longitude.toString() + '&username=tristanjkay')

@@ -238,7 +238,7 @@ fetch('https://restcountries.eu/rest/v2/name/' + encodeURIComponent(innerText))
 
 
  		// Make another API call and pass it into the stream
- 		return fetch('http://api.weatherstack.com/current?access_key=914ab290b5a067d72efa4d6c510059ef&query=' + encodeURIComponent(innerText));
+ 		return fetch('https://api.weatherstack.com/current?access_key=914ab290b5a067d72efa4d6c510059ef&query=' + encodeURIComponent(innerText));
 
 	}).then(function (response) {
 		// Get a JSON object from the response
@@ -253,7 +253,7 @@ fetch('https://restcountries.eu/rest/v2/name/' + encodeURIComponent(innerText))
     console.log(weatherstack['request']['query']);
 
 		// Make another API call and pass it into the stream
-		return fetch('https://raw.githubusercontent.com/tristanjkay/gazetteer/main/js/countryBorders.geo.json');
+		return fetch('https://raw.githubusercontent.com/tristanjkay/gazetteer/main/countryBorders.geo.json');
 
 	}).then(function (response) {
 		// Get a JSON object from the response
@@ -285,7 +285,7 @@ fetch('https://restcountries.eu/rest/v2/name/' + encodeURIComponent(innerText))
 
     console.log("%c\n" +restcountries[0].name + " (" + restcountries[0].alpha2Code + ")", "color: black; font-weight:bold;")
        // Make another API call and pass it into the stream
-		return fetch('http://api.worldbank.org/v2/country/'+ restcountries[0].alpha2Code + '/indicator/NY.GDP.MKTP.CD?date=2019&format=json');
+		return fetch('https://api.worldbank.org/v2/country/'+ restcountries[0].alpha2Code + '/indicator/NY.GDP.MKTP.CD?date=2019&format=json');
 
 	}).then(function (response) {
 		// Get a JSON object from the response
@@ -300,7 +300,7 @@ fetch('https://restcountries.eu/rest/v2/name/' + encodeURIComponent(innerText))
     console.log("%cGDP:", "color: black; font-weight:bold;");
     console.log(worldbankGDP);
 
-    return fetch('http://api.worldbank.org/v2/country/'+ restcountries[0].alpha2Code + '/indicator/UNEMPSA_?date=2019&format=json');
+    return fetch('https://api.worldbank.org/v2/country/'+ restcountries[0].alpha2Code + '/indicator/UNEMPSA_?date=2019&format=json');
 
 	}).then(function (response) {
 		// Get a JSON object from the response
@@ -315,7 +315,7 @@ fetch('https://restcountries.eu/rest/v2/name/' + encodeURIComponent(innerText))
     console.log("%cUnemployment:", "color: black; font-weight:bold;");
     console.log(worldbankUnemployment + "%");
 
-    return fetch('http://api.worldbank.org/v2/country/'+ restcountries[0].alpha2Code + '/indicator/SI.DST.10TH.10?date=2010&format=json');
+    return fetch('https://api.worldbank.org/v2/country/'+ restcountries[0].alpha2Code + '/indicator/SI.DST.10TH.10?date=2010&format=json');
 
 	}).then(function (response) {
 		// Get a JSON object from the response
@@ -330,7 +330,7 @@ fetch('https://restcountries.eu/rest/v2/name/' + encodeURIComponent(innerText))
     console.log("%cWealth Distribution Top 10%:", "color: black; font-weight:bold;");
     console.log(worldbankDistTop10 + "%");
 
-    return fetch('http://api.worldbank.org/v2/country/'+ restcountries[0].alpha2Code + '/indicator/SI.DST.FRST.10?date=2010&format=json');
+    return fetch('https://api.worldbank.org/v2/country/'+ restcountries[0].alpha2Code + '/indicator/SI.DST.FRST.10?date=2010&format=json');
 
 	}).then(function (response) {
 		// Get a JSON object from the response
@@ -346,7 +346,7 @@ fetch('https://restcountries.eu/rest/v2/name/' + encodeURIComponent(innerText))
     console.log(worldbankDistLow10 + "%");
 
 
-    return fetch('http://api.worldbank.org/v2/country/'+ restcountries[0].alpha2Code + '/indicator/EN.POP.SLUM.UR.ZS?date=2010&format=json');
+    return fetch('https://api.worldbank.org/v2/country/'+ restcountries[0].alpha2Code + '/indicator/EN.POP.SLUM.UR.ZS?date=2010&format=json');
 
 	}).then(function (response) {
 		// Get a JSON object from the response
@@ -361,7 +361,7 @@ fetch('https://restcountries.eu/rest/v2/name/' + encodeURIComponent(innerText))
     console.log("%cLiving in Slums:", "color: black; font-weight:bold;");
     console.log(worldbankPercentSlums + "%");
 
-    return fetch('http://api.worldbank.org/v2/country/'+ restcountries[0].alpha2Code + '/indicator/SH.H2O.BASW.ZS?date=2010&format=json');
+    return fetch('https://api.worldbank.org/v2/country/'+ restcountries[0].alpha2Code + '/indicator/SH.H2O.BASW.ZS?date=2010&format=json');
 
 	}).then(function (response) {
 		// Get a JSON object from the response
@@ -376,7 +376,7 @@ fetch('https://restcountries.eu/rest/v2/name/' + encodeURIComponent(innerText))
     console.log("%cAccess to Clean Drinking Water:", "color: black; font-weight:bold;");
     console.log(worldbankPercentWater + "%");
 
-    return fetch('http://api.worldbank.org/v2/country/'+ restcountries[0].alpha2Code + '/indicator/SH.STA.BASS.ZS?date=2010&format=json');
+    return fetch('https://api.worldbank.org/v2/country/'+ restcountries[0].alpha2Code + '/indicator/SH.STA.BASS.ZS?date=2010&format=json');
 
 	}).then(function (response) {
 		// Get a JSON object from the response
@@ -391,7 +391,7 @@ fetch('https://restcountries.eu/rest/v2/name/' + encodeURIComponent(innerText))
     console.log("%cBasic Sanitation:", "color: black; font-weight:bold;");
     console.log(worldbankPercentSanitation + "%");
 
-    return fetch('http://api.worldbank.org/v2/country/'+ restcountries[0].alpha2Code + '/indicator/EG.ELC.ACCS.ZS?date=2010&format=json');
+    return fetch('https://api.worldbank.org/v2/country/'+ restcountries[0].alpha2Code + '/indicator/EG.ELC.ACCS.ZS?date=2010&format=json');
 
 	}).then(function (response) {
 		// Get a JSON object from the response
@@ -406,7 +406,7 @@ fetch('https://restcountries.eu/rest/v2/name/' + encodeURIComponent(innerText))
     console.log("%cAccess to Electricity:", "color: black; font-weight:bold;");
     console.log(worldbankPercentElectricity + "%");
 
-    return fetch('http://api.worldbank.org/v2/country/'+ restcountries[0].alpha2Code + '/indicator/SH.DTH.IMRT?date=2010&format=json');
+    return fetch('https://api.worldbank.org/v2/country/'+ restcountries[0].alpha2Code + '/indicator/SH.DTH.IMRT?date=2010&format=json');
 
 	}).then(function (response) {
 		// Get a JSON object from the response
@@ -421,7 +421,7 @@ fetch('https://restcountries.eu/rest/v2/name/' + encodeURIComponent(innerText))
     console.log("%cInfant Mortalities:", "color: black; font-weight:bold;");
     console.log(worldbankInfantMortality);
 
-    return fetch('http://api.worldbank.org/v2/country/'+ restcountries[0].alpha2Code + '/indicator/SE.ADT.LITR.ZS?date=2010&format=json');
+    return fetch('https://api.worldbank.org/v2/country/'+ restcountries[0].alpha2Code + '/indicator/SE.ADT.LITR.ZS?date=2010&format=json');
 
 	}).then(function (response) {
 		// Get a JSON object from the response
@@ -436,7 +436,7 @@ fetch('https://restcountries.eu/rest/v2/name/' + encodeURIComponent(innerText))
     console.log("%cLiteracy:", "color: black; font-weight:bold;");
     console.log(worldbankLiteracy + "%");
 
-    return fetch('http://api.worldbank.org/v2/country/'+ restcountries[0].alpha2Code + '/indicator/SH.ALC.PCAP.LI?date=2010&format=json');
+    return fetch('https://api.worldbank.org/v2/country/'+ restcountries[0].alpha2Code + '/indicator/SH.ALC.PCAP.LI?date=2010&format=json');
 
 	}).then(function (response) {
 		// Get a JSON object from the response
@@ -451,7 +451,7 @@ fetch('https://restcountries.eu/rest/v2/name/' + encodeURIComponent(innerText))
     console.log("%cAlcohol Consumption:", "color: black; font-weight:bold;");
     console.log(worldbankAlcoholConsumption + "litres per year");
 
-    return fetch('http://api.worldbank.org/v2/country/'+ restcountries[0].alpha2Code + '/indicator/BAR.NOED.15UP.ZS?date=2010&format=json');
+    return fetch('https://api.worldbank.org/v2/country/'+ restcountries[0].alpha2Code + '/indicator/BAR.NOED.15UP.ZS?date=2010&format=json');
 
 	}).then(function (response) {
 		// Get a JSON object from the response
@@ -466,7 +466,7 @@ fetch('https://restcountries.eu/rest/v2/name/' + encodeURIComponent(innerText))
     console.log("%cEducation:", "color: black; font-weight:bold;");
     console.log(worldbankEducation + "%");
 
-    return fetch('http://api.worldbank.org/v2/country/'+ restcountries[0].alpha2Code + '/indicator/SE.XPD.TOTL.GD.ZS?date=2010&format=json');
+    return fetch('https://api.worldbank.org/v2/country/'+ restcountries[0].alpha2Code + '/indicator/SE.XPD.TOTL.GD.ZS?date=2010&format=json');
 
 	}).then(function (response) {
 		// Get a JSON object from the response
@@ -542,7 +542,7 @@ mymap.setMaxBounds([[-90,-180],[90,180]]);
 //-----MOVE MAP TO CURRENT LOCATION
 
 navigator.geolocation.getCurrentPosition(function(location) {
-	fetch('http://api.geonames.org/countryCodeJSON?lat=' + location.coords.latitude.toString() + '&lng=' + location.coords.longitude.toString() + '&username=tristanjkay')
+	fetch('https://api.geonames.org/countryCodeJSON?lat=' + location.coords.latitude.toString() + '&lng=' + location.coords.longitude.toString() + '&username=tristanjkay')
 	.then(response =>{
 	  return response.json();
 	})
@@ -551,7 +551,7 @@ navigator.geolocation.getCurrentPosition(function(location) {
     var countryNameEncoded = encodeURIComponent(geonames.countryName.toLowerCase().trim());
     console.log("Current Location: " + geonames.countryName);
 	  
-	  fetch('http://api.geonames.org/searchJSON?name=' + countryNameEncoded + '&username=tristanjkay')
+	  fetch('https://api.geonames.org/searchJSON?name=' + countryNameEncoded + '&username=tristanjkay')
 	  .then(response =>{
 	  return response.json();
 	})

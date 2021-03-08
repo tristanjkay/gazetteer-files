@@ -156,7 +156,7 @@ window.onload=function(){
 					if (result.status.name == "ok") {
 						result['data'].forEach(element => {
 
-						
+						console.log(element['properties']['name'])
 						});
 	
 						

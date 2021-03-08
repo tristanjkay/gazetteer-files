@@ -137,6 +137,42 @@ countries.forEach(item => {
 
 window.onload=function(){
 
+	//Populate Countries in Dropdown
+	//file_get_contents()
+
+			//GeoJSON
+			$.ajax({
+				url: "php/geojson-fileget.php",
+				type: 'POST',
+				dataType: 'json',
+				data: {
+
+				},
+				success: function(result) {
+	
+					console.log(result);
+					
+	
+					if (result.status.name == "ok") {
+						result['data'].forEach(element => {
+
+						
+						});
+	
+						
+	
+					}
+				
+				},
+				error: function(jqXHR, textStatus, errorThrown) {
+	
+				}
+				
+			});
+
+
+
+	//Start listening for changes in dropdown
 	dropdown.addEventListener('change', function(event) {
 		console.log("You selected: "  + $('#countriesDropdown').val() + ", " + $('#countriesDropdown option:selected').text());
 		console.log(" ");

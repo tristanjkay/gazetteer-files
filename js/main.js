@@ -124,13 +124,13 @@ document.getElementById("other").addEventListener('click', function(event) {
 
     
 //Dropdown Setup   
-
+/* 
 countries.forEach(item => {
         var option = document.createElement("option");
         option.text = item[1];
 		option.value = item[0];
-        dropdown.add(option);
-                            });
+        dropdown.add(option); 
+                            }); */
 
 
 //Listen for Dropdown Changes
@@ -156,7 +156,13 @@ window.onload=function(){
 					if (result.status.name == "ok") {
 						result['data'].forEach(element => {
 
-						console.log(element['properties']['name'])
+						//console.log(element['properties']['name'])
+						var option = document.createElement("option");
+        				option.text = element['properties']['name'];
+						option.value = element['properties']['iso_a2'];
+        				dropdown.add(option);
+
+
 						});
 	
 						

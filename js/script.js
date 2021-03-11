@@ -91,13 +91,11 @@ window.onload=function(){
 		};
 
 		function countrySelected(mycountry) {
-			
+			$('.leaflet-interactive').remove();
 			var indexOfCountry = countries.findIndex(x => x.iso2 === mycountry);
 			
 			var selectedCountryBoundaryData = countries[indexOfCountry].geometry;
-			var layer = L.geoJson();
-			map.removeLayer(layer);
-            var selectedCountryBoundary = layer.addTo(map);
+            var selectedCountryBoundary = L.geoJSON().addTo(map);
             selectedCountryBoundary.addData(selectedCountryBoundaryData);
 			map.fitBounds(selectedCountryBoundary.getBounds());
 		}

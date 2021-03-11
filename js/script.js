@@ -53,7 +53,12 @@ window.onload=function(){
 					if (result.status.name == "ok") {
 						result['data'].forEach(element => {
 
-						countries.push(element['properties']['name'])
+							let country = {
+								"name": element['properties']['name'],
+								"iso2": element['properties']['iso_a2'],
+							   }	
+
+						countries.push(country)
 						
 							//console.log(element['properties']['name'])
 						var option = document.createElement("option");

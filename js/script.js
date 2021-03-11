@@ -36,7 +36,7 @@ map.locate({setView: true, maxZoom: 16});
 window.onload=function(){
 
 	dropdown.addEventListener('change', function(event) {
-		console.log($('#countriesDropdown').val());
+		selectedCountry = $('#countriesDropdown').val();
 	})
 		
 	

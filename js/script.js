@@ -35,8 +35,10 @@ map.locate({setView: true, maxZoom: 16});
 
 window.onload=function(){
 
+	//Retrieve iso2 code of selected Country
 	dropdown.addEventListener('change', function(event) {
 		selectedCountry = $('#countriesDropdown').val();
+		countrySelected(selectedCountry);
 	})
 		
 	
@@ -87,4 +89,11 @@ window.onload=function(){
 				
 			})
 		};
+
+		function countrySelected(country) {
+			console.log(country);
+		}
+
+
+
 

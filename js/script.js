@@ -90,8 +90,8 @@ window.onload=function(){
 			})
 		};
 
-		function countrySelected(country) {
-			console.log(country);
+		function countrySelected(mycountry) {
+			console.log(mycountry);
 		}
 
 

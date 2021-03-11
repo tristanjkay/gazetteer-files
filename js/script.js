@@ -91,6 +91,7 @@ window.onload=function(){
 		};
 
 		function countrySelected(mycountry) {
+			map.removeLayer(selectedCountryBoundary);
 			var indexOfCountry = countries.findIndex(x => x.iso2 === mycountry);
 			
 			var selectedCountryBoundaryData = countries[indexOfCountry].geometry;

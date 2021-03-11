@@ -96,6 +96,7 @@ window.onload=function(){
 			var selectedCountryBoundaryData = countries[indexOfCountry].geometry;
             var selectedCountryBoundary = L.geoJSON().addTo(map);
             selectedCountryBoundary.addData(selectedCountryBoundaryData);
+			map.fitBounds(selectedCountryBoundary.getBounds());
 		}
 
 

@@ -55,6 +55,7 @@ window.onload=function(){
 							let country = {
 								"name": element['properties']['name'],
 								"iso2": element['properties']['iso_a2'],
+								"geometry": element['geometry']
 							   }	
 
 						countries.push(country)

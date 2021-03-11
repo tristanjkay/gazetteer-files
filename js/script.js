@@ -3,6 +3,8 @@
 var map = L.map('map').fitWorld();
 var dropdown = document.getElementById("countriesDropdown");
 
+var countries = [];
+
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
 	maxZoom: 18,
 	attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
@@ -51,11 +53,15 @@ window.onload=function(){
 					if (result.status.name == "ok") {
 						result['data'].forEach(element => {
 
-						//console.log(element['properties']['name'])
+						countries.push(element['properties']['name'])
+						
+							//console.log(element['properties']['name'])
 						var option = document.createElement("option");
-        				option.text = element['name'];
-						option.value = element['iso_a2'];
+
+        				option.text = element['properties']['name'];
+						option.value = element['properties']['iso_a2'];
         				dropdown.add(option);
+						print(countries);
 
 
 						});

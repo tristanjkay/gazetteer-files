@@ -2,6 +2,7 @@
 
 var map = L.map('map').fitWorld();
 var dropdown = document.getElementById("countriesDropdown");
+var selectedCountry;
 
 var countries = [];
 
@@ -34,6 +35,11 @@ map.locate({setView: true, maxZoom: 16});
 
 window.onload=function(){
 
+	dropdown.addEventListener('change', function(event) {
+		return selectedCountry = $('#countriesDropdown').val();
+	})
+		
+	
 	//Populate Countries in Dropdown
 	//file_get_contents()
 
@@ -81,3 +87,4 @@ window.onload=function(){
 				
 			})
 		};
+

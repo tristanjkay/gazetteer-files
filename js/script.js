@@ -61,7 +61,7 @@ window.onload=function(){
         				option.text = element['properties']['name'];
 						option.value = element['properties']['iso_a2'];
         				dropdown.add(option);
-						print(countries);
+						console.log(countries);
 
 
 						});

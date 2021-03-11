@@ -60,13 +60,13 @@ window.onload=function(){
 
 						countries.push(country)
 						
-							//console.log(element['properties']['name'])
+						
 						var option = document.createElement("option");
 
-        				option.text = element['properties']['name'];
-						option.value = element['properties']['iso_a2'];
+        				option.text = country.name;
+						option.value = country.iso2;
         				dropdown.add(option);
-						console.log(countries);
+						//console.log(countries);
 
 
 						});

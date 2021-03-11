@@ -47,7 +47,6 @@ window.onload=function(){
 				},
 				success: function(result) {
 	
-					//console.log(result);
 					
 	
 					if (result.status.name == "ok") {
@@ -66,7 +65,6 @@ window.onload=function(){
         				option.text = country.name;
 						option.value = country.iso2;
         				dropdown.add(option);
-						//console.log(countries);
 
 
 						});

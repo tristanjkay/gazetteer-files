@@ -1,3 +1,14 @@
+//API List
+
+/*
+1. GeoJSON
+2. GeoNames
+3. RESTCountries
+4. WeatherStack
+
+
+*/
+
 //MAP SETUP
 
 var map = L.map('map').fitWorld();
@@ -203,7 +214,7 @@ window.onload=function(){
 
 
 						//Location
-						selectedCountry.capital.location = [result['data']['location']['lat'],result['data']['location']['lat']] ;
+						selectedCountry.capital.location = [result['data']['location']['lat'],result['data']['location']['lon']] ;
 
 
 

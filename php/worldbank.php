@@ -26,13 +26,12 @@ curl_multi_close($mh);
 // all of our requests are done, we can now access the results
 $response_1 = curl_multi_getcontent($ch_1);
 $response_2 = curl_multi_getcontent($ch_2);
-console.log($response_1);
-echo "$response_1 $response_2"; // output results	
+
+$decode1 = json_decode($response_1,true)
+$output['data'] = $decode1;
 
 
-/* 	$decode = json_decode($result,true);	
-	$output['data'] = $decode;
+echo json_encode($output); 
 
-	echo json_encode($output);  */ 
 
 ?>

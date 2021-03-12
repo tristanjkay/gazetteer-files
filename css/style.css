@@ -33,11 +33,12 @@ select {
 
 .modal-dialog {
     position: fixed;
-    width: 32rem;
+    width: max-content;
     margin: 0.5rem;
     pointer-events: none;
     right: 1rem;
     height: max-content;
+    max-width: 80vw;
 }
 
 .modal-content {

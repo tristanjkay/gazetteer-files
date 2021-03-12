@@ -101,11 +101,12 @@ window.onload=function(){
             var selectedCountryBoundary = L.geoJSON().addTo(map);
             selectedCountryBoundary.addData(selectedCountryBoundaryData);
 			map.fitBounds(selectedCountryBoundary.getBounds());
-			showModal(mycountry);
+			showModal(selectedCountry);
 		}
 
 		function showModal(mycountry) {
 			document.querySelector('.modal').style.display = "inherit";
+			document.querySelector('.modal-title').innerHTML = mycountry.name;
 			//getElementsByClassName('.modal').item(0).style.display = "inherit";
 		}
 

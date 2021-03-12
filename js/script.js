@@ -19,7 +19,7 @@ function onLocationFound(e) {
 	var radius = e.accuracy / 2;
 
 	L.marker(e.latlng).addTo(map)
-		.bindPopup("You are within " + radius + " meters from this point").openPopup();
+		.bindPopup(<p>this is a test</p>).openPopup();
 
 	L.circle(e.latlng, radius).addTo(map);
 }
@@ -90,10 +90,13 @@ window.onload=function(){
 			})
 		};
 
+		//Do something when a country is selected
 		function countrySelected(mycountry) {
+			//Remove previous geometry
 			$('.leaflet-interactive').remove();
 			var indexOfCountry = countries.findIndex(x => x.iso2 === mycountry);
-			
+
+			//Add new country geometry
 			var selectedCountryBoundaryData = countries[indexOfCountry].geometry;
             var selectedCountryBoundary = L.geoJSON().addTo(map);
             selectedCountryBoundary.addData(selectedCountryBoundaryData);

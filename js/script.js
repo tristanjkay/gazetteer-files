@@ -244,12 +244,12 @@ window.onload=function(){
 				console.log(result);
 
 				if (result.status.name == "ok") {
-
-					console.log("WorldBank[GDP] = ");
-					console.log(result['data'][1][0]['indicator']['id']);
+					selectedCountry.gdp = {
+						"value": result['data'][1][0]['value'],
+						"description": result['data'][1][0]['indicator']['value']
+					};
 					
-					//Set Data
-					//document.getElementById('name').innerHTML = result['data'][1][0]['value'];
+					
 					
 
 				}
@@ -273,11 +273,10 @@ window.onload=function(){
 
 				if (result.status.name == "ok") {
 
-					console.log("WorldBank[ALC] = ");
-					console.log(result['data'][1][0]['indicator']['id']);
-					
-					//Set Data
-					//document.getElementById('name').innerHTML = result['data'][1][0]['value'];
+					selectedCountry.alcConsompution = {
+						"value": result['data'][1][0]['value'],
+						"description": result['data'][1][0]['indicator']['value']
+					};
 					
 					
 
@@ -302,11 +301,10 @@ window.onload=function(){
 
 				if (result.status.name == "ok") {
 
-					console.log("WorldBank[EDU] = ");
-					console.log(result['data'][1][0]['indicator']['id']);
-					
-					//Set Data
-					//document.getElementById('name').innerHTML = result['data'][1][0]['value'];
+					selectedCountry.education = {
+						"value": result['data'][1][0]['value'],
+						"description": result['data'][1][0]['indicator']['value']
+					};
 					
 
 				}
@@ -330,11 +328,10 @@ window.onload=function(){
 
 				if (result.status.name == "ok") {
 
-					console.log("WorldBank[ELEC] = ");
-					console.log(result['data'][1][0]['indicator']['id']);
-					
-					//Set Data
-					//document.getElementById('name').innerHTML = result['data'][1][0]['value'];
+					selectedCountry.electricity = {
+						"value": result['data'][1][0]['value'],
+						"description": result['data'][1][0]['indicator']['value']
+					};
 					
 
 				}
@@ -358,11 +355,10 @@ window.onload=function(){
 
 				if (result.status.name == "ok") {
 
-					console.log("WorldBank[GOV EXP] = ");
-					console.log(result['data'][1][0]['indicator']['id']);
-					
-					//Set Data
-					//document.getElementById('name').innerHTML = result['data'][1][0]['value'];
+					selectedCountry.edExpense = {
+						"value": result['data'][1][0]['value'],
+						"description": result['data'][1][0]['indicator']['value']
+					};
 					
 
 				}
@@ -386,11 +382,10 @@ window.onload=function(){
 
 				if (result.status.name == "ok") {
 
-					console.log("WorldBank[INF] = ");
-					console.log(result['data'][1][0]['indicator']['id']);
-					
-					//Set Data
-					//document.getElementById('name').innerHTML = result['data'][1][0]['value'];
+					selectedCountry.infantMortality = {
+						"value": result['data'][1][0]['value'],
+						"description": result['data'][1][0]['indicator']['value']
+					};
 					
 
 				}
@@ -414,11 +409,10 @@ window.onload=function(){
 
 				if (result.status.name == "ok") {
 
-					console.log("WorldBank[LIT] = ");
-					console.log(result['data'][1][0]['indicator']['id']);
-					
-					//Set Data
-					//document.getElementById('name').innerHTML = result['data'][1][0]['value'];
+					selectedCountry.literacy = {
+						"value": result['data'][1][0]['value'],
+						"description": result['data'][1][0]['indicator']['value']
+					};
 					
 
 				}
@@ -442,11 +436,10 @@ window.onload=function(){
 
 				if (result.status.name == "ok") {
 
-					console.log("WorldBank[LOW10] = ");
-					console.log(result['data'][1][0]['indicator']['id']);
-					
-					//Set Data
-					//document.getElementById('name').innerHTML = result['data'][1][0]['value'];
+					selectedCountry.worldbanklow10dist = {
+						"value": result['data'][1][0]['value'],
+						"description": result['data'][1][0]['indicator']['value']
+					};
 					
 
 				}
@@ -470,11 +463,10 @@ window.onload=function(){
 
 				if (result.status.name == "ok") {
 
-					console.log("WorldBank[SAN] = ");
-					console.log(result['data'][1][0]['indicator']['id']);
-					
-					//Set Data
-					//document.getElementById('name').innerHTML = result['data'][1][0]['value'];
+					selectedCountry.sanitation = {
+						"value": result['data'][1][0]['value'],
+						"description": result['data'][1][0]['indicator']['value']
+					};
 					
 
 				}
@@ -498,11 +490,10 @@ window.onload=function(){
 
 				if (result.status.name == "ok") {
 
-					console.log("WorldBank[SLUMS] = ");
-					console.log(result['data'][1][0]['indicator']['id']);
-					
-					//Set Data
-					//document.getElementById('name').innerHTML = result['data'][1][0]['value'];
+					selectedCountry.percentInSlums = {
+						"value": result['data'][1][0]['value'],
+						"description": result['data'][1][0]['indicator']['value']
+					};
 					
 
 				}
@@ -526,11 +517,10 @@ window.onload=function(){
 
 				if (result.status.name == "ok") {
 
-					console.log("WorldBank[LOW10] = ");
-					console.log(result['data'][1][0]['indicator']['id']);
-					
-					//Set Data
-					//document.getElementById('name').innerHTML = result['data'][1][0]['value'];
+					selectedCountry.worldbanktop10dist = {
+						"value": result['data'][1][0]['value'],
+						"description": result['data'][1][0]['indicator']['value']
+					};
 					
 
 				}
@@ -554,11 +544,10 @@ window.onload=function(){
 
 				if (result.status.name == "ok") {
 
-					console.log("WorldBank[UNEM] = ");
-					console.log(result['data'][1][0]['indicator']['id']);
-					
-					//Set Data
-					//document.getElementById('name').innerHTML = result['data'][1][0]['value'];
+					selectedCountry.unemployment = {
+						"value": result['data'][1][0]['value'],
+						"description": result['data'][1][0]['indicator']['value']
+					};
 					
 
 				}
@@ -582,11 +571,10 @@ window.onload=function(){
 
 				if (result.status.name == "ok") {
 
-					console.log("WorldBank[WATER] = ");
-					console.log(result['data'][1][0]['indicator']['id']);
-					
-					//Set Data
-					//document.getElementById('name').innerHTML = result['data'][1][0]['value'];
+					selectedCountry.water = {
+						"value": result['data'][1][0]['value'],
+						"description": result['data'][1][0]['indicator']['value']
+					};
 					
 
 				}

@@ -104,8 +104,6 @@ window.onload=function(){
 		}
 
 		function showModal(mycountry) {
-			var modals = document.getElementsByClassName(".modal");
-			modals[0].style.display = "inherit";
 			document.querySelector('.myclass').style.display = "inherit";
 			getElementsByClassName('test').item(0).style.display = "inherit";
 		}

@@ -1,28 +1,57 @@
 <?php
 
-$executionStartTime = microtime(true) / 1000;
+//The URLs that we want to send cURL requests to.
+$urls = array(
+  'http://test.com',
+  'http://php.net',
+  'http://wikipedia.org',
+);
 
-    $url='https://restcountries.eu/rest/v2/alpha/' . $_REQUEST['country'];
+//An array that will contain all of the information
+//relating to each request.
+$requests = array();
 
-	$ch = curl_init();
-	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-	curl_setopt($ch, CURLOPT_URL,$url);
 
-	$result=curl_exec($ch);
+//Initiate a multiple cURL handle
+$mh = curl_multi_init();
 
-	curl_close($ch);
+//Loop through each URL.
+foreach($urls as $k => $url){
+  $requests[$k] = array();
+  $requests[$k]['url'] = $url;
+  //Create a normal cURL handle for this particular request.
+  $requests[$k]['curl_handle'] = curl_init($url);
+  //Configure the options for this request.
+  curl_setopt($requests[$k]['curl_handle'], CURLOPT_RETURNTRANSFER, true);
+  curl_setopt($requests[$k]['curl_handle'], CURLOPT_FOLLOWLOCATION, true);
+  curl_setopt($requests[$k]['curl_handle'], CURLOPT_TIMEOUT, 10);
+  curl_setopt($requests[$k]['curl_handle'], CURLOPT_CONNECTTIMEOUT, 10);
+  curl_setopt($requests[$k]['curl_handle'], CURLOPT_SSL_VERIFYHOST, false);
+  curl_setopt($requests[$k]['curl_handle'], CURLOPT_SSL_VERIFYPEER, false);
+  //Add our normal / single cURL handle to the cURL multi handle.
+  curl_multi_add_handle($mh, $requests[$k]['curl_handle']);
+}
 
-	$decode = json_decode($result,true);	
+//Execute our requests using curl_multi_exec.
+$stillRunning = false;
+do {
+  curl_multi_exec($mh, $stillRunning);
+} while ($stillRunning);
 
-	$output['status']['code'] = "200";
-	$output['status']['name'] = "ok";
-	$output['status']['description'] = "success";
-	$output['status']['returnedIn'] = (microtime(true) - $executionStartTime) / 1000 . " ms";
-	$output['data'] = $decode;
-	
-	header('Content-Type: application/json; charset=UTF-8');
+//Loop through the requests that we executed.
+foreach($requests as $k => $request){
+  //Remove the handle from the multi handle.
+  curl_multi_remove_handle($mh, $request['curl_handle']);
+  //Get the response content and the HTTP status code.
+  $requests[$k]['content'] = curl_multi_getcontent($request['curl_handle']);
+  $requests[$k]['http_code'] = curl_getinfo($request['curl_handle'], CURLINFO_HTTP_CODE);
+  //Close the handle.
+  curl_close($requests[$k]['curl_handle']);
+}
+//Close the multi handle.
+curl_multi_close($mh);
 
-	echo json_encode($output); 
+//var_dump the $requests array for example purposes.
+var_dump($requests);
 
 ?>

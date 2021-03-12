@@ -233,7 +233,7 @@ window.onload=function(){
 			//WorldBank
 		//GDP
 		$.ajax({
-			url: "php/worldbankgdp.php",
+			url: "php/worldbank/worldbankgdp.php",
 			type: 'POST',
 			dataType: 'json',
 			data: {
@@ -261,7 +261,7 @@ window.onload=function(){
 			
 		});
 		$.ajax({
-			url: "php/worldbankalcohol.php",
+			url: "php/worldbank/worldbankalcohol.php",
 			type: 'POST',
 			dataType: 'json',
 			data: {
@@ -290,7 +290,7 @@ window.onload=function(){
 			
 		});
 		$.ajax({
-			url: "php/worldbankeducation.php",
+			url: "php/worldbank/worldbankeducation.php",
 			type: 'POST',
 			dataType: 'json',
 			data: {
@@ -318,7 +318,7 @@ window.onload=function(){
 			
 		});
 		$.ajax({
-			url: "php/worldbankelectricity.php",
+			url: "php/worldbank/worldbankelectricity.php",
 			type: 'POST',
 			dataType: 'json',
 			data: {
@@ -346,7 +346,7 @@ window.onload=function(){
 			
 		});
 		$.ajax({
-			url: "php/worldbankgovedexpense.php",
+			url: "php/worldbank/worldbankgovedexpense.php",
 			type: 'POST',
 			dataType: 'json',
 			data: {
@@ -374,7 +374,7 @@ window.onload=function(){
 			
 		});
 		$.ajax({
-			url: "php/worldbankinfantmortality.php",
+			url: "php/worldbank/worldbankinfantmortality.php",
 			type: 'POST',
 			dataType: 'json',
 			data: {
@@ -402,7 +402,7 @@ window.onload=function(){
 			
 		});
 		$.ajax({
-			url: "php/worldbankliteracy.php",
+			url: "php/worldbank/worldbankliteracy.php",
 			type: 'POST',
 			dataType: 'json',
 			data: {
@@ -430,7 +430,7 @@ window.onload=function(){
 			
 		});
 		$.ajax({
-			url: "php/worldbanklow10dist.php",
+			url: "php/worldbank/worldbanklow10dist.php",
 			type: 'POST',
 			dataType: 'json',
 			data: {
@@ -458,7 +458,7 @@ window.onload=function(){
 			
 		});
 		$.ajax({
-			url: "php/worldbanksanitation.php",
+			url: "php/worldbank/worldbanksanitation.php",
 			type: 'POST',
 			dataType: 'json',
 			data: {
@@ -486,7 +486,7 @@ window.onload=function(){
 			
 		});
 		$.ajax({
-			url: "php/worldbankslums.php",
+			url: "php/worldbank/worldbankslums.php",
 			type: 'POST',
 			dataType: 'json',
 			data: {
@@ -514,7 +514,7 @@ window.onload=function(){
 			
 		});
 		$.ajax({
-			url: "php/worldbanktop10dist.php",
+			url: "php/worldbank/worldbanktop10dist.php",
 			type: 'POST',
 			dataType: 'json',
 			data: {
@@ -542,7 +542,7 @@ window.onload=function(){
 			
 		});
 		$.ajax({
-			url: "php/worldbankunemployment.php",
+			url: "php/worldbank/worldbankunemployment.php",
 			type: 'POST',
 			dataType: 'json',
 			data: {
@@ -570,7 +570,7 @@ window.onload=function(){
 			
 		});
 		$.ajax({
-			url: "php/worldbankwater.php",
+			url: "php/worldbank/worldbankwater.php",
 			type: 'POST',
 			dataType: 'json',
 			data: {

@@ -188,8 +188,8 @@ window.onload=function(){
 						//Capital
 						//Weather
 						selectedCountry.capital.weather.temperature = result['data']['current']['temperature'];
-						selectedCountry.capital.weather.icon = result['data']['current']['weather_icons'];
-						selectedCountry.capital.weather.description = result['data']['current']['weather_descriptions'];
+						selectedCountry.capital.weather.icon = result['data']['current']['weather_icons'][0];
+						selectedCountry.capital.weather.description = result['data']['current']['weather_descriptions'][0];
 						selectedCountry.capital.weather.windSpeed = result['data']['current']['wind_speed'];
 						selectedCountry.capital.weather.windDirection = result['data']['current']['wind_dir'];
 						selectedCountry.capital.weather.precipitation = result['data']['current']['precip'];

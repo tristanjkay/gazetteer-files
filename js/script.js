@@ -173,7 +173,7 @@ window.onload=function(){
 					},
 					success: function(result) {
 
-						console.log(result);
+						console.log(selectedCountry.capital.name);
 						
 
 						if (result.status.name == "ok") {

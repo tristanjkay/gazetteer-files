@@ -92,10 +92,52 @@ window.onload=function(){
 
 		//Do something when a country is selected
 		function countrySelected(mycountry) {
+
 			//Remove previous geometry
 			$('.leaflet-interactive').remove();
+
+			//Get Country Object from Countries Array
 			var indexOfCountry = countries.findIndex(x => x.iso2 === mycountry);
 			selectedCountry = countries[indexOfCountry];
+
+
+			//Add more Data to Country Object from APIs
+			//RESTCountries
+		$.ajax({
+			url: "php/restcountries.php",
+			type: 'POST',
+			dataType: 'json',
+			data: {
+				country: mycountry,
+			},
+			success: function(result) {
+
+				console.log(result);
+
+				if (result.status.name == "ok") {
+
+					console.log("RestCountries[name] = " + result['data']['name']);
+					
+					//Set Data
+					/* document.getElementById('name').innerHTML = result['data']['name'];
+					
+				    document.getElementById('flag').innerHTML = '<svg><image xlink:href="' + result['data']['flag'] + '" src="unknownflag.png" width="100%" height="100%"/></svg>';
+					document.getElementById('capital').innerHTML = "<b>Capital: </b>" + result['data']['capital'];
+					document.getElementById('population').innerHTML = "<b>Population: </b>" + result['data']['population'];
+					document.getElementById('populationfact').innerHTML = "Population: " + result['data']['population'];
+					document.getElementById('currencyfact').innerHTML = "Currency: " + result['data']['currencies'][0]['name'];
+					document.getElementById('language').innerHTML = "<b>Main Language: </b>" + result['data']['languages'][0]['name'];
+                    document.querySelector("#flag > svg").style.height = "13em";
+                    document.querySelector("#flag > svg").style.width = "26em"; */
+
+				}
+			
+			},
+			error: function(jqXHR, textStatus, errorThrown) {
+
+			}
+			
+		});
 
 			//Add new country geometry
 			var selectedCountryBoundaryData = selectedCountry.geometry;

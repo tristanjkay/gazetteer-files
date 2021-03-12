@@ -63,7 +63,8 @@ window.onload=function(){
 								"name": element['properties']['name'],
 								"iso2": element['properties']['iso_a2'],
 								"iso3": element['properties']['iso_a3'],
-								"geometry": element['geometry']
+								"geometry": element['geometry'],
+								"capital": {}
 							   }	
 
 						countries.push(country)
@@ -145,7 +146,7 @@ window.onload=function(){
 						if (result.status.name == "ok") {
 
 							//Set Data to Country Object
-							selectedCountry.capital = result['data']['capital'];
+							selectedCountry.capital.name = result['data']['capital'];
 							selectedCountry.population = result['data']['population'];
 							selectedCountry.currency = result['data']['currencies'][0]['name'];
 							selectedCountry.language = result['data']['languages'][0]['name'];
@@ -168,7 +169,7 @@ window.onload=function(){
 					type: 'POST',
 					dataType: 'json',
 					data: {
-						country: mycountry,
+						country: selectedCountry.capital.name,
 					},
 					success: function(result) {
 

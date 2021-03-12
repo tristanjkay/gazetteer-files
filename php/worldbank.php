@@ -32,6 +32,6 @@ echo "$response_1 $response_2"; // output results
 /* 	$decode = json_decode($result,true);	
 	$output['data'] = $decode;
 
-	echo json_encode($output);  */
+	echo json_encode($output);  */ 
 
 ?>

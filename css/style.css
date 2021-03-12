@@ -56,3 +56,11 @@ select {
     outline: 0;
     height: 60vh;
 }
+
+.modal-body {
+    position: relative;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1rem;
+    overflow-wrap: anywhere;
+}

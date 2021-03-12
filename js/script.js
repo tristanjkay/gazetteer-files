@@ -94,9 +94,10 @@ window.onload=function(){
 			//Remove previous geometry
 			$('.leaflet-interactive').remove();
 			var indexOfCountry = countries.findIndex(x => x.iso2 === mycountry);
+			selectedCountry = countries[indexOfCountry];
 
 			//Add new country geometry
-			var selectedCountryBoundaryData = countries[indexOfCountry].geometry;
+			var selectedCountryBoundaryData = selectedCountry.geometry;
             var selectedCountryBoundary = L.geoJSON().addTo(map);
             selectedCountryBoundary.addData(selectedCountryBoundaryData);
 			map.fitBounds(selectedCountryBoundary.getBounds());

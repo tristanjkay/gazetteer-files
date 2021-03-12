@@ -2,7 +2,7 @@
 
 	$executionStartTime = microtime(true) / 1000;
 
-    $url='http://api.worldbank.org/v2/country/' . $_REQUEST['country'] . '/indicator/BAR.NOED.15UP.ZS?date=2019&format=json';
+    $url='https://restcountries.eu/rest/v2/alpha/' . $_REQUEST['country'];
 
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
@@ -22,8 +22,8 @@
 	$output['data'] = $decode;
 	
 	header('Content-Type: application/json; charset=UTF-8');
-  //END 1
-  $url='http://api.worldbank.org/v2/country/' . $_REQUEST['country'] . '/indicator/BAR.NOED.15UP.ZS?date=2019&format=json';
+
+  $url='https://restcountries.eu/rest/v2/alpha/' . $_REQUEST['country'];
 
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);

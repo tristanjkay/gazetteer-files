@@ -236,7 +236,7 @@ window.onload=function(){
 				type: 'POST',
 				dataType: 'json',
 				data: {
-					country: selectedCountry.name,
+					country: mycountry,
 				},
 				success: function(result) {
 

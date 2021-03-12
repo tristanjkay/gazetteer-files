@@ -22,7 +22,28 @@
 	$output['data'] = $decode;
 	
 	header('Content-Type: application/json; charset=UTF-8');
+  //END 1
+  $url='http://api.worldbank.org/v2/country/' . $_REQUEST['country'] . '/indicator/BAR.NOED.15UP.ZS?date=2019&format=json';
 
-	//echo json_encode($output); 
+	$ch = curl_init();
+	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+	curl_setopt($ch, CURLOPT_URL,$url);
+
+	$result=curl_exec($ch);
+
+	curl_close($ch);
+
+	$decode = json_decode($result,true);	
+
+	$output2['status']['code'] = "200";
+	$output2['status']['name'] = "ok";
+	$output2['status']['description'] = "success";
+	$output2['status']['returnedIn'] = (microtime(true) - $executionStartTime) / 1000 . " ms";
+	$output2['data'] = $decode;
+	
+	header('Content-Type: application/json; charset=UTF-8');
+
+	echo json_encode($output $output2); 
 
 ?>

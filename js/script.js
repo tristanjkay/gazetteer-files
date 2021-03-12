@@ -158,7 +158,7 @@ window.onload=function(){
 									type: 'POST',
 									dataType: 'json',
 									data: {
-										country: encodeURIComponent((selectedCountry.capital.name).trim()),
+										country: encodeURIComponent((selectedCountry.name).trim()),
 									},
 									success: function(result) {
 

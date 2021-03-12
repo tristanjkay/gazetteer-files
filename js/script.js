@@ -105,8 +105,8 @@ window.onload=function(){
 
 		function showModal(mycountry) {
 			document.getElementsByClassName(".fade:not(.show)").style.opacity = "1";
-			$('#myModal').modal('hide')
-			$('#myModal').modal('show')
+			$('#exampleModalCenter').modal('hide')
+			$('#exampleModalCenter').modal('show')
 		}
 
 

@@ -230,6 +230,32 @@ window.onload=function(){
 				
 			});
 
+			//WorldBank
+			$.ajax({
+				url: "php/worldbank.php",
+				type: 'POST',
+				dataType: 'json',
+				data: {
+					country: selectedCountry.iso2,
+				},
+				success: function(result) {
+
+					console.log(result)
+					
+
+					if (result.status.name == "ok") {
+						
+
+
+					}
+				
+				},
+				error: function(jqXHR, textStatus, errorThrown) {
+
+				}
+				
+			});
+
 
 			
 

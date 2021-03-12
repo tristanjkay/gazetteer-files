@@ -169,11 +169,11 @@ window.onload=function(){
 					type: 'POST',
 					dataType: 'json',
 					data: {
-						country: selectedCountry.capital.name,
+						country: encodeURIComponent(selectedCountry.capital.name.trim()),
 					},
 					success: function(result) {
 
-						console.log(selectedCountry.capital.name);
+						console.log(encodeURIComponent(selectedCountry.capital.name.trim()));
 						
 
 						if (result.status.name == "ok") {

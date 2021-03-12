@@ -10,6 +10,19 @@
 
 */
 
+
+//CATEGORIES
+/*
+- ECONOMY
+- HEALTH
+- ENVIRONMENT
+- EDUCATION
+- CLIMATE
+- CRIME
+- TRAVEL
+
+*/
+
 //MAP SETUP
 
 var map = L.map('map').fitWorld();
@@ -567,7 +580,7 @@ window.onload=function(){
 			},
 			success: function(result) {
 
-				console.log(result);
+				//console.log(result);
 
 				if (result.status.name == "ok") {
 

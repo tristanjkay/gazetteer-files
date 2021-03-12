@@ -105,7 +105,7 @@ window.onload=function(){
 
 		function showModal(mycountry) {
 			document.getElementsByClassName(".fade:not(.show)").style.opacity = "1";
-			$('#exampleModalCenter').modal('show')  
+			$("#myModal").modal();
 		}
 
 

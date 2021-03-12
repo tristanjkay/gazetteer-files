@@ -116,19 +116,17 @@ window.onload=function(){
 
 				if (result.status.name == "ok") {
 
-					console.log("RestCountries[name] = " + result['data']['name']);
+					//Set Data to Country Object
+					selectedCountry.capital = result['data']['capital'];
+					selectedCountry.population = result['data']['population'];
+					selectedCountry.currency = result['data']['currencies'][0]['name'];
+					selectedCountry.language = result['data']['languages'][0]['name'];
+					selectedCountry.flag = result['data']['flag'];
+
+
 					
-					//Set Data
-					/* document.getElementById('name').innerHTML = result['data']['name'];
 					
-				    document.getElementById('flag').innerHTML = '<svg><image xlink:href="' + result['data']['flag'] + '" src="unknownflag.png" width="100%" height="100%"/></svg>';
-					document.getElementById('capital').innerHTML = "<b>Capital: </b>" + result['data']['capital'];
-					document.getElementById('population').innerHTML = "<b>Population: </b>" + result['data']['population'];
-					document.getElementById('populationfact').innerHTML = "Population: " + result['data']['population'];
-					document.getElementById('currencyfact').innerHTML = "Currency: " + result['data']['currencies'][0]['name'];
-					document.getElementById('language').innerHTML = "<b>Main Language: </b>" + result['data']['languages'][0]['name'];
-                    document.querySelector("#flag > svg").style.height = "13em";
-                    document.querySelector("#flag > svg").style.width = "26em"; */
+					
 
 				}
 			

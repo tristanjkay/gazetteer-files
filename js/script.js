@@ -104,9 +104,7 @@ window.onload=function(){
 		}
 
 		function showModal(mycountry) {
-			document.getElementsByClassName(".fade:not(.show)").style.opacity = "1";
-			$('#exampleModalCenter').modal('hide')
-			$('#exampleModalCenter').modal('show')
+			document.getElementsByClassName(".modal").style.display = "inherit";
 		}
 
 

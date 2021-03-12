@@ -1,5 +1,5 @@
 <?php
-/* $executionStartTime = microtime(true) / 1000;
+$executionStartTime = microtime(true) / 1000;
 // build the individual requests, but do not execute them
 $ch_1 = curl_init('http://api.worldbank.org/v2/country/' . $_REQUEST['country'] . '/indicator/SH.ALC.PCAP.LI?date=2019&format=json');
 $ch_2 = curl_init('http://webservice.two.com/');

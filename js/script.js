@@ -100,6 +100,11 @@ window.onload=function(){
             var selectedCountryBoundary = L.geoJSON().addTo(map);
             selectedCountryBoundary.addData(selectedCountryBoundaryData);
 			map.fitBounds(selectedCountryBoundary.getBounds());
+			showModal(mycountry);
+		}
+
+		function showModal(mycountry) {
+			
 		}
 
 

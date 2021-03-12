@@ -231,35 +231,372 @@ window.onload=function(){
 			});
 
 			//WorldBank
-			$.ajax({
-				url: "php/worldbank.php",
-				type: 'POST',
-				dataType: 'json',
-				data: {
-					country: mycountry,
-				},
-				success: function(result) {
+		//GDP
+		$.ajax({
+			url: "php/worldbankgdp.php",
+			type: 'POST',
+			dataType: 'json',
+			data: {
+				country: mycountry,
+			},
+			success: function(result) {
 
-					console.log(result);
+				console.log(result);
+
+				if (result.status.name == "ok") {
+
+					console.log("WorldBank[GDP] = ");
+					console.log(result['data'][1][0]['indicator']['id']);
+					
+					//Set Data
+					//document.getElementById('name').innerHTML = result['data'][1][0]['value'];
 					
 
-					if (result.status.name == "ok") {
-						
-						//Set Data to Country Object
+				}
+			
+			},
+			error: function(jqXHR, textStatus, errorThrown) {
 
-						
+			}
+			
+		});
+		$.ajax({
+			url: "php/worldbankalcohol.php",
+			type: 'POST',
+			dataType: 'json',
+			data: {
+				country: mycountry,
+			},
+			success: function(result) {
 
+				console.log(result);
 
-						
+				if (result.status.name == "ok") {
 
-					}
-				
-				},
-				error: function(jqXHR, textStatus, errorThrown) {
+					console.log("WorldBank[ALC] = ");
+					console.log(result['data'][1][0]['indicator']['id']);
+					
+					//Set Data
+					//document.getElementById('name').innerHTML = result['data'][1][0]['value'];
+					
+					
 
 				}
-				
-			});
+			
+			},
+			error: function(jqXHR, textStatus, errorThrown) {
+
+			}
+			
+		});
+		$.ajax({
+			url: "php/worldbankeducation.php",
+			type: 'POST',
+			dataType: 'json',
+			data: {
+				country: mycountry,
+			},
+			success: function(result) {
+
+				console.log(result);
+
+				if (result.status.name == "ok") {
+
+					console.log("WorldBank[EDU] = ");
+					console.log(result['data'][1][0]['indicator']['id']);
+					
+					//Set Data
+					//document.getElementById('name').innerHTML = result['data'][1][0]['value'];
+					
+
+				}
+			
+			},
+			error: function(jqXHR, textStatus, errorThrown) {
+
+			}
+			
+		});
+		$.ajax({
+			url: "php/worldbankelectricity.php",
+			type: 'POST',
+			dataType: 'json',
+			data: {
+				country: mycountry,
+			},
+			success: function(result) {
+
+				console.log(result);
+
+				if (result.status.name == "ok") {
+
+					console.log("WorldBank[ELEC] = ");
+					console.log(result['data'][1][0]['indicator']['id']);
+					
+					//Set Data
+					//document.getElementById('name').innerHTML = result['data'][1][0]['value'];
+					
+
+				}
+			
+			},
+			error: function(jqXHR, textStatus, errorThrown) {
+
+			}
+			
+		});
+		$.ajax({
+			url: "php/worldbankgovedexpense.php",
+			type: 'POST',
+			dataType: 'json',
+			data: {
+				country: mycountry,
+			},
+			success: function(result) {
+
+				console.log(result);
+
+				if (result.status.name == "ok") {
+
+					console.log("WorldBank[GOV EXP] = ");
+					console.log(result['data'][1][0]['indicator']['id']);
+					
+					//Set Data
+					//document.getElementById('name').innerHTML = result['data'][1][0]['value'];
+					
+
+				}
+			
+			},
+			error: function(jqXHR, textStatus, errorThrown) {
+
+			}
+			
+		});
+		$.ajax({
+			url: "php/worldbankinfantmortality.php",
+			type: 'POST',
+			dataType: 'json',
+			data: {
+				country: mycountry,
+			},
+			success: function(result) {
+
+				console.log(result);
+
+				if (result.status.name == "ok") {
+
+					console.log("WorldBank[INF] = ");
+					console.log(result['data'][1][0]['indicator']['id']);
+					
+					//Set Data
+					//document.getElementById('name').innerHTML = result['data'][1][0]['value'];
+					
+
+				}
+			
+			},
+			error: function(jqXHR, textStatus, errorThrown) {
+
+			}
+			
+		});
+		$.ajax({
+			url: "php/worldbankliteracy.php",
+			type: 'POST',
+			dataType: 'json',
+			data: {
+				country: mycountry,
+			},
+			success: function(result) {
+
+				console.log(result);
+
+				if (result.status.name == "ok") {
+
+					console.log("WorldBank[LIT] = ");
+					console.log(result['data'][1][0]['indicator']['id']);
+					
+					//Set Data
+					//document.getElementById('name').innerHTML = result['data'][1][0]['value'];
+					
+
+				}
+			
+			},
+			error: function(jqXHR, textStatus, errorThrown) {
+
+			}
+			
+		});
+		$.ajax({
+			url: "php/worldbanklow10dist.php",
+			type: 'POST',
+			dataType: 'json',
+			data: {
+				country: mycountry,
+			},
+			success: function(result) {
+
+				console.log(result);
+
+				if (result.status.name == "ok") {
+
+					console.log("WorldBank[LOW10] = ");
+					console.log(result['data'][1][0]['indicator']['id']);
+					
+					//Set Data
+					//document.getElementById('name').innerHTML = result['data'][1][0]['value'];
+					
+
+				}
+			
+			},
+			error: function(jqXHR, textStatus, errorThrown) {
+
+			}
+			
+		});
+		$.ajax({
+			url: "php/worldbanksanitation.php",
+			type: 'POST',
+			dataType: 'json',
+			data: {
+				country: mycountry,
+			},
+			success: function(result) {
+
+				console.log(result);
+
+				if (result.status.name == "ok") {
+
+					console.log("WorldBank[SAN] = ");
+					console.log(result['data'][1][0]['indicator']['id']);
+					
+					//Set Data
+					//document.getElementById('name').innerHTML = result['data'][1][0]['value'];
+					
+
+				}
+			
+			},
+			error: function(jqXHR, textStatus, errorThrown) {
+
+			}
+			
+		});
+		$.ajax({
+			url: "php/worldbankslums.php",
+			type: 'POST',
+			dataType: 'json',
+			data: {
+				country: mycountry,
+			},
+			success: function(result) {
+
+				console.log(result);
+
+				if (result.status.name == "ok") {
+
+					console.log("WorldBank[SLUMS] = ");
+					console.log(result['data'][1][0]['indicator']['id']);
+					
+					//Set Data
+					//document.getElementById('name').innerHTML = result['data'][1][0]['value'];
+					
+
+				}
+			
+			},
+			error: function(jqXHR, textStatus, errorThrown) {
+
+			}
+			
+		});
+		$.ajax({
+			url: "php/worldbanktop10dist.php",
+			type: 'POST',
+			dataType: 'json',
+			data: {
+				country: mycountry,
+			},
+			success: function(result) {
+
+				console.log(result);
+
+				if (result.status.name == "ok") {
+
+					console.log("WorldBank[LOW10] = ");
+					console.log(result['data'][1][0]['indicator']['id']);
+					
+					//Set Data
+					//document.getElementById('name').innerHTML = result['data'][1][0]['value'];
+					
+
+				}
+			
+			},
+			error: function(jqXHR, textStatus, errorThrown) {
+
+			}
+			
+		});
+		$.ajax({
+			url: "php/worldbankunemployment.php",
+			type: 'POST',
+			dataType: 'json',
+			data: {
+				country: mycountry,
+			},
+			success: function(result) {
+
+				console.log(result);
+
+				if (result.status.name == "ok") {
+
+					console.log("WorldBank[UNEM] = ");
+					console.log(result['data'][1][0]['indicator']['id']);
+					
+					//Set Data
+					//document.getElementById('name').innerHTML = result['data'][1][0]['value'];
+					
+
+				}
+			
+			},
+			error: function(jqXHR, textStatus, errorThrown) {
+
+			}
+			
+		});
+		$.ajax({
+			url: "php/worldbankwater.php",
+			type: 'POST',
+			dataType: 'json',
+			data: {
+				country: mycountry,
+			},
+			success: function(result) {
+
+				console.log(result);
+
+				if (result.status.name == "ok") {
+
+					console.log("WorldBank[WATER] = ");
+					console.log(result['data'][1][0]['indicator']['id']);
+					
+					//Set Data
+					//document.getElementById('name').innerHTML = result['data'][1][0]['value'];
+					
+
+				}
+			
+			},
+			error: function(jqXHR, textStatus, errorThrown) {
+
+			}
+			
+		});
 
 
 

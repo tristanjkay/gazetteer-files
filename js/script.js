@@ -102,40 +102,95 @@ window.onload=function(){
 
 
 			//Add more Data to Country Object from APIs
+
+			//Geonames
+				$.ajax({
+					url: "php/geonames.php",
+					type: 'POST',
+					dataType: 'json',
+					data: {
+						country: mycountry,
+					},
+					success: function(result) {
+
+						console.log(result);
+
+						if (result.status.name == "ok") {
+
+							console.log("Geonames[CountryName] = " + result['data'][0]['countryName']);
+							console.log(" ");
+							
+
+						}
+					
+					},
+					error: function(jqXHR, textStatus, errorThrown) {
+
+					}
+					
+				});
+
 			//RESTCountries
-		$.ajax({
-			url: "php/restcountries.php",
-			type: 'POST',
-			dataType: 'json',
-			data: {
-				country: mycountry,
-			},
-			success: function(result) {
+				$.ajax({
+					url: "php/restcountries.php",
+					type: 'POST',
+					dataType: 'json',
+					data: {
+						country: mycountry,
+					},
+					success: function(result) {
 
-				console.log(result);
+						console.log(result);
 
-				if (result.status.name == "ok") {
+						if (result.status.name == "ok") {
 
-					//Set Data to Country Object
-					selectedCountry.capital = result['data']['capital'];
-					selectedCountry.population = result['data']['population'];
-					selectedCountry.currency = result['data']['currencies'][0]['name'];
-					selectedCountry.language = result['data']['languages'][0]['name'];
-					selectedCountry.flag = result['data']['flag'];
+							//Set Data to Country Object
+							selectedCountry.capital = result['data']['capital'];
+							selectedCountry.population = result['data']['population'];
+							selectedCountry.currency = result['data']['currencies'][0]['name'];
+							selectedCountry.language = result['data']['languages'][0]['name'];
+							selectedCountry.flag = result['data']['flag'];
 
+							
 
+						}
 					
-					
-					
+					},
+					error: function(jqXHR, textStatus, errorThrown) {
 
-				}
-			
-			},
-			error: function(jqXHR, textStatus, errorThrown) {
+					}
+					
+				});
 
-			}
-			
-		});
+			//WeatherStack
+				$.ajax({
+					url: "php/weatherstack.php",
+					type: 'POST',
+					dataType: 'json',
+					data: {
+						country: mycountry,
+					},
+					success: function(result) {
+
+						console.log(result);
+						
+
+						if (result.status.name == "ok") {
+							
+							//Set Data to Country Object
+
+							//Capital
+							selectedCountry.capital.temperature = result['data']['current']['temperature'];
+
+
+						}
+					
+					},
+					error: function(jqXHR, textStatus, errorThrown) {
+
+					}
+					
+				});
 
 			//Add new country geometry
 			var selectedCountryBoundaryData = selectedCountry.geometry;

@@ -62,6 +62,7 @@ window.onload=function(){
 							let country = {
 								"name": element['properties']['name'],
 								"iso2": element['properties']['iso_a2'],
+								"iso3": element['properties']['iso_a3'],
 								"geometry": element['geometry']
 							   }	
 

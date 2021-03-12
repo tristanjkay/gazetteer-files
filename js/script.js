@@ -129,12 +129,11 @@ window.onload=function(){
 					},
 					success: function(result) {
 
-						console.log(result);
 
 						if (result.status.name == "ok") {
 
-							console.log("Geonames[CountryName] = " + result['data'][0]['countryName']);
-							console.log(" ");
+							selectedCountry.continent = result['data'][0]['continentName'];
+							selectedCountry.area = result['data'][0]['areaInSqKm'];
 							
 
 						}
@@ -162,10 +161,15 @@ window.onload=function(){
 
 							//Set Data to Country Object
 							selectedCountry.capital.name = result['data']['capital'];
+							selectedCountry.region = result['data']['region'];
+							//selectedCountry.continent = result['data']['subregion'];
 							selectedCountry.population = result['data']['population'];
 							selectedCountry.currency = result['data']['currencies'][0]['name'];
+							selectedCountry.currencies = result['data']['currencies'];
 							selectedCountry.language = result['data']['languages'][0]['name'];
 							selectedCountry.flag = result['data']['flag'];
+							//selectedCountry.area = result['data']['area'];
+							selectedCountry.timezones = result['data']['timezones'];
 
 							
 							
@@ -215,8 +219,6 @@ window.onload=function(){
 
 						//Location
 						selectedCountry.capital.location = [result['data']['location']['lat'],result['data']['location']['lon']] ;
-
-
 
 					}
 				

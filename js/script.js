@@ -230,7 +230,7 @@ window.onload=function(){
 				
 			});
 
-			//WorldBank
+			//WorldBank 
 			$.ajax({
 				url: "php/worldbank.php",
 				type: 'POST',

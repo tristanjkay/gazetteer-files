@@ -152,36 +152,7 @@ window.onload=function(){
 							selectedCountry.language = result['data']['languages'][0]['name'];
 							selectedCountry.flag = result['data']['flag'];
 
-							//WeatherStack
-								$.ajax({
-									url: "php/weatherstack.php",
-									type: 'POST',
-									dataType: 'json',
-									data: {
-										country: encodeURIComponent((selectedCountry.name).trim()),
-									},
-									success: function(result) {
-
-										console.log(encodeURIComponent((selectedCountry.capital.name).trim()));
-										
-
-										if (result.status.name == "ok") {
-											
-											//Set Data to Country Object
-
-											//Capital
-											selectedCountry.capital.temperature = result['data']['current']['temperature'];
-
-
-										}
-									
-									},
-									error: function(jqXHR, textStatus, errorThrown) {
-
-									}
-									
-								});
-
+							
 							
 
 						}
@@ -192,6 +163,37 @@ window.onload=function(){
 					}
 					
 				});
+
+			//WeatherStack
+			$.ajax({
+				url: "php/weatherstack.php",
+				type: 'POST',
+				dataType: 'json',
+				data: {
+					country: encodeURIComponent((selectedCountry.name).trim()),
+				},
+				success: function(result) {
+
+					console.log(encodeURIComponent((selectedCountry.capital.name).trim()));
+					
+
+					if (result.status.name == "ok") {
+						
+						//Set Data to Country Object
+
+						//Capital
+						selectedCountry.capital.temperature = result['data']['current']['temperature'];
+
+
+					}
+				
+				},
+				error: function(jqXHR, textStatus, errorThrown) {
+
+				}
+				
+			});
+
 
 			
 

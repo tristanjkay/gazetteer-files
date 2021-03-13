@@ -56,7 +56,8 @@ select {
     vertical-align: middle;
     align-self: center;
     display: inline-block;
-    margin: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
     width: -webkit-fill-available;
     border: none;
     border-radius: 15px;

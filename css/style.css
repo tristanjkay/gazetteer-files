@@ -9,6 +9,12 @@
 
 */
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 
 
 
@@ -28,7 +34,14 @@ body {
     height: 100%; 
     width: 100vw; 
 }
-
+select {
+    appearance: none;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: inherit;
+    line-height: inherit;
+  }
 
 
 select {

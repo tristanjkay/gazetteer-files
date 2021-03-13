@@ -19,14 +19,17 @@ select {
     word-wrap: normal;
     position: fixed;
     z-index: 10001;
-    padding: .5rem;
+    padding: 1rem;
     margin: 0 0 auto;
     vertical-align: middle;
     align-self: center;
     display: inline-block;
-    margin: 1rem;
+    margin: 1.5rem;
     width: -webkit-fill-available;
+    border: none;
+    border-radius: 15px;
 }
+
 .fade:not(.show){
     opacity: 1 !important;
 }

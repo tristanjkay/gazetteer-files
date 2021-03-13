@@ -73,3 +73,9 @@ select {
     padding: 1rem;
     overflow-wrap: anywhere;
 }
+
+.fade {
+    transition: opacity 0.15s linear;
+    background: dimgrey;
+    mix-blend-mode: color;
+}

@@ -614,10 +614,10 @@ window.onload=function(){
 		function showModal(mycountry) {
 			//document.querySelector('.modal').style.display = "inherit";
 			document.querySelector('.modal-title').innerHTML = mycountry.name;
-			document.querySelector('.col-sm-4').style.maxWidth = inherit;
-			document.querySelector('.col-sm-4').style.flex = inherit;
-			document.querySelector('.col-sm-4').style.display = flex;
-			document.querySelector('.col-sm-8').style.width = inherit;
+			document.querySelector('.col-sm-4').style.maxWidth = null;
+			document.querySelector('.col-sm-4').style.flex = null;
+			document.querySelector('.col-sm-4').style.display = null;
+			document.querySelector('.col-sm-8').style.width = null;
 			//getElementsByClassName('.modal').item(0).style.display = "inherit";
 		}
 

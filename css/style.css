@@ -145,3 +145,13 @@ option {
     background: red !important;
     border: none;
 }
+
+
+/* Default Column Widths*/
+.col-sm-8 {
+    width: -webkit-fill-available;
+}
+
+.col-sm-4 {
+    width:0px;
+}

@@ -30,9 +30,11 @@ body {
     color: #2b344f;
 } 
 
-#map { 
-    height: 100%; 
-    width: 100vw; 
+#map {
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
+    border-radius: 20px;
+    margin: 1rem;
 }
 select {
     appearance: none;

@@ -17,7 +17,9 @@
 }
 
 
-
+html {
+    padding: 1rem;
+}
 
 html, body {
     height: 100%;
@@ -34,7 +36,6 @@ body {
     height: -webkit-fill-available;
     width: -webkit-fill-available;
     border-radius: 20px;
-    margin: 1rem;
 }
 select {
     appearance: none;

@@ -17,15 +17,15 @@ body {
 
 select {
     word-wrap: normal;
-    position: absolute;
+    position: fixed;
     z-index: 10001;
     padding: .5rem;
-
     margin: 0 0 auto;
     vertical-align: middle;
     align-self: center;
     display: inline-block;
     margin: 1rem;
+    width: -webkit-fill-available;
 }
 .fade:not(.show){
     opacity: 1 !important;

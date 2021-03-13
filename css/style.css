@@ -149,12 +149,9 @@ option {
 
 /* Default Column Widths*/
 .col-sm-8 {
-    flex: 0 0 100%;
-    max-width: 100%;
+
 }
 
 .col-sm-4 {
-    flex: 0 0 0%;
-    max-width: 0%;
     display: none;
 }

@@ -33,7 +33,7 @@ body {
 } 
 
 #map {
-    height: calc(100vh - 8rem);
+    height: calc(100vh - 9rem);
     width: -webkit-fill-available;
     border-radius: 20px;
 }
@@ -49,7 +49,7 @@ select {
 
 select {
     word-wrap: normal;
-    position: fixed;
+    position: inherit;
     z-index: 10001;
     padding: 1rem;
     margin: 0 0 auto;

@@ -121,3 +121,7 @@ select {
     color:white;
     background-color: #2b344f;
 }
+
+.leaflet-touch .leaflet-control-layers, .leaflet-touch .leaflet-bar {
+    border: none;
+}

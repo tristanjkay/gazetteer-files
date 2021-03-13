@@ -157,4 +157,6 @@ option {
 
 .col-sm-4 {
     display: none;
+    flex: 0 0 33.3%;
+    max-width: 33.3%;
 }

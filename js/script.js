@@ -207,7 +207,7 @@ window.onload=function(){
 				},
 				success: function(result) {
 
-					console.log(encodeURIComponent((selectedCountry.capital.name).trim()));
+					console.log(selectedCountry.capital.name);
 					
 
 					if (result.status.name == "ok") {

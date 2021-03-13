@@ -612,7 +612,7 @@ window.onload=function(){
 		}
 
 		function showModal(mycountry) {
-			document.querySelector('.modal').style.display = "inherit";
+			//document.querySelector('.modal').style.display = "inherit";
 			document.querySelector('.modal-title').innerHTML = mycountry.name;
 			//getElementsByClassName('.modal').item(0).style.display = "inherit";
 		}

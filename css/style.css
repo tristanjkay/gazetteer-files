@@ -106,8 +106,10 @@ select {
 
 .fade {
     transition: opacity 0.15s linear;
+    /*
     background: dimgrey;
     mix-blend-mode: color;
+    */
 }
 
 .leaflet-touch .leaflet-bar a:first-child {

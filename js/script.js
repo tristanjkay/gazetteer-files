@@ -28,6 +28,7 @@
 var map = L.map('map').fitWorld();
 var dropdown = document.getElementById("countriesDropdown");
 var selectedCountry;
+var col2 = document.querySelector('.col-sm-4');
 
 var countries = [];
 
@@ -59,6 +60,7 @@ map.locate({setView: true, maxZoom: 16});
 
 window.onload=function(){
 
+	col2.style.display = "none";
 	//Retrieve iso2 code of selected Country
 	dropdown.addEventListener('change', function(event) {
 		selectedCountry = $('#countriesDropdown').val();
@@ -616,7 +618,7 @@ window.onload=function(){
 			document.querySelector('.modal-title').innerHTML = mycountry.name;
 			document.querySelector('.col-sm-12').classList.add('col-sm-8');
 			document.querySelector('.col-sm-12.col-sm-8').classList.remove('col-sm-12');
-			//document.querySelector('.col-sm-8').style.flex = "0 0 66.666667%";
+			col2.style.display = "block";
 			//document.querySelector('.col-sm-8').style.maxWidth = "66.666667%";
 			//getElementsByClassName('.modal').item(0).style.display = "inherit";
 		}

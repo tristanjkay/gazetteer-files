@@ -125,3 +125,7 @@ select {
 .leaflet-touch .leaflet-control-layers, .leaflet-touch .leaflet-bar {
     border: none;
 }
+
+.leaflet-bar a, .leaflet-bar a:hover {
+    border-bottom: none;
+}

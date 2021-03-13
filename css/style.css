@@ -33,7 +33,7 @@ body {
 } 
 
 #map {
-    height: -webkit-fill-available;
+    height: calc(100vh - 8rem);
     width: -webkit-fill-available;
     border-radius: 20px;
 }

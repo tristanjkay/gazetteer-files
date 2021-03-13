@@ -145,9 +145,4 @@ option {
     background: red !important;
     border: none;
 }
-.col-auto {
-    -ms-flex: 0 0 auto;
-    flex: 0 0 auto;
-    width: -webkit-fill-available;
-    max-width: 100%;
-}
+

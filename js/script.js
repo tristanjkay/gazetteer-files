@@ -169,7 +169,7 @@ window.onload=function(){
 					},
 					success: function(result) {
 
-						console.log(result);
+						//console.log(result);
 
 						if (result.status.name == "ok") {
 
@@ -207,7 +207,7 @@ window.onload=function(){
 				},
 				success: function(result) {
 
-					console.log(selectedCountry.capital.name);
+					//console.log(selectedCountry.capital.name);
 					
 
 					if (result.status.name == "ok") {
@@ -254,7 +254,7 @@ window.onload=function(){
 			},
 			success: function(result) {
 
-				console.log(result);
+				//console.log(result);
 
 				if (result.status.name == "ok") {
 					selectedCountry.gdp = {
@@ -282,7 +282,7 @@ window.onload=function(){
 			},
 			success: function(result) {
 
-				console.log(result);
+				//console.log(result);
 
 				if (result.status.name == "ok") {
 
@@ -310,7 +310,7 @@ window.onload=function(){
 			},
 			success: function(result) {
 
-				console.log(result);
+				//console.log(result);
 
 				if (result.status.name == "ok") {
 
@@ -337,7 +337,7 @@ window.onload=function(){
 			},
 			success: function(result) {
 
-				console.log(result);
+				//console.log(result);
 
 				if (result.status.name == "ok") {
 
@@ -364,7 +364,7 @@ window.onload=function(){
 			},
 			success: function(result) {
 
-				console.log(result);
+				//console.log(result);
 
 				if (result.status.name == "ok") {
 
@@ -391,7 +391,7 @@ window.onload=function(){
 			},
 			success: function(result) {
 
-				console.log(result);
+				//console.log(result);
 
 				if (result.status.name == "ok") {
 
@@ -418,7 +418,7 @@ window.onload=function(){
 			},
 			success: function(result) {
 
-				console.log(result);
+				//console.log(result);
 
 				if (result.status.name == "ok") {
 
@@ -445,7 +445,7 @@ window.onload=function(){
 			},
 			success: function(result) {
 
-				console.log(result);
+				//console.log(result);
 
 				if (result.status.name == "ok") {
 
@@ -472,7 +472,7 @@ window.onload=function(){
 			},
 			success: function(result) {
 
-				console.log(result);
+				//console.log(result);
 
 				if (result.status.name == "ok") {
 
@@ -499,7 +499,7 @@ window.onload=function(){
 			},
 			success: function(result) {
 
-				console.log(result);
+				//console.log(result);
 
 				if (result.status.name == "ok") {
 
@@ -526,7 +526,7 @@ window.onload=function(){
 			},
 			success: function(result) {
 
-				console.log(result);
+				//console.log(result);
 
 				if (result.status.name == "ok") {
 
@@ -553,7 +553,7 @@ window.onload=function(){
 			},
 			success: function(result) {
 
-				console.log(result);
+				//console.log(result);
 
 				if (result.status.name == "ok") {
 

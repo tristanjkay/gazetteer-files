@@ -6,6 +6,7 @@
 #cbd0e6 - Medium Grey
 #e5e9f6 - Light Grey
 
+#8f4ef3 - Purple
 
 */
 
@@ -27,7 +28,6 @@ body {
     padding: 0;
     font-family: 'Roboto' !important;
     color: #2b344f;
-
 } 
 
 #map { 
@@ -134,4 +134,9 @@ select {
     width: 40px;
     height: 40px;
     line-height: 40px;
+}
+
+option {
+    background: red;
+    border: none;
 }

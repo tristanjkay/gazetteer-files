@@ -137,6 +137,6 @@ select {
 }
 
 option {
-    background: red;
+    background: red !important;
     border: none;
 }

@@ -146,17 +146,3 @@ option {
     border: none;
 }
 
-
-/* Default Column Widths*/
-.col-sm-8 {
-    width: -webkit-fill-available;
-    flex: 0 0 100%;
-    max-width: 100%;
-
-}
-
-.col-sm-4 {
-    display: none;
-    flex: 0 0 33.3%;
-    max-width: 33.3%;
-}

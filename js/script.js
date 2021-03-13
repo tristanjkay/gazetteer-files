@@ -28,7 +28,7 @@
 var map = L.map('map').fitWorld();
 var dropdown = document.getElementById("countriesDropdown");
 var selectedCountry;
-var col2 = document.querySelector('.col-sm-4');
+var col2 = document.querySelector('.col-sm-3');
 
 var countries = [];
 
@@ -616,8 +616,8 @@ window.onload=function(){
 		function showModal(mycountry) {
 			//document.querySelector('.modal').style.display = "inherit";
 			document.querySelector('.modal-title').innerHTML = mycountry.name;
-			document.querySelector('.col-sm-12').classList.add('col-sm-8');
-			document.querySelector('.col-sm-12.col-sm-8').classList.remove('col-sm-12');
+			document.querySelector('.col-sm-12').classList.add('col-sm-9');
+			document.querySelector('.col-sm-12.col-sm-9').classList.remove('col-sm-12');
 			col2.style.display = "block";
 			//document.querySelector('.col-sm-8').style.maxWidth = "66.666667%";
 			//getElementsByClassName('.modal').item(0).style.display = "inherit";

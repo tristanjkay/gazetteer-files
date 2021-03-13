@@ -615,8 +615,8 @@ window.onload=function(){
 
 		function showModal(mycountry) {
 			//document.querySelector('.modal').style.display = "inherit";
-			document.querySelector('.modal-title').innerHTML = mycountry.name;
-			document.querySelector('.continent-title').innerHTML = mycountry.continent;
+			document.querySelector('.modal-title').innerHTML = selectedCountry.name;
+			document.querySelector('.continent-title').innerHTML = selectedCountry.continent;
 			document.querySelector('.col-sm-12').classList.add('col-sm-9');
 			document.querySelector('.col-sm-12.col-sm-9').classList.remove('col-sm-12');
 			col2.style.display = "block";

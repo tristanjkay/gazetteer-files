@@ -615,8 +615,8 @@ window.onload=function(){
 			//document.querySelector('.modal').style.display = "inherit";
 			document.querySelector('.modal-title').innerHTML = mycountry.name;
 			document.querySelector('.col-sm-4').style.display = "block";
-			//document.querySelector('.col-sm-8').style.flex = "none";
-			//document.querySelector('.col-sm-8').style.maxWidth = "none";
+			document.querySelector('.col-sm-8').style.flex = "0 0 66.666667%";
+			document.querySelector('.col-sm-8').style.maxWidth = "66.666667%";
 			//getElementsByClassName('.modal').item(0).style.display = "inherit";
 		}
 

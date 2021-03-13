@@ -150,6 +150,8 @@ option {
 /* Default Column Widths*/
 .col-sm-8 {
     width: -webkit-fill-available;
+    flex: 0 0 100%;
+    max-width: 100%;
 
 }
 

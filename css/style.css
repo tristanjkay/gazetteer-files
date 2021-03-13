@@ -129,3 +129,9 @@ select {
 .leaflet-bar a, .leaflet-bar a:hover {
     border-bottom: none;
 }
+
+.leaflet-touch .leaflet-bar a {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+}

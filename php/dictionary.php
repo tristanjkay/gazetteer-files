@@ -2,7 +2,7 @@
 
 	$executionStartTime = microtime(true) / 1000;
 
-    $url='https://dictionaryapi.com/api/v3/references/collegiate/json/' . $_REQUEST['country'] . '?key=359dbcb3-e2b3-4a0d-a82f-51642a20b059';
+    $url='https://api.dictionaryapi.dev/api/v2/entries/en_US/' . $_REQUEST['country'];
 
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);

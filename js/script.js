@@ -245,51 +245,6 @@ window.onload=function(){
 				
 			});
 
-						//WeatherStack
-			$.ajax({
-				url: "php/weatherstack.php",
-				type: 'POST',
-				dataType: 'json',
-				data: {
-					country: encodeURIComponent((selectedCountry.name).trim()),
-				},
-				success: function(result) {
-
-					//console.log(selectedCountry.capital.name);
-					
-
-					if (result.status.name == "ok") {
-						
-						//Set Data to Country Object
-
-						//Capital
-						//Weather
-						selectedCountry.capital.weather.temperature = result['data']['current']['temperature'];
-						selectedCountry.capital.weather.icon = result['data']['current']['weather_icons'][0];
-						selectedCountry.capital.weather.description = result['data']['current']['weather_descriptions'][0];
-						selectedCountry.capital.weather.windSpeed = result['data']['current']['wind_speed'];
-						selectedCountry.capital.weather.windDirection = result['data']['current']['wind_dir'];
-						selectedCountry.capital.weather.precipitation = result['data']['current']['precip'];
-						selectedCountry.capital.weather.humidity = result['data']['current']['humidity'];
-						selectedCountry.capital.weather.cloudcover = result['data']['current']['cloudcover'];
-						selectedCountry.capital.weather.feelslike = result['data']['current']['feelslike'];
-						selectedCountry.capital.weather.uvIndex = result['data']['current']['uv_index'];
-						selectedCountry.capital.weather.visibility = result['data']['current']['visibility'];
-						selectedCountry.capital.weather.isDay = result['data']['current']['is_day'];
-						selectedCountry.capital.weather.barPressure = result['data']['current']['pressure'];
-
-
-						//Location
-						selectedCountry.capital.location = [result['data']['location']['lat'],result['data']['location']['lon']] ;
-
-					}
-				
-				},
-				error: function(jqXHR, textStatus, errorThrown) {
-
-				}
-				
-			});
 
 			//DictionaryAPI
 			$.ajax({
@@ -307,17 +262,9 @@ window.onload=function(){
 					if (result.status.name == "ok") {
 						var i = 0;
 						//Set Data to Country Object
-						result['data'][0]['shortdef'].forEach(element => {
-							if(element.includes("capital")){
 								selectedCountry.description = result['data'][0]['shortdef'][i];
-								i++;
-								console.log(i);
-								console.log(selectedCountry.description);
-							};
+
 							
-							
-						});
-						selectedCountry.description = result['data']
 				
 				}
 			},

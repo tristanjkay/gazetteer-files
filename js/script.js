@@ -311,6 +311,8 @@ window.onload=function(){
 							if(element.includes("capital")){
 								selectedCountry.description = result['data'][0]['shortdef'][i];
 								i++;
+								console.log(i);
+								console.log(selectedCountry.description);
 							};
 							
 							

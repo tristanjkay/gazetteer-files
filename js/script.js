@@ -263,8 +263,10 @@ window.onload=function(){
 						var i = 0;
 						//Set Data to Country Object
 						result['data'].forEach(element => {
-							if(element['shortdef'].includes("capital")){
-								selectedCountry.description = result['data'][i]['shortdef'];
+							if(element[0]['shortdef'][i].includes("capital")){
+								if(selectedCountry.description != null){
+									selectedCountry.description = result['data'][0]['shortdef'][i];
+								}
 								i++;
 								console.log(i);
 								console.log(selectedCountry.description);

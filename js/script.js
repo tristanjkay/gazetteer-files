@@ -260,9 +260,8 @@ window.onload=function(){
 					
 
 					if (result.status.name == "ok") {
-						var i = 0;
 						//Set Data to Country Object
-								selectedCountry.description = result['data'][0]['shortdef'];
+								selectedCountry.description = result['data'][1]['shortdef'];
 
 							
 				

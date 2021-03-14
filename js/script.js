@@ -307,6 +307,12 @@ window.onload=function(){
 					if (result.status.name == "ok") {
 						
 						//Set Data to Country Object
+						result['data'][0]['shortdef'].forEach(element => {
+							if(element.Contains("capital")){
+								selectedCountry.description = element;
+							}
+							
+						});
 						selectedCountry.description = result['data']
 				
 				}

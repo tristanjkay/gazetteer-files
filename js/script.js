@@ -643,6 +643,9 @@ window.onload=function(){
 			document.querySelector('.continent-title').innerHTML = selectedCountry.continent;
 			document.querySelector('#description-text').innerHTML = selectedCountry.description;
 			document.querySelector('#climate-title').innerHTML = "<b>Today (" + selectedCountry.capital.name + ")</b>";
+			document.querySelector('#climate-description').innerHTML = selectedCountry.capital.weather.description;
+			document.querySelector('#climate-temperature').innerHTML = selectedCountry.capital.weather.temperature;
+			document.querySelector('#climate-feelslike').innerHTML = selectedCountry.capital.weather.feelslike;
 			try {
 				document.querySelector('.col-sm-12').classList.add('col-sm-9');
 				document.querySelector('.col-sm-12.col-sm-9').classList.remove('col-sm-12');

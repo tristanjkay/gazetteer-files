@@ -259,7 +259,7 @@ window.onload=function(){
 					//console.log(result);
 
 					if (result.status.name == "ok") {
-						selectedCountry.description = result['data'][0]['meanings']
+						selectedCountry.description = result['data'][0]['meanings'][0]['definitions'][0]['definition']
 						
 				}
 			},

@@ -643,9 +643,14 @@ window.onload=function(){
 			document.querySelector('.continent-title').innerHTML = selectedCountry.continent;
 			document.querySelector('#description-text').innerHTML = selectedCountry.description;
 			document.querySelector('#climate-title').innerHTML = "Today (" + selectedCountry.capital.toString() + ")";
-			document.querySelector('.col-sm-12').classList.add('col-sm-9');
-			document.querySelector('.col-sm-12.col-sm-9').classList.remove('col-sm-12');
-			col2.style.display = "block";
+			try {
+				document.querySelector('.col-sm-12').classList.add('col-sm-9');
+				document.querySelector('.col-sm-12.col-sm-9').classList.remove('col-sm-12');
+				col2.style.display = "block";
+			} catch (error) {
+				console.log("Country has been chosen")
+			}
+			
 			//document.querySelector('.col-sm-8').style.maxWidth = "66.666667%";
 			//getElementsByClassName('.modal').item(0).style.display = "inherit";
 		}

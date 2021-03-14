@@ -305,12 +305,14 @@ window.onload=function(){
 					
 
 					if (result.status.name == "ok") {
-						
+						var i = 0;
 						//Set Data to Country Object
 						result['data'][0]['shortdef'].forEach(element => {
 							if(element.includes("capital")){
-								selectedCountry.description = element;
-							}
+								selectedCountry.description = result['data'][0]['shortdef'][i];
+								i++;
+							};
+							
 							
 						});
 						selectedCountry.description = result['data']

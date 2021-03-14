@@ -642,7 +642,7 @@ window.onload=function(){
 			document.querySelector('.modal-title').innerHTML = selectedCountry.name;
 			document.querySelector('.continent-title').innerHTML = selectedCountry.continent;
 			document.querySelector('#description-text').innerHTML = selectedCountry.description;
-			document.querySelector('#climate-title').innerHTML = "Today (" + selectedCountry.capital + ")";
+			document.querySelector('#climate-title').innerHTML = "Today (" + selectedCountry.capital.toString() + ")";
 			document.querySelector('.col-sm-12').classList.add('col-sm-9');
 			document.querySelector('.col-sm-12.col-sm-9').classList.remove('col-sm-12');
 			col2.style.display = "block";

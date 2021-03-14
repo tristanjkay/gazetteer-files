@@ -30,6 +30,8 @@ var dropdown = document.getElementById("countriesDropdown");
 var selectedCountry;
 var col2 = document.querySelector('.col-sm-3');
 
+
+
 var countries = [];
 
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
@@ -219,7 +221,7 @@ window.onload=function(){
 						//Capital
 						//Weather
 						selectedCountry.capital.weather.temperature = result['data']['current']['temperature'];
-						selectedCountry.capital.weather.icon = result['data']['current']['weather_icons'][0];
+						
 						selectedCountry.capital.weather.description = result['data']['current']['weather_descriptions'][0];
 						selectedCountry.capital.weather.windSpeed = result['data']['current']['wind_speed'];
 						selectedCountry.capital.weather.windDirection = result['data']['current']['wind_dir'];
@@ -232,6 +234,48 @@ window.onload=function(){
 						selectedCountry.capital.weather.isDay = result['data']['current']['is_day'];
 						selectedCountry.capital.weather.barPressure = result['data']['current']['pressure'];
 
+						
+						
+						//Weather icon
+						switch(selectedCountry.capital.weather.description) {
+							case "Partly cloudy":
+							  // code block
+							  selectedCountry.capital.weather.icon = "https://api.met.no/images/weathericons/svg/fair_day.svg"
+							  break;
+							case "Sunny":
+							  // code block
+							  selectedCountry.capital.weather.icon = "https://api.met.no/images/weathericons/svg/clearsky_day.svg"
+							  break;
+							case "Overcast":
+								// code block
+								selectedCountry.capital.weather.icon = "https://api.met.no/images/weathericons/svg/partlycloudy_day.svg"
+							  break;
+							case "Light Rain":
+								// code block
+								selectedCountry.capital.weather.icon = "https://api.met.no/images/weathericons/svg/lightrain.svg"
+							  break;
+							case "Clear":
+								// code block
+								selectedCountry.capital.weather.icon = "https://api.met.no/images/weathericons/svg/clearsky_day.svg"
+							  break;
+							case "Torrential rain shower":
+								// code block
+								selectedCountry.capital.weather.icon = "https://api.met.no/images/weathericons/svg/heavyrain.svg"
+							  break;
+							case "Light Rain Shower":
+								// code block
+								selectedCountry.capital.weather.icon = "https://api.met.no/images/weathericons/svg/lightrain.svg"
+							  break;
+							case "Cloudy":
+								// code block
+								selectedCountry.capital.weather.icon = "https://api.met.no/images/weathericons/svg/cloudy.svg"
+							  break;
+							default:
+							  // code block
+							  selectedCountry.capital.weather.icon = "https://api.met.no/images/weathericons/svg/clearsky_day.svg"
+
+						  }
+						selectedCountry.capital.weather.icon = result['data']['current']['weather_icons'][0];
 
 						//Location
 						selectedCountry.capital.location = [result['data']['location']['lat'],result['data']['location']['lon']] ;
@@ -643,6 +687,7 @@ window.onload=function(){
 			document.querySelector('.continent-title').innerHTML = selectedCountry.continent;
 			document.querySelector('#description-text').innerHTML = selectedCountry.description;
 			document.querySelector('#climate-title').innerHTML = "<b>Today (" + selectedCountry.capital.name + ")</b>";
+			document.querySelector('#climate-icon').innerHTML = '<img src="' + selectedCountry.capital.weather.icon + '" alt="Weathericon">';
 			document.querySelector('#climate-description').innerHTML = selectedCountry.capital.weather.description;
 			document.querySelector('#climate-temperature').innerHTML = selectedCountry.capital.weather.temperature + "&deg";
 			document.querySelector('#climate-feelslike').innerHTML = "Feels like " + selectedCountry.capital.weather.feelslike + "&deg";

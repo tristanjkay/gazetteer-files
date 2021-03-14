@@ -252,7 +252,7 @@ window.onload=function(){
 				type: 'POST',
 				dataType: 'json',
 				data: {
-					country: encodeURIComponent((selectedCountry.name).trim()),
+					country: selectedCountry.name,
 				},
 				success: function(result) {
 

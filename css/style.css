@@ -167,3 +167,7 @@ option {
 #climate-description {
     font-size: 1.5rem;
 }
+
+#climate-icon img {
+    width: 5rem;
+}

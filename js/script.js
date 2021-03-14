@@ -645,7 +645,7 @@ window.onload=function(){
 			document.querySelector('#climate-title').innerHTML = "<b>Today (" + selectedCountry.capital.name + ")</b>";
 			document.querySelector('#climate-description').innerHTML = selectedCountry.capital.weather.description;
 			document.querySelector('#climate-temperature').innerHTML = selectedCountry.capital.weather.temperature + "&deg";
-			document.querySelector('#climate-feelslike').innerHTML = selectedCountry.capital.weather.feelslike;
+			document.querySelector('#climate-feelslike').innerHTML = "Feels like " + selectedCountry.capital.weather.feelslike + "&deg";
 			try {
 				document.querySelector('.col-sm-12').classList.add('col-sm-9');
 				document.querySelector('.col-sm-12.col-sm-9').classList.remove('col-sm-12');

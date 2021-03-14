@@ -263,9 +263,9 @@ window.onload=function(){
 						var i = 0;
 						//Set Data to Country Object
 						result['data'].forEach(element => {
-							if(element[0]['shortdef'][i].includes("capital")){
+							if(element.includes("capital")){
 								if(selectedCountry.description != null){
-									selectedCountry.description = result['data'][0]['shortdef'][i];
+									selectedCountry.description = element;
 								}
 								i++;
 								console.log(i);

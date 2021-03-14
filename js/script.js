@@ -275,7 +275,6 @@ window.onload=function(){
 							  selectedCountry.capital.weather.icon = "https://api.met.no/images/weathericons/svg/clearsky_day.svg"
 
 						  }
-						selectedCountry.capital.weather.icon = result['data']['current']['weather_icons'][0];
 
 						//Location
 						selectedCountry.capital.location = [result['data']['location']['lat'],result['data']['location']['lon']] ;

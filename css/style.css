@@ -143,8 +143,11 @@ select {
 }
 
 option {
-    background: red !important;
     border: none;
+}
+
+.jumbotron {
+    background-color: transparent;
 }
 
 

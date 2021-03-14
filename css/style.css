@@ -157,3 +157,8 @@ option {
 }
 
 
+/* Weather */
+#climate-temperature{
+    font-size: 3rem;
+    margin-bottom: 0rem;
+}

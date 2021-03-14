@@ -308,7 +308,7 @@ window.onload=function(){
 						
 						//Set Data to Country Object
 						result['data'][0]['shortdef'].forEach(element => {
-							if(element.Contains("capital")){
+							if(element.includes("capital")){
 								selectedCountry.description = element;
 							}
 							

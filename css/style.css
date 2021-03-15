@@ -175,7 +175,7 @@ option {
 
 @media screen and (max-width: 575px) {
     .col-sm-3{
-      top: -5.5rem;
+      top: -9vh;
       z-index: 9999999;
       background: white;
       -webkit-box-shadow: 3px 3px 5px 6px #ccc;

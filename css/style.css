@@ -173,7 +173,7 @@ option {
 }
 
 
-@media screen and (max-width: 575px) {
+/* @media screen and (max-width: 575px) {
     .col-sm-3{
       top: -87px;
       z-index: 9999999;
@@ -185,4 +185,4 @@ option {
       padding: 2rem;
   }
   
-  }
+  } */

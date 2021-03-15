@@ -172,6 +172,11 @@ option {
     width: 5rem;  
 }
 
+#exchangerate {
+    padding: 1rem;
+    background-color: azure;
+}
+
 
 @media screen and (max-width: 1200px) {
 

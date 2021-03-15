@@ -329,7 +329,7 @@ window.onload=function(){
 					//console.log(result);
 
 					if (result.status.name == "ok") {
-						selectedCountry.description = result['data']['articles']
+						selectedCountry.news = result['data']['articles']
 						
 				}
 			},

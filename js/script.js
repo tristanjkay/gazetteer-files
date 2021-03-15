@@ -270,6 +270,10 @@ window.onload=function(){
 								// code block
 								selectedCountry.capital.weather.icon = "https://api.met.no/images/weathericons/svg/cloudy.svg"
 							  break;
+							case "Patchy rain possible":
+								// code block
+								selectedCountry.capital.weather.icon = "https://api.met.no/images/weathericons/svg/cloudy.svg"
+							  break;
 							default:
 							  // code block
 							  selectedCountry.capital.weather.icon = "https://api.met.no/images/weathericons/svg/clearsky_day.svg"

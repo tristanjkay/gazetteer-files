@@ -696,14 +696,13 @@ window.onload=function(){
 			document.querySelector('#climate-feelslike').innerHTML = "Feels like " + selectedCountry.capital.weather.feelslike + "&deg";
 			try {
 				document.querySelector('.col-sm-12').classList.add('col-sm-9');
-				document.querySelector('.col-sm-3').style.maxHeight = "calc(100vh - 9rem)";
-				document.querySelector('.col-sm-3').style.height = "calc(100vh - 9rem)";
-				
 				document.querySelector('.col-sm-12.col-sm-9').classList.remove('col-sm-12');
 				col2.style.display = "block";
 			} catch (error) {
 				console.log("Country has been chosen")
 			}
+			document.querySelector('.col-sm-3').style.maxHeight = "calc(100vh - 9rem)";
+				document.querySelector('.col-sm-3').style.height = "calc(100vh - 9rem)";
 			
 			//document.querySelector('.col-sm-8').style.maxWidth = "66.666667%";
 			//getElementsByClassName('.modal').item(0).style.display = "inherit";

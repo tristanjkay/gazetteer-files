@@ -692,6 +692,9 @@ window.onload=function(){
 			document.querySelector('#climate-feelslike').innerHTML = "Feels like " + selectedCountry.capital.weather.feelslike + "&deg";
 			try {
 				document.querySelector('.col-sm-12').classList.add('col-sm-9');
+				document.querySelector('.col-sm-12').style.maxHeight = "calc(100vh - 9rem)";
+				document.querySelector('.col-sm-12').style.height = "calc(100vh - 9rem)";
+				
 				document.querySelector('.col-sm-12.col-sm-9').classList.remove('col-sm-12');
 				col2.style.display = "block";
 			} catch (error) {

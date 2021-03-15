@@ -316,6 +316,29 @@ window.onload=function(){
 				
 			});
 
+			//NewsAPI
+			$.ajax({
+				url: "php/news.php",
+				type: 'POST',
+				dataType: 'json',
+				data: {
+					country: selectedCountry.name,
+				},
+				success: function(result) {
+
+					//console.log(result);
+
+					if (result.status.name == "ok") {
+						selectedCountry.description = result['data']['articles']
+						
+				}
+			},
+				error: function(jqXHR, textStatus, errorThrown) {
+
+				}
+				
+			});
+
 			//WorldBank
 		//GDP
 		$.ajax({

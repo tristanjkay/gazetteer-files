@@ -169,5 +169,21 @@ option {
 }
 
 #climate-icon img {
-    width: 5rem;
+    width: 5rem;  
 }
+
+
+@media only screen and (min-width: 575px) {
+    .col-sm-3{
+      display: block;
+      top: -10rem;
+      z-index: 9999999;
+      background: white;
+      -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+      -moz-box-shadow: 3px 3px 5px 6px #ccc;
+      box-shadow: 3px 3px 5px 6px #cccccc38;
+      border-radius: 40px;
+      padding: 2rem;
+  }
+  
+  }

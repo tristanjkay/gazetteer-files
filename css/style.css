@@ -173,11 +173,16 @@ option {
 }
 
 
+
 @media screen and (max-width: 575px) {
 
 
   #map {
     height: 38vh;
+  }
+
+  .col-sm-3 {
+    overflow-y: scroll;
   }
   
   }

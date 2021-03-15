@@ -702,7 +702,8 @@ window.onload=function(){
 				console.log("Country has been chosen")
 			}
 			document.querySelector('.col-sm-3').style.maxHeight = "calc(100vh - 9rem)";
-				document.querySelector('.col-sm-3').style.height = "calc(100vh - 9rem)";
+			document.querySelector('.col-sm-3').style.height = "calc(100vh - 9rem)";
+			document.querySelector('.col-sm-3').style.overflowY = "scroll";
 			
 			//document.querySelector('.col-sm-8').style.maxWidth = "66.666667%";
 			//getElementsByClassName('.modal').item(0).style.display = "inherit";

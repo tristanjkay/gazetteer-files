@@ -183,6 +183,7 @@ option {
 
   .col-sm-3 {
     overflow-y:visible !important;
+    margin: 1rem !important;
   }
   
   }

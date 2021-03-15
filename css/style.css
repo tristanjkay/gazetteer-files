@@ -173,16 +173,11 @@ option {
 }
 
 
-/* @media screen and (max-width: 575px) {
-    .col-sm-3{
-      top: -87px;
-      z-index: 9999999;
-      background: white;
-      -webkit-box-shadow: 3px 3px 5px 6px #ccc;
-      -moz-box-shadow: 3px 3px 5px 6px #ccc;
-      box-shadow: 3px 3px 5px 6px #cccccc38;
-      border-radius: 40px;
-      padding: 2rem;
+@media screen and (max-width: 575px) {
+
+
+  #map {
+    height: 38vh;
   }
   
-  } */
+  }

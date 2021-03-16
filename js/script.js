@@ -6,6 +6,8 @@
 3. RESTCountries
 4. WeatherStack
 5. WorldBank
+6. News API
+7. Dictionary API 
 
 
 */
@@ -13,13 +15,14 @@
 
 //CATEGORIES
 /*
-- ECONOMY
+- ECONOMY +
 - HEALTH
 - ENVIRONMENT
 - EDUCATION
 - CLIMATE
 - CRIME
 - TRAVEL
+- NEWS
 
 */
 

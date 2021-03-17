@@ -7,7 +7,8 @@
 4. WeatherStack
 5. WorldBank
 6. News API
-7. Dictionary API 
+7. Dictionary API
+8. Exchange Rates https://api.fastforex.io/fetch-one?from=USD&to=EUR&api_key=db3282d82a-f27cfc1282-qq44i7
 
 
 */
@@ -186,6 +187,8 @@ window.onload=function(){
 							//selectedCountry.continent = result['data']['subregion'];
 							selectedCountry.population = result['data']['population'];
 							selectedCountry.currency = result['data']['currencies'][0]['name'];
+							selectedCountry.currencycode = result['data']['currencies'][0]['code'];
+							selectedCountry.currencysymbol = result['data']['currencies'][0]['symbol'];
 							selectedCountry.currencies = result['data']['currencies'];
 							selectedCountry.language = result['data']['languages'][0]['name'];
 							selectedCountry.flag = result['data']['flag'];
@@ -310,6 +313,29 @@ window.onload=function(){
 
 					if (result.status.name == "ok") {
 						selectedCountry.description = result['data'][0]['meanings'][0]['definitions'][0]['definition']
+						
+				}
+			},
+				error: function(jqXHR, textStatus, errorThrown) {
+
+				}
+				
+			});
+
+			//ExchangeRateAPI
+			$.ajax({
+				url: "php/exchangerate.php",
+				type: 'POST',
+				dataType: 'json',
+				data: {
+					country: selectedCountry.currencycode,
+				},
+				success: function(result) {
+
+					//console.log(result);
+
+					if (result.status.name == "ok") {
+						selectedCountry.exchangerate = result['data']['result'][selectedCountry.currencycode]
 						
 				}
 			},

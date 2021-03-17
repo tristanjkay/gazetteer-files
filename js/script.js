@@ -712,7 +712,8 @@ window.onload=function(){
 
 		function showModal(mycountry) {
 			//document.querySelector('.modal').style.display = "inherit";
-			document.querySelector('.modal-title').innerHTML = selectedCountry.name;
+			//document.querySelector('.modal-title').innerHTML = selectedCountry.name;
+			$(".modal-title").html(selectedCountry.name);
 			document.querySelector('.continent-title').innerHTML = selectedCountry.continent;
 			document.querySelector('#description-text').innerHTML = selectedCountry.description;
 			document.querySelector('#climate-title').innerHTML = "<b>Today (" + selectedCountry.capital.name + ")</b>";

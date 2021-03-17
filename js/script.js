@@ -720,7 +720,7 @@ window.onload=function(){
 			$('#climate-description').html(selectedCountry.capital.weather.description);
 			$('#climate-temperature').html(selectedCountry.capital.weather.temperature + "&deg");
 			$('#climate-feelslike').html("Feels like " + selectedCountry.capital.weather.feelslike + "&deg");
-			
+
 			try {
 				document.querySelector('.col-sm-12').classList.add('col-sm-9');
 				document.querySelector('.col-sm-12.col-sm-9').classList.remove('col-sm-12');
@@ -732,8 +732,7 @@ window.onload=function(){
 			document.querySelector('.col-sm-3').style.height = "calc(100vh - 9rem)";
 			document.querySelector('.col-sm-3').style.overflowY = "scroll";
 			
-			//document.querySelector('.col-sm-8').style.maxWidth = "66.666667%";
-			//getElementsByClassName('.modal').item(0).style.display = "inherit";
+
 		}
 		
 

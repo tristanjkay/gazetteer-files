@@ -181,6 +181,7 @@ option {
 
 #rowitem {
     margin: 1rem;
+    justify-content: center;
 }
 
 

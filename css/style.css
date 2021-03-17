@@ -176,6 +176,11 @@ option {
     padding: 1rem;
     background-color: #e5e9f6;
     text-align: center;
+    align-items: center; 
+}
+
+#statrow {
+    margin: 1rem;
 }
 
 

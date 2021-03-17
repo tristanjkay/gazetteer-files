@@ -174,7 +174,8 @@ option {
 
 #exchangerate {
     padding: 1rem;
-    background-color: azure;
+    background-color: #e5e9f6;
+    text-align: center;
 }
 
 

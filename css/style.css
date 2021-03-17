@@ -184,6 +184,10 @@ option {
     justify-content: center;
 }
 
+#value {
+    font-size: 3rem;
+}
+
 
 @media screen and (max-width: 1200px) {
 

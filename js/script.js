@@ -720,6 +720,7 @@ window.onload=function(){
 			$('#climate-description').html(selectedCountry.capital.weather.description);
 			$('#climate-temperature').html(selectedCountry.capital.weather.temperature + "&deg");
 			$('#climate-feelslike').html("Feels like " + selectedCountry.capital.weather.feelslike + "&deg");
+			$('#currency').html(selectedCountry.currency);
 
 			try {
 				document.querySelector('.col-sm-12').classList.add('col-sm-9');

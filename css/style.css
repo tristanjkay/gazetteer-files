@@ -188,6 +188,10 @@ option {
     font-size: 3rem;
 }
 
+#key {
+    align-self: center;
+}
+
 
 @media screen and (max-width: 1200px) {
 

@@ -711,16 +711,16 @@ window.onload=function(){
 		}
 
 		function showModal(mycountry) {
-			//document.querySelector('.modal').style.display = "inherit";
-			//document.querySelector('.modal-title').innerHTML = selectedCountry.name;
+
 			$(".modal-title").html(selectedCountry.name);
-			document.querySelector('.continent-title').innerHTML = selectedCountry.continent;
-			document.querySelector('#description-text').innerHTML = selectedCountry.description;
-			document.querySelector('#climate-title').innerHTML = "<b>Today (" + selectedCountry.capital.name + ")</b>";
-			document.querySelector('#climate-icon').innerHTML = '<img src="' + selectedCountry.capital.weather.icon + '" alt="Weathericon">';
-			document.querySelector('#climate-description').innerHTML = selectedCountry.capital.weather.description;
-			document.querySelector('#climate-temperature').innerHTML = selectedCountry.capital.weather.temperature + "&deg";
-			document.querySelector('#climate-feelslike').innerHTML = "Feels like " + selectedCountry.capital.weather.feelslike + "&deg";
+			$(".continent-title").html(selectedCountry.continent);
+			$("#description-text").html(selectedCountry.description);
+			$("#climate-title").html("<b>Today (" + selectedCountry.capital.name + ")</b>");
+			$('#climate-icon').html('<img src="' + selectedCountry.capital.weather.icon + '" alt="Weathericon">');
+			$('#climate-description').html(selectedCountry.capital.weather.description);
+			$('#climate-temperature').html(selectedCountry.capital.weather.temperature + "&deg");
+			$('#climate-feelslike').html("Feels like " + selectedCountry.capital.weather.feelslike + "&deg");
+			
 			try {
 				document.querySelector('.col-sm-12').classList.add('col-sm-9');
 				document.querySelector('.col-sm-12.col-sm-9').classList.remove('col-sm-12');

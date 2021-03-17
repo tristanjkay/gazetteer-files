@@ -2,7 +2,7 @@
 
 	$executionStartTime = microtime(true) / 1000;
 
-    $url='https://api.fastforex.io/fetch-one?from=GDP&to=' . $_REQUEST['country'] . '&api_key=db3282d82a-f27cfc1282-qq44i7';
+    $url='https://free.currconv.com/api/v7/convert?q=GBP_' . $_REQUEST['country'] . '&compact=ultra&apiKey=4d137d5e5392cb18274d';
 
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);

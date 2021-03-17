@@ -335,7 +335,8 @@ window.onload=function(){
 					//console.log(result);
 
 					if (result.status.name == "ok") {
-						selectedCountry.exchangerate = result['data']['result'][selectedCountry.currencycode]
+						var code = "GBP_" + selectedCountry.currencycode;
+						selectedCountry.exchangerate = result['data'][code];
 						
 				}
 			},

@@ -9,6 +9,7 @@
 6. News API
 7. Dictionary API
 8. Exchange Rates https://api.fastforex.io/fetch-one?from=USD&to=EUR&api_key=db3282d82a-f27cfc1282-qq44i7
+9. POIs http://api.mapbox.com/geocoding/v5/mapbox.places/texas.json?access_token=pk.eyJ1IjoidHJpc3RhbmprYXkiLCJhIjoiY2ttZXU2N2N1MDE4cDJ3a2JmNTh2bjFubCJ9.7S834EYCLeCMakiK1IiVUg
 
 
 */

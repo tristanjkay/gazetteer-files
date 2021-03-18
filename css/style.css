@@ -179,10 +179,16 @@ option {
     align-items: center; 
 }
 
+#exchangerate.row {
+    border-radius: 10px;
+}
+
 #rowitem {
     margin: 1rem;
     justify-content: center;
 }
+
+
 
 #value {
     font-size: 3rem;

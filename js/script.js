@@ -218,7 +218,7 @@ window.onload=function(){
 				},
 				success: function(result) {
 
-					console.log(result);
+					//console.log(result);
 					
 
 					if (result.status.name == "ok") {

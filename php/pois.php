@@ -1,7 +1,5 @@
 <?php
 
-	$executionStartTime = microtime(true) / 1000;
-
 	$url ='http://api.mapbox.com/geocoding/v5/mapbox.places/' . $_REQUEST['country'] . '.json?access_token=pk.eyJ1IjoidHJpc3RhbmprYXkiLCJhIjoiY2ttZXU2N2N1MDE4cDJ3a2JmNTh2bjFubCJ9.7S834EYCLeCMakiK1IiVUg'
 
 	$ch = curl_init();

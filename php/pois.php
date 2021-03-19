@@ -1,9 +1,6 @@
 <?php
 
 	$executionStartTime = microtime(true) / 1000;
-
-    $url='http://newsapi.org/v2/everything?q=' . $_REQUEST['country'] . '&from=2021-02-15&sortBy=publishedAt&apiKey=f6c3d2f0f0bd4b27860fb2d9fc938d75';
-
 	$url ='http://api.mapbox.com/geocoding/v5/mapbox.places/' . $_REQUEST['country'] . '.json?access_token=pk.eyJ1IjoidHJpc3RhbmprYXkiLCJhIjoiY2ttZXU2N2N1MDE4cDJ3a2JmNTh2bjFubCJ9.7S834EYCLeCMakiK1IiVUg'
 
 	$ch = curl_init();

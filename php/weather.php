@@ -2,7 +2,7 @@
 
 	$executionStartTime = microtime(true) / 1000;
 
-    $url='http://api.weatherstack.com/current?access_key=914ab290b5a067d72efa4d6c510059ef&query=' . $_REQUEST['country'];
+    $url='http://api.weatherapi.com/v1/current.json?key=86e31af8f3084b5b9ed104335211903&q=' . $_REQUEST['country'];
 
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);

@@ -210,11 +210,11 @@ window.onload=function(){
 
 			//WeatherStack
 			$.ajax({
-				url: "php/weatherstack.php",
+				url: "php/weather.php",
 				type: 'POST',
 				dataType: 'json',
 				data: {
-					country: encodeURIComponent((selectedCountry.name).trim()),
+					country: selectedCountry.capital,
 				},
 				success: function(result) {
 
@@ -227,19 +227,19 @@ window.onload=function(){
 
 						//Capital
 						//Weather
-						selectedCountry.capital.weather.temperature = result['data']['current']['temperature'];
-						
-						selectedCountry.capital.weather.description = result['data']['current']['weather_descriptions'][0];
-						selectedCountry.capital.weather.windSpeed = result['data']['current']['wind_speed'];
+						selectedCountry.capital.weather.temperature = result['data']['current']['temp_c'];
+						selectedCountry.capital.weather.description = result['data']['current']['condition']['text'];
+						selectedCountry.capital.weather.windSpeed = result['data']['current']['wind_mph'];
 						selectedCountry.capital.weather.windDirection = result['data']['current']['wind_dir'];
-						selectedCountry.capital.weather.precipitation = result['data']['current']['precip'];
+						selectedCountry.capital.weather.precipitation = result['data']['current']['precip_mm'];
+
 						selectedCountry.capital.weather.humidity = result['data']['current']['humidity'];
-						selectedCountry.capital.weather.cloudcover = result['data']['current']['cloudcover'];
-						selectedCountry.capital.weather.feelslike = result['data']['current']['feelslike'];
-						selectedCountry.capital.weather.uvIndex = result['data']['current']['uv_index'];
-						selectedCountry.capital.weather.visibility = result['data']['current']['visibility'];
+						selectedCountry.capital.weather.cloudcover = result['data']['current']['cloud'];
+						selectedCountry.capital.weather.feelslike = result['data']['current']['feelslike_c'];
+						selectedCountry.capital.weather.uvIndex = result['data']['current']['uv'];
+						selectedCountry.capital.weather.visibility = result['data']['current']['vis_km'];
 						selectedCountry.capital.weather.isDay = result['data']['current']['is_day'];
-						selectedCountry.capital.weather.barPressure = result['data']['current']['pressure'];
+						selectedCountry.capital.weather.barPressure = result['data']['current']['pressure_mb'];
 
 						
 						

@@ -373,7 +373,7 @@ window.onload=function(){
 			//POIs
 			$.ajax({
 				url: "php/pois.php",
-				type: 'GET',
+				type: 'POST',
 				dataType: 'json',
 				data: {
 					country: 'bolivia',

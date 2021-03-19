@@ -102,6 +102,9 @@ window.onload=function(){
 									"weather":{
 
 									}
+								},
+								"pois": {
+
 								}
 							   }	
 

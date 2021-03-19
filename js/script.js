@@ -376,14 +376,14 @@ window.onload=function(){
 				type: 'POST',
 				dataType: 'json',
 				data: {
-					country: "bolivia",
+					country: 'bolivia',
 				},
 				success: function(result) {
 
 					console.log(result);
 
 					if (result.status.name == "ok") {
-						selectedCountry.pois = result['data']['features']
+						selectedCountry.pois = result['data'];
 						
 				}
 			},

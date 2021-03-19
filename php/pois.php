@@ -1,6 +1,6 @@
 <?php
 
-	$url ='http://api.mapbox.com/geocoding/v5/mapbox.places/' . $_REQUEST['country'] . '.json?access_token=pk.eyJ1IjoidHJpc3RhbmprYXkiLCJhIjoiY2ttZXU2N2N1MDE4cDJ3a2JmNTh2bjFubCJ9.7S834EYCLeCMakiK1IiVUg'
+	$url ='https://www.triposo.com/api/20210317/poi.json?location_id=' . $_REQUEST['country'] . '&count=10&fields=id,name,score,intro,tag_labels,best_for&order_by=-score&account=5H84J8Q3&token=kkuxteg67z108qmihlu82c7vks8mhfw3'
 
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
@@ -17,7 +17,7 @@
 	$output['status']['name'] = "ok";
 	$output['status']['description'] = "success";
 	$output['status']['returnedIn'] = (microtime(true) - $executionStartTime) / 1000 . " ms";
-	$output['data'] = $decode['features'];
+	$output['data'] = $decode;
 	
 	header('Content-Type: application/json; charset=UTF-8');
 

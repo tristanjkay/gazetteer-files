@@ -9,7 +9,9 @@
 6. News API
 7. Dictionary API
 8. Exchange Rates https://api.fastforex.io/fetch-one?from=USD&to=EUR&api_key=db3282d82a-f27cfc1282-qq44i7
-9. POIs http://api.mapbox.com/geocoding/v5/mapbox.places/texas.json?access_token=pk.eyJ1IjoidHJpc3RhbmprYXkiLCJhIjoiY2ttZXU2N2N1MDE4cDJ3a2JmNTh2bjFubCJ9.7S834EYCLeCMakiK1IiVUg
+9. POIs https://www.triposo.com/api/20210317/poi.json?location_id=Sydney&count=10&fields=id,name,score,intro,tag_labels,best_for&order_by=-score&account=5H84J8Q3&token=kkuxteg67z108qmihlu82c7vks8mhfw3
+9b. POIs by TAG https://www.triposo.com/api/20210317/poi.json?location_id=Sydney&tag_labels=district-city_centre|district-the_rocks&tag_labels=cuisine-Italian&count=10&fields=id,name,score,intro,tag_labels,best_for&order_by=-score&account=5H84J8Q3&token=kkuxteg67z108qmihlu82c7vks8mhfw3
+10. Images https://www.triposo.com/api/20210317/location.json?id=London&account=5H84J8Q3&token=kkuxteg67z108qmihlu82c7vks8mhfw3
 
 
 */
@@ -386,7 +388,7 @@ window.onload=function(){
 					console.log(result);
 
 					if (result.status.name == "ok") {
-						selectedCountry.pois = result['data'];
+						selectedCountry.pois = result['data']['results'];
 						
 				}
 			},

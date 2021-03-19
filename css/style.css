@@ -183,9 +183,6 @@ option {
     border-radius: 10px;
 }
 
-#exchangerate p {
-    font-size: 3rem;
-}
 
 #rowitem {
     margin: 1rem;
@@ -194,7 +191,7 @@ option {
 
 
 
-#value {
+#value, #exchangeratevalue {
     font-size: 3rem;
 }
 

@@ -377,7 +377,7 @@ window.onload=function(){
 
 			//POIs
 			$.ajax({
-				url: "php/pois.php",
+				url: "php/pointsofinterest.php",
 				type: 'POST',
 				dataType: 'json',
 				data: {

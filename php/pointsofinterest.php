@@ -1,5 +1,7 @@
 <?php
 
+	$executionStartTime = microtime(true) / 1000;
+	
 	$url ='https://www.triposo.com/api/20210317/poi.json?location_id=' . $_REQUEST['country'] . '&count=10&fields=id,name,score,intro,tag_labels,best_for&order_by=-score&account=5H84J8Q3&token=kkuxteg67z108qmihlu82c7vks8mhfw3'
 
 	$ch = curl_init();

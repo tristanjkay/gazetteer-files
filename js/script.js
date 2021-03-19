@@ -208,7 +208,7 @@ window.onload=function(){
 					
 				});
 
-			//WeatherStack
+			//Weather
 			$.ajax({
 				url: "php/weather.php",
 				type: 'POST',
@@ -218,7 +218,7 @@ window.onload=function(){
 				},
 				success: function(result) {
 
-					//console.log(selectedCountry.capital.name);
+					console.log(result);
 					
 
 					if (result.status.name == "ok") {

@@ -183,6 +183,10 @@ option {
     border-radius: 10px;
 }
 
+#exchangerate p {
+    font-size: 3rem;
+}
+
 #rowitem {
     margin: 1rem;
     justify-content: center;

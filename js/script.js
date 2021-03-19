@@ -388,6 +388,7 @@ window.onload=function(){
 				}
 			},
 				error: function(jqXHR, textStatus, errorThrown) {
+					console.log(textStatus);
 
 				}
 				

@@ -214,7 +214,7 @@ window.onload=function(){
 				type: 'POST',
 				dataType: 'json',
 				data: {
-					country: selectedCountry.capital,
+					country: selectedCountry.name,
 				},
 				success: function(result) {
 

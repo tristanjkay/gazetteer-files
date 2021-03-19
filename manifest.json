@@ -1,7 +1,7 @@
 {
-    "name": "Dev'Coffee",
-    "short_name": "DevCoffee",
-    "start_url": "index.html",
+    "name": "Gazetteer",
+    "short_name": "Gazetteer",
+    "start_url": "/index.html",
     "display": "standalone",
     "background_color": "#fdfdfd",
     "theme_color": "#db4938",

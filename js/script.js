@@ -350,7 +350,7 @@ window.onload=function(){
 			//NewsAPI
 			$.ajax({
 				url: "php/news.php",
-				type: 'GET',
+				type: 'POST',
 				dataType: 'json',
 				data: {
 					country: selectedCountry.name,
@@ -373,7 +373,7 @@ window.onload=function(){
 			//POIs
 			$.ajax({
 				url: "php/pois.php",
-				type: 'POST',
+				type: 'GET',
 				dataType: 'json',
 				data: {
 					country: 'bolivia',

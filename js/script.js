@@ -370,6 +370,29 @@ window.onload=function(){
 				
 			});
 
+			//POIs
+			$.ajax({
+				url: "php/pois.php",
+				type: 'POST',
+				dataType: 'json',
+				data: {
+					country: selectedCountry.name,
+				},
+				success: function(result) {
+
+					//console.log(result);
+
+					if (result.status.name == "ok") {
+						selectedCountry.pois = result['data']['features']
+						
+				}
+			},
+				error: function(jqXHR, textStatus, errorThrown) {
+
+				}
+				
+			});
+
 			//WorldBank
 		//GDP
 		$.ajax({

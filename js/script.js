@@ -394,6 +394,8 @@ window.onload=function(){
 			},
 				error: function(jqXHR, textStatus, errorThrown) {
 					console.log(textStatus);
+					console.log(errorThrown);
+					console.log(jqXHR);
 
 				}
 				

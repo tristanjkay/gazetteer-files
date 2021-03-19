@@ -4,7 +4,7 @@
 1. GeoJSON
 2. GeoNames
 3. RESTCountries
-4. WeatherStack
+4. Weather http://api.weatherapi.com/v1/current.json?key=86e31af8f3084b5b9ed104335211903&q=london
 5. WorldBank
 6. News API
 7. Dictionary API

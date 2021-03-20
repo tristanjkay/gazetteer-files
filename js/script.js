@@ -338,7 +338,7 @@ window.onload=function(){
 				},
 				success: function(result) {
 
-					//console.log(result);
+					console.log("Exchange Rate : " + result);
 
 					if (result.status.name == "ok") {
 						var code = "GBP_" + selectedCountry.currencycode;

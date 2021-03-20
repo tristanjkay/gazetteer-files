@@ -388,7 +388,7 @@ window.onload=function(){
 					console.log(result);
 
 					if (result.status.name == "ok") {
-						selectedCountry.pois = result['data']['results'];
+						selectedCountry.pois = result['data'];
 						
 				}
 			},

@@ -385,7 +385,7 @@ window.onload=function(){
 				},
 				success: function(result) {
 
-					console.log(result);
+					//console.log(result);
 
 					if (result.status.name == "ok") {
 						selectedCountry.pois = result['data'];
@@ -393,9 +393,9 @@ window.onload=function(){
 				}
 			},
 				error: function(jqXHR, textStatus, errorThrown) {
-					console.log(textStatus);
-					console.log(errorThrown);
-					console.log(jqXHR);
+					//console.log(textStatus);
+					//console.log(errorThrown);
+					//console.log(jqXHR);
 
 				}
 				

@@ -203,6 +203,10 @@ option {
     width: 3rem;
 }
 
+#gdp {
+    text-align: center;
+}
+
 
 @media screen and (max-width: 1200px) {
 

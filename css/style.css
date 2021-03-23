@@ -199,8 +199,12 @@ option {
     align-self: center;
 }
 
-.fa-male, .fa-female, .fa-baby {
+.fa-male, .fa-female{
     height: 8rem;
+}
+
+.fa-baby {
+    height: 5rem;
 }
 
 #gdp {

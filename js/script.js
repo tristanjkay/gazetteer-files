@@ -1,6 +1,7 @@
 //API List
 
 /*
+
 1. GeoJSON
 2. GeoNames
 3. RESTCountries
@@ -12,7 +13,8 @@
 9. POIs https://www.triposo.com/api/20210317/poi.json?location_id=Sydney&count=10&fields=id,name,score,intro,tag_labels,best_for&order_by=-score&account=5H84J8Q3&token=kkuxteg67z108qmihlu82c7vks8mhfw3
 9b. POIs by TAG https://www.triposo.com/api/20210317/poi.json?location_id=Sydney&tag_labels=district-city_centre|district-the_rocks&tag_labels=cuisine-Italian&count=10&fields=id,name,score,intro,tag_labels,best_for&order_by=-score&account=5H84J8Q3&token=kkuxteg67z108qmihlu82c7vks8mhfw3
 10. Images https://www.triposo.com/api/20210317/location.json?id=London&account=5H84J8Q3&token=kkuxteg67z108qmihlu82c7vks8mhfw3
-
+11. Flights https://opensky-network.org/api/flights/departure?airport=EGLL&begin=1616315812&end=1616761412
+12. ICAO Airports - http://airlabs.co/api/v6/airports?api_key=a6e92fe4-2d6b-4456-b2b6-ec9c12e96a66
 
 */
 
@@ -22,10 +24,10 @@
 - ECONOMY +
 - HEALTH
 - ENVIRONMENT
-- EDUCATION
+- EDUCATION	
 - CLIMATE
 - CRIME
-- TRAVEL
+- TRAVEL & Flights 
 - NEWS
 
 */
@@ -36,8 +38,9 @@ var map = L.map('map').fitWorld();
 var dropdown = document.getElementById("countriesDropdown");
 var selectedCountry;
 var col2 = document.querySelector('.col-sm-3');
+var epochTime = Date.now();
 
-
+   
 
 var countries = [];
 

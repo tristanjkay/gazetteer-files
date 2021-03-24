@@ -218,11 +218,19 @@ option {
     margin-bottom: 1rem;
 }
 
+#covidChart{
+    justify-content: center;
+    background-color: #e5e9f6;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
 #bar1, #bar2, #bar3, #bar4 {
     height: 3rem;
     background-color: red;
     margin: 1rem;
-    width:5%;
+    flex-grow: .1;
 }
 
 

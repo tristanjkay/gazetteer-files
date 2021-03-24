@@ -211,6 +211,12 @@ option {
     text-align: center;
 }
 
+#latestFlight {
+    background-color: #e5e9f6;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
 
 @media screen and (max-width: 1200px) {
 

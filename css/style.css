@@ -221,6 +221,7 @@ option {
 #bar1, #bar2, #bar3, #bar4 {
     height: 3rem;
     background-color: red;
+    padding: 1rem;
 }
 
 

@@ -227,7 +227,7 @@ option {
 }
 
 #bar1, #bar2, #bar3, #bar4 {
-    height: 6rem;
+    height: 10rem;
     background-color: #2b344f;
     border-radius: 100px;
     margin: 1.8rem;

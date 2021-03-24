@@ -200,11 +200,11 @@ option {
 }
 
 .fa-male, .fa-female, .fa-stethoscope, .fa-gas-pump, .fa-seedling, .fa-smog, .fa-graduation-cap, .fa-coins, .fa-book, .fa-exclamation-circle, .fa-percent, .fa-bars, .fa-concierge-bell, .fa-chart-line, .fa-plane{
-    height: 8rem;
+    height: 6rem;
 }
 
 .fa-baby {
-    height: 5rem;
+    height: 3rem;
 }
 
 #gdp {

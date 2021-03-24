@@ -223,11 +223,10 @@ option {
     background-color: #e5e9f6;
     border-radius: 10px;
     padding: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
 }
 
 #bar1, #bar2, #bar3, #bar4 {
-    height: 10rem;
     background-color: #2b344f;
     border-radius: 100px;
     margin: 1.3rem;
@@ -235,6 +234,25 @@ option {
     width: 0.001rem;
     padding: .5rem;
 
+}
+
+#bar1 {
+    height: 10rem;
+}
+#bar2 {
+    height: 10rem;
+}
+#bar3 {
+    height: 10rem;
+}
+#bar4 {
+    height: 10rem;
+}
+#bar5 {
+    height: 10rem;
+}
+#bar6 {
+    height: 10rem;
 }
 
 #charttext{

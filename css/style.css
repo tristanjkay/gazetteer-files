@@ -232,7 +232,8 @@ option {
     border-radius: 100px;
     margin: 1.8rem;
     flex-grow: .02;
-    width: 0.01rem;
+    width: 0.001rem;
+    padding: .5rem;
 
 }
 

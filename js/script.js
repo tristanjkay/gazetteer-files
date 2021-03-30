@@ -93,7 +93,7 @@ window.onload=function(){
 
 				},
 				success: function(result) {
-	
+					console.log("GeoJSON Success")
 					
 	
 					if (result.status.name == "ok") {
@@ -132,7 +132,7 @@ window.onload=function(){
 				
 				},
 				error: function(jqXHR, textStatus, errorThrown) {
-	
+					console.log("GeoJSON Fail")
 				}
 				
 			})
@@ -351,6 +351,7 @@ window.onload=function(){
 				}
 			},
 				error: function(jqXHR, textStatus, errorThrown) {
+
 
 				}
 				

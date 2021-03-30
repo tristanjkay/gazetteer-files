@@ -366,7 +366,7 @@ window.onload=function(){
 				},
 				success: function(result) {
 
-					console.log(result);
+					console.log("This is the news");
 
 					if (result.status.name == "ok") {
 						selectedCountry.news = result['data']['articles']

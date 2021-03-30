@@ -45,6 +45,9 @@ var epochTime = Date.now();
 
 var countries = [];
 
+var debugActive;
+var debugLog; 
+
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
 	maxZoom: 18,
 	attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
@@ -123,7 +126,7 @@ window.onload=function(){
 						option.value = country.iso2;
         				dropdown.add(option);
 
-
+ 
 						});
 	
 						
@@ -140,6 +143,7 @@ window.onload=function(){
 
 		//Do something when a country is selected
 		function countrySelected(mycountry) {
+			
 
 			//Remove previous geometry
 			$('.leaflet-interactive').remove();
@@ -172,6 +176,7 @@ window.onload=function(){
 					
 					},
 					error: function(jqXHR, textStatus, errorThrown) {
+						console.log("GeoNames Fail")
 
 					}
 					
@@ -187,7 +192,7 @@ window.onload=function(){
 					},
 					success: function(result) {
 
-						//console.log(result);
+						console.log("RESTCountries Success");
 
 						if (result.status.name == "ok") {
 
@@ -212,6 +217,7 @@ window.onload=function(){
 					
 					},
 					error: function(jqXHR, textStatus, errorThrown) {
+						console.log("RESTCountries Fail")
 
 					}
 					
@@ -227,7 +233,7 @@ window.onload=function(){
 				},
 				success: function(result) {
 
-					//console.log(result);
+					console.log("Weather Success");
 					
 
 					if (result.status.name == "ok") {
@@ -303,7 +309,7 @@ window.onload=function(){
 				
 				},
 				error: function(jqXHR, textStatus, errorThrown) {
-
+					console.log("Weather Fail")
 				}
 				
 			});
@@ -319,7 +325,7 @@ window.onload=function(){
 				},
 				success: function(result) {
 
-					//console.log(result);
+					console.log("Dictionary Success");
 
 					if (result.status.name == "ok") {
 						selectedCountry.description = result['data'][0]['meanings'][0]['definitions'][0]['definition']
@@ -327,7 +333,7 @@ window.onload=function(){
 				}
 			},
 				error: function(jqXHR, textStatus, errorThrown) {
-
+					console.log("Dictionary Fail")
 				}
 				
 			});
@@ -342,7 +348,7 @@ window.onload=function(){
 				},
 				success: function(result) {
 
-					console.log("Exchange Rate : " + result);
+					console.log("Exchange Rate Success");
 
 					if (result.status.name == "ok") {
 						var code = "GBP_" + selectedCountry.currencycode;
@@ -351,7 +357,7 @@ window.onload=function(){
 				}
 			},
 				error: function(jqXHR, textStatus, errorThrown) {
-
+					console.log("Exchange Rate Fail")
 
 				}
 				

@@ -384,6 +384,11 @@ window.onload=function(){
 								articlediv.id = 'article' + selectedCountry.news.indexOf(article);
 								//articlediv.className = 'null';
 							document.getElementById('newsarticles').appendChild(articlediv);
+							var articletitle = document.createElement('p');
+							articletitle.id = 'articleheadline';
+							articletitle.innerHTML = article['title'];
+							document.getElementById('article' + selectedCountry.news.indexOf(article)).appendChild(articletitle);
+
 						}
 						)}
 			},

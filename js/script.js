@@ -381,7 +381,8 @@ window.onload=function(){
 						document.getElementById('newsarticles').innerHTML = "";
 						selectedCountry.news = result['data']['articles']
 						selectedCountry.news.forEach(article => {
-							var articlediv = document.createElement('div');
+							if(selectedCountry.news.indexOf(article) <=2){
+								var articlediv = document.createElement('div');
 								articlediv.id = 'article' + selectedCountry.news.indexOf(article);
 								//articlediv.className = 'null';
 							document.getElementById('newsarticles').appendChild(articlediv);
@@ -395,6 +396,9 @@ window.onload=function(){
 							articlebody.id = 'articlebody';
 							articlebody.innerHTML = article['description'];
 							document.getElementById('article' + selectedCountry.news.indexOf(article)).appendChild(articlebody);
+
+							}
+							
 
 						}
 						)}

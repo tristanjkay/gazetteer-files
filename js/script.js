@@ -383,7 +383,7 @@ window.onload=function(){
 							var articlediv = document.createElement('div');
 								articlediv.id = 'article' + selectedCountry.news.indexOf(article);
 								//articlediv.className = 'null';
-							document.getElementByID('newsarticles').appendChild(articlediv);
+							document.getElementById('newsarticles').appendChild(articlediv);
 						}
 						)}
 			},

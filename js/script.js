@@ -378,6 +378,7 @@ window.onload=function(){
 					console.log("News Success");
 
 					if (result.status.name == "ok") {
+						document.getElementById('newsarticles').innerHTML = "";
 						selectedCountry.news = result['data']['articles']
 						selectedCountry.news.forEach(article => {
 							var articlediv = document.createElement('div');

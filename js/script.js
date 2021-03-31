@@ -165,6 +165,8 @@ window.onload=function(){
 					},
 					success: function(result) {
 
+						console.log("GeoNames Success")
+
 
 						if (result.status.name == "ok") {
 
@@ -373,7 +375,7 @@ window.onload=function(){
 				},
 				success: function(result) {
 
-					console.log("This is the news");
+					console.log("News Success");
 
 					if (result.status.name == "ok") {
 						selectedCountry.news = result['data']['articles']
@@ -381,6 +383,8 @@ window.onload=function(){
 				}
 			},
 				error: function(jqXHR, textStatus, errorThrown) {
+
+					console.log("News Fail")
 
 				}
 				
@@ -396,7 +400,7 @@ window.onload=function(){
 				},
 				success: function(result) {
 
-					//console.log(result);
+					console.log("POI Success")
 
 					if (result.status.name == "ok") {
 						selectedCountry.pois = result['data'];
@@ -404,9 +408,7 @@ window.onload=function(){
 				}
 			},
 				error: function(jqXHR, textStatus, errorThrown) {
-					//console.log(textStatus);
-					//console.log(errorThrown);
-					//console.log(jqXHR);
+					console.log("POI Fail")
 
 				}
 				
@@ -423,7 +425,7 @@ window.onload=function(){
 			},
 			success: function(result) {
 
-				//console.log(result);
+				console.log("WorldBank Success")
 
 				if (result.status.name == "ok") {
 					selectedCountry.gdp = {
@@ -438,6 +440,8 @@ window.onload=function(){
 			
 			},
 			error: function(jqXHR, textStatus, errorThrown) {
+
+				console.log("WorldBank Fail")
 
 			}
 			

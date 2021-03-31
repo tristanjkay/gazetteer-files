@@ -379,8 +379,13 @@ window.onload=function(){
 
 					if (result.status.name == "ok") {
 						selectedCountry.news = result['data']['articles']
-						
-				}
+						selectedCountry.news.forEach(article => {
+							var articlediv = document.createElement('div');
+								articlediv.id = 'article' + selectedCountry.news.indexOf(article);
+								//articlediv.className = 'null';
+							document.getElementsByID('newsarticles').appendChild(articlediv);
+						}
+						)}
 			},
 				error: function(jqXHR, textStatus, errorThrown) {
 

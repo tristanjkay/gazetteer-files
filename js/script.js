@@ -387,7 +387,7 @@ window.onload=function(){
 							//Title
 							var articletitle = document.createElement('p');
 							articletitle.id = 'articleheadline';
-							articletitle.innerHTML = article['title'];
+							articletitle.innerHTML = '<b>' + article['title'] + '</b>';
 							document.getElementById('article' + selectedCountry.news.indexOf(article)).appendChild(articletitle);
 							//Article Body
 							var articlebody = document.createElement('p');

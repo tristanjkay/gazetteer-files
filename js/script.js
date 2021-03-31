@@ -393,7 +393,7 @@ window.onload=function(){
 							var articlebody = document.createElement('p');
 							articlebody.id = 'articlebody';
 							articlebody.innerHTML = article['description'];
-							document.getElementById('article' + selectedCountry.news.indexOf(article)).appendChild(articletitle);
+							document.getElementById('article' + selectedCountry.news.indexOf(article)).appendChild(articlebody);
 
 						}
 						)}

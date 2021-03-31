@@ -384,9 +384,15 @@ window.onload=function(){
 								articlediv.id = 'article' + selectedCountry.news.indexOf(article);
 								//articlediv.className = 'null';
 							document.getElementById('newsarticles').appendChild(articlediv);
+							//Title
 							var articletitle = document.createElement('p');
 							articletitle.id = 'articleheadline';
 							articletitle.innerHTML = article['title'];
+							document.getElementById('article' + selectedCountry.news.indexOf(article)).appendChild(articletitle);
+							//Article Body
+							var articlebody = document.createElement('p');
+							articlebody.id = 'articlebody';
+							articlebody.innerHTML = article['description'];
 							document.getElementById('article' + selectedCountry.news.indexOf(article)).appendChild(articletitle);
 
 						}

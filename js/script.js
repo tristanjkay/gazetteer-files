@@ -366,8 +366,12 @@ window.onload=function(){
 					console.log("Exchange Rate Success");
 
 					if (result.status.name == "ok") {
+						console.log(selectedCountry.currencycode);
+						
 						var code = "GBP_" + selectedCountry.currencycode;
+						console.log(code);
 						selectedCountry.exchangerate = result['data'][code];
+						console.log(selectedCountry.exchangerate);
 
 						$('#currency').html(selectedCountry.currency);
 						//TODO Make this work
@@ -436,6 +440,7 @@ window.onload=function(){
 				data: {
 					country: selectedCountry.name,
 				},
+				beforeSend: function(xhr){xhr.setRequestHeader('x-api-key', 'WeEOSzCLt3vmpbsXBjEc9ZRmh57ToW126jJau9Mf');},
 				success: function(result) {
 
 					console.log("POI Success")

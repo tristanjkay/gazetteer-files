@@ -310,7 +310,14 @@ window.onload=function(){
 						  }
 
 						//Location
-						selectedCountry.capital.location = [result['data']['location']['lat'],result['data']['location']['lon']] ;
+						selectedCountry.capital.location = [result['data']['location']['lat'],result['data']['location']['lon']];
+
+						//Update UI
+						$("#climate-title").html("<b>Today (" + selectedCountry.capital.name + ")</b>");
+						$('#climate-icon').html('<img src="' + selectedCountry.capital.weather.icon + '" alt="Weathericon">');
+						$('#climate-description').html(selectedCountry.capital.weather.description);
+						$('#climate-temperature').html(selectedCountry.capital.weather.temperature + "&deg");
+						$('#climate-feelslike').html("Feels like " + selectedCountry.capital.weather.feelslike + "&deg");
 
 					}
 				
@@ -814,11 +821,7 @@ window.onload=function(){
 		function showModal(mycountry) {
 
 			
-			$("#climate-title").html("<b>Today (" + selectedCountry.capital.name + ")</b>");
-			$('#climate-icon').html('<img src="' + selectedCountry.capital.weather.icon + '" alt="Weathericon">');
-			$('#climate-description').html(selectedCountry.capital.weather.description);
-			$('#climate-temperature').html(selectedCountry.capital.weather.temperature + "&deg");
-			$('#climate-feelslike').html("Feels like " + selectedCountry.capital.weather.feelslike + "&deg");
+			
 			$('#currency').html(selectedCountry.currency);
 			//TODO Make this work
 			$('#exchangeratevalue').html(selectedCountry.exchangerate);

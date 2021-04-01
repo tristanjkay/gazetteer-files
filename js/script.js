@@ -368,6 +368,10 @@ window.onload=function(){
 					if (result.status.name == "ok") {
 						var code = "GBP_" + selectedCountry.currencycode;
 						selectedCountry.exchangerate = result['data'][code];
+
+						$('#currency').html(selectedCountry.currency);
+						//TODO Make this work
+						$('#exchangeratevalue').html(selectedCountry.exchangerate);
 						
 				}
 			},
@@ -823,9 +827,7 @@ window.onload=function(){
 
 			
 			
-			$('#currency').html(selectedCountry.currency);
-			//TODO Make this work
-			$('#exchangeratevalue').html(selectedCountry.exchangerate);
+			
 
 			try {
 				document.querySelector('.col-sm-12').classList.add('col-sm-9');

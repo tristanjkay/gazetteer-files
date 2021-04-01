@@ -151,6 +151,7 @@ window.onload=function(){
 			//Get Country Object from Countries Array
 			var indexOfCountry = countries.findIndex(x => x.iso2 === mycountry);
 			selectedCountry = countries[indexOfCountry];
+			$(".modal-title").html(selectedCountry.name);
 
 
 			//Add more Data to Country Object from APIs
@@ -172,6 +173,8 @@ window.onload=function(){
 
 							selectedCountry.continent = result['data'][0]['continentName'];
 							selectedCountry.area = result['data'][0]['areaInSqKm'];
+							
+							$(".continent-title").html(selectedCountry.continent);
 							
 
 						}
@@ -211,6 +214,8 @@ window.onload=function(){
 							selectedCountry.flag = result['data']['flag'];
 							//selectedCountry.area = result['data']['area'];
 							selectedCountry.timezones = result['data']['timezones'];
+							
+			
 
 							
 							
@@ -331,6 +336,7 @@ window.onload=function(){
 
 					if (result.status.name == "ok") {
 						selectedCountry.description = result['data'][0]['meanings'][0]['definitions'][0]['definition']
+						$("#description-text").html(selectedCountry.description);
 						
 				}
 			},
@@ -807,9 +813,7 @@ window.onload=function(){
 
 		function showModal(mycountry) {
 
-			$(".modal-title").html(selectedCountry.name);
-			$(".continent-title").html(selectedCountry.continent);
-			$("#description-text").html(selectedCountry.description);
+			
 			$("#climate-title").html("<b>Today (" + selectedCountry.capital.name + ")</b>");
 			$('#climate-icon').html('<img src="' + selectedCountry.capital.weather.icon + '" alt="Weathericon">');
 			$('#climate-description').html(selectedCountry.capital.weather.description);

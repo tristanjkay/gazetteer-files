@@ -370,11 +370,12 @@ window.onload=function(){
 						
 						var code = "GBP_" + selectedCountry.currencycode;
 						console.log(code);
-						selectedCountry.exchangerate = result['data'][code];
+						selectedCountry.exchangerate = result['data']['rates'][selectedCountry.currencycode];
 						console.log(selectedCountry.exchangerate);
 
 						$('#currency').html(selectedCountry.currency);
 						//TODO Make this work
+						$('#exchangeratevalue').html(selectedCountry.exchangerate);
 						
 						
 				}
@@ -806,7 +807,7 @@ window.onload=function(){
 						"value": result['data'][1][0]['value'],
 						"description": result['data'][1][0]['indicator']['value']
 					};
-					$('#exchangeratevalue').html(selectedCountry.exchangerate);
+					
 
 				}
 			

@@ -2,7 +2,7 @@
 
 	$executionStartTime = microtime(true) / 1000;
 
-    $url='https://free.currconv.com/api/v7/convert?q=GBP_' . $_REQUEST['country'] . '&compact=ultra&apiKey=4d137d5e5392cb18274d';
+    $url='http://api.exchangeratesapi.io/v1/latest?access_key=54b526998f0966bf0d078441c47bd911&symbols=' . $_REQUEST['country'];
 
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);

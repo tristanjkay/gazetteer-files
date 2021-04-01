@@ -313,7 +313,7 @@ window.onload=function(){
 						selectedCountry.capital.location = [result['data']['location']['lat'],result['data']['location']['lon']];
 
 						//Update UI
-						$("#climate-title").html("<b>Today (" + selectedCountry.capital.name + ")</b>");
+						
 						$('#climate-icon').html('<img src="' + selectedCountry.capital.weather.icon + '" alt="Weathericon">');
 						$('#climate-description').html(selectedCountry.capital.weather.description);
 						$('#climate-temperature').html(selectedCountry.capital.weather.temperature + "&deg");
@@ -465,10 +465,11 @@ window.onload=function(){
 					selectedCountry.gdp = {
 						"value": result['data'][1][0]['value'],
 						"description": result['data'][1][0]['indicator']['value']
+						
 					};
 					
 					
-					
+					$("#climate-title").html("<b>Today (" + selectedCountry.capital.name + ")</b>");
 
 				}
 			

@@ -191,7 +191,7 @@ option {
 
 
 
-#value, #exchangeratevalue {
+#value, #exchangeratevalue, #gdp_value, #inf_value, #bud_value {
     font-size: 3rem;
 }
 

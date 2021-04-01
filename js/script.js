@@ -795,7 +795,7 @@ window.onload=function(){
 			data: {
 				country: mycountry,
 			},
-			success: function(result) {
+			success: function(result) { 
 
 				//console.log(result);
 

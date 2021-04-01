@@ -375,7 +375,7 @@ window.onload=function(){
 
 						$('#currency').html(selectedCountry.currency);
 						//TODO Make this work
-						$('#exchangeratevalue').html(selectedCountry.exchangerate);
+						
 						
 				}
 			},
@@ -805,7 +805,7 @@ window.onload=function(){
 						"value": result['data'][1][0]['value'],
 						"description": result['data'][1][0]['indicator']['value']
 					};
-					
+					$('#exchangeratevalue').html(selectedCountry.exchangerate);
 
 				}
 			

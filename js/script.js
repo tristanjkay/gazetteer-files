@@ -98,35 +98,35 @@ window.onload=function(){
 	})
 	economyDiv.addEventListener('click', function(event) {
 		console.log("economy");
-		document.getElementsByClassName('col-sm-3').innerHTML = "";
+		$(".col-sm-3").html("");
 	})
 	cultureDiv.addEventListener('click', function(event) {
 		console.log("culture");
-		document.getElementsByClassName('col-sm-3').innerHTML = "";
+		$(".col-sm-3").html("");
 	})
 	newsDiv.addEventListener('click', function(event) {
 		console.log("news");
-		document.getElementsByClassName('col-sm-3').innerHTML = "";
+		$(".col-sm-3").html("");
 	})
 	healthDiv.addEventListener('click', function(event) {
 		console.log("health");
-		document.getElementsByClassName('col-sm-3').innerHTML = "";
+		$(".col-sm-3").html("");
 	})
 	environmentDiv.addEventListener('click', function(event) {
 		console.log("environment");
-		document.getElementsByClassName('col-sm-3').innerHTML = "";
+		$(".col-sm-3").html("");
 	})
 	educationDiv.addEventListener('click', function(event) {
 		console.log("education");
-		document.getElementsByClassName('col-sm-3').innerHTML = "";
+		$(".col-sm-3").html("");
 	})
 	crimeDiv.addEventListener('click', function(event) {
 		console.log("crime");
-		document.getElementsByClassName('col-sm-3').innerHTML = "";
+		$(".col-sm-3").html("");
 	})
 	tourismDiv.addEventListener('click', function(event) {
 		console.log("tourism");
-		document.getElementsByClassName('col-sm-3').innerHTML = "";
+		$(".col-sm-3").html("");
 	})
 		
 	

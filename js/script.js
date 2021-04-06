@@ -37,6 +37,15 @@
 
 var map = L.map('map').fitWorld();
 var dropdown = document.getElementById("countriesDropdown");
+var climateDiv = document.getElementById("climate");
+var economyDiv = document.getElementById("economy");
+var cultureDiv = document.getElementById("culture");
+var newsDiv = document.getElementById("news");
+var healthDiv = document.getElementById("health");
+var environmentDiv = document.getElementById("environment");
+var educationDiv = document.getElementById("education");
+var crimeDiv = document.getElementById("crime");
+var tourismDiv = document.getElementById("tourism");
 var selectedCountry;
 var col2 = document.querySelector('.col-sm-3');
 var epochTime = Date.now();
@@ -81,6 +90,34 @@ window.onload=function(){
 	dropdown.addEventListener('change', function(event) {
 		selectedCountry = $('#countriesDropdown').val();
 		countrySelected(selectedCountry);
+	})
+
+	climateDiv.addEventListener('change', function(event) {
+		console.log("climate");
+	})
+	economyDiv.addEventListener('change', function(event) {
+		console.log("economy");
+	})
+	cultureDiv.addEventListener('change', function(event) {
+		console.log("culture");
+	})
+	newsDiv.addEventListener('change', function(event) {
+		console.log("news");
+	})
+	healthDiv.addEventListener('change', function(event) {
+		console.log("health");
+	})
+	environmentDiv.addEventListener('change', function(event) {
+		console.log("environment");
+	})
+	educationDiv.addEventListener('change', function(event) {
+		console.log("education");
+	})
+	crimeDiv.addEventListener('change', function(event) {
+		console.log("crime");
+	})
+	tourismDiv.addEventListener('change', function(event) {
+		console.log("tourism");
 	})
 		
 	

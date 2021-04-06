@@ -96,57 +96,57 @@ window.onload=function(){
 	climateDiv.addEventListener('click', function(event) {
 		console.log("climate");
 
-		divPrevContent = document.getElementsByClassName("col-sm-3").innerHTML;
+		divPrevContent = $(".col-sm-3").html();
 		$(".col-sm-3").html("");
 		$(".col-sm-3").html("<p>This is what will go here.</p>");
 
 	})
 	economyDiv.addEventListener('click', function(event) {
 		console.log("economy");
-		divPrevContent = document.getElementsByClassName("col-sm-3").innerHTML;
+		divPrevContent = $(".col-sm-3").html();
 		$(".col-sm-3").html("");
 		$(".col-sm-3").html("<p>This is what will go here.</p>");
 	})
 	cultureDiv.addEventListener('click', function(event) {
 		console.log("culture");
-		divPrevContent = document.getElementsByClassName("col-sm-3").innerHTML;
+		divPrevContent = $(".col-sm-3").html();
 		$(".col-sm-3").html("");
 		$(".col-sm-3").html("<p>This is what will go here.</p>");
 	})
 	newsDiv.addEventListener('click', function(event) {
 		console.log("news");
 		
-		divPrevContent = document.getElementsByClassName("col-sm-3").innerHTML;
+		divPrevContent = $(".col-sm-3").html();
 		$(".col-sm-3").html("");
 		$(".col-sm-3").html("<p>This is what will go here.</p>");
 	})
 	healthDiv.addEventListener('click', function(event) {
 		console.log("health");
-		divPrevContent = document.getElementsByClassName("col-sm-3").innerHTML;
+		divPrevContent = $(".col-sm-3").html();
 		$(".col-sm-3").html("");
 		$(".col-sm-3").html("<p>This is what will go here.</p>");
 	})
 	environmentDiv.addEventListener('click', function(event) {
 		console.log("environment");
-		divPrevContent = document.getElementsByClassName("col-sm-3").innerHTML;
+		divPrevContent = $(".col-sm-3").html();
 		$(".col-sm-3").html("");
 		$(".col-sm-3").html("<p>This is what will go here.</p>");
 	})
 	educationDiv.addEventListener('click', function(event) {
 		console.log("education");
-		divPrevContent = document.getElementsByClassName("col-sm-3").innerHTML;
+		divPrevContent = $(".col-sm-3").html();
 		$(".col-sm-3").html("");
 		$(".col-sm-3").html("<p>This is what will go here.</p>");
 	})
 	crimeDiv.addEventListener('click', function(event) {
 		console.log("crime");
-		divPrevContent = document.getElementsByClassName("col-sm-3").innerHTML;
+		divPrevContent = $(".col-sm-3").html();
 		$(".col-sm-3").html("");
 		$(".col-sm-3").html("<p>This is what will go here.</p>");
 	})
 	tourismDiv.addEventListener('click', function(event) {
 		console.log("tourism");
-		divPrevContent = document.getElementsByClassName("col-sm-3").innerHTML;
+		divPrevContent = $(".col-sm-3").html();
 		$(".col-sm-3").html("");
 		$(".col-sm-3").html("<p>This is what will go here.</p>");
 	})

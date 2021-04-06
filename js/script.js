@@ -95,38 +95,48 @@ window.onload=function(){
 	climateDiv.addEventListener('click', function(event) {
 		console.log("climate");
 		$(".col-sm-3").html("");
+		$(".col-sm-3").html("<p>This is what will go here.</p>");
+
 	})
 	economyDiv.addEventListener('click', function(event) {
 		console.log("economy");
 		$(".col-sm-3").html("");
+		$(".col-sm-3").html("<p>This is what will go here.</p>");
 	})
 	cultureDiv.addEventListener('click', function(event) {
 		console.log("culture");
 		$(".col-sm-3").html("");
+		$(".col-sm-3").html("<p>This is what will go here.</p>");
 	})
 	newsDiv.addEventListener('click', function(event) {
 		console.log("news");
 		$(".col-sm-3").html("");
+		$(".col-sm-3").html("<p>This is what will go here.</p>");
 	})
 	healthDiv.addEventListener('click', function(event) {
 		console.log("health");
 		$(".col-sm-3").html("");
+		$(".col-sm-3").html("<p>This is what will go here.</p>");
 	})
 	environmentDiv.addEventListener('click', function(event) {
 		console.log("environment");
 		$(".col-sm-3").html("");
+		$(".col-sm-3").html("<p>This is what will go here.</p>");
 	})
 	educationDiv.addEventListener('click', function(event) {
 		console.log("education");
 		$(".col-sm-3").html("");
+		$(".col-sm-3").html("<p>This is what will go here.</p>");
 	})
 	crimeDiv.addEventListener('click', function(event) {
 		console.log("crime");
 		$(".col-sm-3").html("");
+		$(".col-sm-3").html("<p>This is what will go here.</p>");
 	})
 	tourismDiv.addEventListener('click', function(event) {
 		console.log("tourism");
 		$(".col-sm-3").html("");
+		$(".col-sm-3").html("<p>This is what will go here.</p>");
 	})
 		
 	

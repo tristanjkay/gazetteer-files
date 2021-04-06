@@ -125,7 +125,7 @@ window.onload=function(){
 		divPrevContent = $(".col-sm-3").html();
 		$(".col-sm-3").html("");
 		$(".col-sm-3").html("<p>This is what will go here.</p>");
-	})
+	}) 
 	environmentDiv.addEventListener('click', function(event) {
 		console.log("environment");
 		divPrevContent = $(".col-sm-3").html();

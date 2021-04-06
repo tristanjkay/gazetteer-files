@@ -94,7 +94,7 @@ window.onload=function(){
 
 	climateDiv.addEventListener('click', function(event) {
 		console.log("climate");
-		document.getElementsByClassName(col-sm-3).innerHTML = "";
+		$(".col-sm-3").html("");
 	})
 	economyDiv.addEventListener('click', function(event) {
 		console.log("economy");

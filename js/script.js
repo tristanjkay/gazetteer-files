@@ -94,30 +94,39 @@ window.onload=function(){
 
 	climateDiv.addEventListener('click', function(event) {
 		console.log("climate");
+		document.getElementsByClassName('col-sm-3').innerHTML = "";
 	})
 	economyDiv.addEventListener('click', function(event) {
 		console.log("economy");
+		document.getElementsByClassName('col-sm-3').innerHTML = "";
 	})
 	cultureDiv.addEventListener('click', function(event) {
 		console.log("culture");
+		document.getElementsByClassName('col-sm-3').innerHTML = "";
 	})
 	newsDiv.addEventListener('click', function(event) {
 		console.log("news");
+		document.getElementsByClassName('col-sm-3').innerHTML = "";
 	})
 	healthDiv.addEventListener('click', function(event) {
 		console.log("health");
+		document.getElementsByClassName('col-sm-3').innerHTML = "";
 	})
 	environmentDiv.addEventListener('click', function(event) {
 		console.log("environment");
+		document.getElementsByClassName('col-sm-3').innerHTML = "";
 	})
 	educationDiv.addEventListener('click', function(event) {
 		console.log("education");
+		document.getElementsByClassName('col-sm-3').innerHTML = "";
 	})
 	crimeDiv.addEventListener('click', function(event) {
 		console.log("crime");
+		document.getElementsByClassName('col-sm-3').innerHTML = "";
 	})
 	tourismDiv.addEventListener('click', function(event) {
 		console.log("tourism");
+		document.getElementsByClassName('col-sm-3').innerHTML = "";
 	})
 		
 	

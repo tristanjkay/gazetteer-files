@@ -92,31 +92,31 @@ window.onload=function(){
 		countrySelected(selectedCountry);
 	})
 
-	climateDiv.addEventListener('change', function(event) {
+	climateDiv.addEventListener('click', function(event) {
 		console.log("climate");
 	})
-	economyDiv.addEventListener('change', function(event) {
+	economyDiv.addEventListener('click', function(event) {
 		console.log("economy");
 	})
-	cultureDiv.addEventListener('change', function(event) {
+	cultureDiv.addEventListener('click', function(event) {
 		console.log("culture");
 	})
-	newsDiv.addEventListener('change', function(event) {
+	newsDiv.addEventListener('click', function(event) {
 		console.log("news");
 	})
-	healthDiv.addEventListener('change', function(event) {
+	healthDiv.addEventListener('click', function(event) {
 		console.log("health");
 	})
-	environmentDiv.addEventListener('change', function(event) {
+	environmentDiv.addEventListener('click', function(event) {
 		console.log("environment");
 	})
-	educationDiv.addEventListener('change', function(event) {
+	educationDiv.addEventListener('click', function(event) {
 		console.log("education");
 	})
-	crimeDiv.addEventListener('change', function(event) {
+	crimeDiv.addEventListener('click', function(event) {
 		console.log("crime");
 	})
-	tourismDiv.addEventListener('change', function(event) {
+	tourismDiv.addEventListener('click', function(event) {
 		console.log("tourism");
 	})
 		

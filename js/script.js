@@ -367,9 +367,6 @@ window.onload=function(){
 
 					if (result.status.name == "ok") {
 						console.log(selectedCountry.currencycode);
-						
-						var code = "GBP_" + selectedCountry.currencycode;
-						console.log(code);
 						selectedCountry.exchangerate = result['data']['rates'][selectedCountry.currencycode];
 						console.log(selectedCountry.exchangerate);
 

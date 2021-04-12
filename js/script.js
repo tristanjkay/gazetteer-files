@@ -98,7 +98,7 @@ window.onload=function(){
 
 		divPrevContent = $(".col-sm-3").html();
 		$(".col-sm-3").html("");
-		$(".col-sm-3").html("<div class='row'><div class='col'><h1>Brazil</h1><h3>Today(Brasilia)</h3></div><h3>18degreesC</h3><h3>weathericon</h3></div>");
+		$(".col-sm-3").html("<div class='row'><div class='col'><h1>Brazil</h1><h3>Today(Brasilia)</h3></div><h3>18&deg;C</h3><h3>&#9728;</h3></div>");
 
 	})
 	economyDiv.addEventListener('click', function(event) {

@@ -158,7 +158,7 @@ window.onload=function(){
 			//GeoJSON
 			$.ajax({
 				url: "php/geojson-fileget.php",
-				type: 'POST',
+				type: 'POST',  
 				dataType: 'json',
 				data: {
 
@@ -300,7 +300,7 @@ window.onload=function(){
 
 			//Weather
 			$.ajax({
-				url: "php/weather.php",
+				url: "php/weather/weather_current.php",
 				type: 'POST',
 				dataType: 'json',
 				data: {

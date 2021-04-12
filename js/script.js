@@ -47,6 +47,7 @@ var educationDiv = document.getElementById("education");
 var crimeDiv = document.getElementById("crime");
 var tourismDiv = document.getElementById("tourism");
 var selectedCountry;
+var col1;
 var col2 = document.querySelector('.col-sm-3');
 var epochTime = Date.now();
 var divPrevContent;
@@ -97,8 +98,13 @@ window.onload=function(){
 		console.log("climate");
 
 		divPrevContent = $(".col-sm-3").html();
-		$(".col-sm-3").html("");
-		$(".col-sm-3").html("<div class='row'> <div class='col'> <h1>Brazil</h1> <h3>Today(Brasilia)</h3> </div> <h3>18&deg;C</h3> <h3>&#9728;</h3> </div> <div class='row bg-light'> <div class='col'> <h1>83</h1> <h4>HUMIDITY</h4> </div> <div class='col'> <h1>0</h1> <h4>PRECIPITATION</h4> </div> <div class='col'> <h1>N</h1> <h4>WIND DIRECTION</h4> </div> <div class='col'> <h1>3.8</h1> <h4>WIND SPEED</h4> </div> <div class='col'> <h1>3</h1> <h4>UV INDEX</h4> </div> </div> <br> <br> <h2>This Week</h2> <h3>Monday 12</h3> <div class='row' id='covidChart'> <div class='col' id='charttext'> <div id='bar1'></div> <h4>28c</h4> <h4>10%</h4> <h4>&darr;</h4> <h4>5mph</h4> </div> <div class='col' id='charttext'> <div id='bar2'></div> <h4>28c</h4> <h4>10%</h4> <h4>&darr;</h4> <h4>5mph</h4> </div> <div class='col' id='charttext'> <div id='bar3'></div> <h4>28c</h4> <h4>10%</h4> <h4>&darr;</h4> <h4>5mph</h4> </div> <div class='col' id='charttext'> <div id='bar4'></div> <h4>28c</h4> <h4>10%</h4> <h4>&darr;</h4> <h4>5mph</h4> </div> <div class='col' id='charttext'> <div id='bar5'></div> <h4>28c</h4> <h4>10%</h4> <h4>&darr;</h4> <h4>5mph</h4> </div> </div><p>Other days to be populated by api...</p> ");
+		$(".col-sm-3").classList.add('col-sm-9');
+		$(".col-sm-9").classList.add('col-sm-3');
+		$(".col-sm-3.col-sm-9").classList.remove('col-sm-3');
+		$(".col-sm-9.col-sm-3").classList.remove('col-sm-9');
+		$(".col-sm-9").html("");
+		$(".col-sm-9").html("<div class='row'> <div class='col'> <h1>Brazil</h1> <h3>Today(Brasilia)</h3> </div> <h3>18&deg;C</h3> <h3>&#9728;</h3> </div> <div class='row bg-light'> <div class='col'> <h1>83</h1> <h4>HUMIDITY</h4> </div> <div class='col'> <h1>0</h1> <h4>PRECIPITATION</h4> </div> <div class='col'> <h1>N</h1> <h4>WIND DIRECTION</h4> </div> <div class='col'> <h1>3.8</h1> <h4>WIND SPEED</h4> </div> <div class='col'> <h1>3</h1> <h4>UV INDEX</h4> </div> </div> <br> <br> <h2>This Week</h2> <h3>Monday 12</h3> <div class='row' id='covidChart'> <div class='col' id='charttext'> <div id='bar1'></div> <h4>28c</h4> <h4>10%</h4> <h4>&darr;</h4> <h4>5mph</h4> </div> <div class='col' id='charttext'> <div id='bar2'></div> <h4>28c</h4> <h4>10%</h4> <h4>&darr;</h4> <h4>5mph</h4> </div> <div class='col' id='charttext'> <div id='bar3'></div> <h4>28c</h4> <h4>10%</h4> <h4>&darr;</h4> <h4>5mph</h4> </div> <div class='col' id='charttext'> <div id='bar4'></div> <h4>28c</h4> <h4>10%</h4> <h4>&darr;</h4> <h4>5mph</h4> </div> <div class='col' id='charttext'> <div id='bar5'></div> <h4>28c</h4> <h4>10%</h4> <h4>&darr;</h4> <h4>5mph</h4> </div> </div><p>Other days to be populated by api...</p> ");
+		
 
 	})
 	economyDiv.addEventListener('click', function(event) {
@@ -925,6 +931,7 @@ window.onload=function(){
 			try {
 				document.querySelector('.col-sm-12').classList.add('col-sm-9');
 				document.querySelector('.col-sm-12.col-sm-9').classList.remove('col-sm-12');
+				col1 = document.querySelector('.col-sm-9')
 				col2.style.display = "block";
 			} catch (error) {
 				console.log("Country has been chosen")

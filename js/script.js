@@ -98,7 +98,7 @@ window.onload=function(){
 
 		divPrevContent = $(".col-sm-3").html();
 		$(".col-sm-3").html("");
-		$(".col-sm-3").html("<p>This is what will go here.</p>");
+		$(".col-sm-3").html("<div class='row'><div class='col'><h1>Brazil</h1><h3>Today(Brasilia)</h3></div><h3>18degreesC</h3><h3>weathericon</h3></div>");
 
 	})
 	economyDiv.addEventListener('click', function(event) {
@@ -308,7 +308,7 @@ window.onload=function(){
 				},
 				success: function(result) {
 
-					console.log("Weather Success");
+					console.log("Weather Current Success");
 					
 
 					if (result.status.name == "ok") {
@@ -391,7 +391,28 @@ window.onload=function(){
 				
 				},
 				error: function(jqXHR, textStatus, errorThrown) {
-					console.log("Weather Fail")
+					console.log("Weather Current Fail")
+				}
+				
+			});
+
+			$.ajax({
+				url: "php/weather/weather_forecast.php",
+				type: 'POST',
+				dataType: 'json',
+				data: {
+					country: selectedCountry.name,
+				},
+				success: function(result) {
+
+					console.log("Weather Forecast Success");
+					
+
+					
+				
+				},
+				error: function(jqXHR, textStatus, errorThrown) {
+					console.log("Weather Forecast Fail")
 				}
 				
 			});

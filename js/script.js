@@ -129,7 +129,7 @@ window.onload=function(){
 		$(".col-sm-9").html("<div class='container-fluid'> <h1> Brazil </h1> <div class='row'> <div class='col-md-3'> <div class='jumbotron'> <div class='row'> <div class='col-md-4'> <p>1</p> <p>GBP</p> </div> <div class='col-md-4'>=</div> <div class='col-md-4'> <p>1</p> <p>GBP</p> </div> </div> </div> <div class='jumbotron'> <div class='row'> 10 GBP </div> <div class='row'> 10 GBP </div> <div class='row'> 10 GBP </div> <div class='row'> 10 GBP </div> <div class='row'> 10 GBP </div> <div class='row'> 10 GBP </div> <div class='row'> 10 GBP </div> </div> </div> <div class='col-md-9'> <div class='row'> <div class='col-md-4'> <div class='jumbotron'> </div> </div> <div class='col-md-4'> <div class='jumbotron'> </div> </div> <div class='col-md-4'> <div class='jumbotron'> </div> </div> </div> <div class='row'> <div class='col-md-6'> <div class='jumbotron'> </div> </div> <div class='col-md-6'> <div class='jumbotron'> </div> </div> </div> </div> </div> </div>");
 
 		//Centre Map
-		map.setView([10, 10], 2);
+		map.setView([selectedCountry.capital.location[0], selectedCountry.capital.location[1]], 2);
 	})
 	cultureDiv.addEventListener('click', function(event) {
 		console.log("culture");

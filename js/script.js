@@ -19,7 +19,6 @@
 
 */
 
-
 //CATEGORIES
 /*
 - ECONOMY +
@@ -33,7 +32,9 @@
 
 */
 
-//MAP SETUP
+
+
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------VARIABLES-//
 
 var map = L.map('map').fitWorld();
 var dropdown = document.getElementById("countriesDropdown");
@@ -51,13 +52,11 @@ var col1;
 var col2 = document.querySelector('.col-sm-3');
 var epochTime = Date.now();
 var divPrevContent;
-
-   
-
 var countries = [];
-
 var debugActive;
 var debugLog; 
+
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------MAP SETUP-//
 
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
 	maxZoom: 18,
@@ -85,6 +84,7 @@ map.on('locationerror', onLocationError);
 
 map.locate({setView: true, maxZoom: 16});
 
+//------------------------------------------------------------------------------------------------------------------------------------------------------------WHEN PAGE LOADS-//
 window.onload=function(){
 
 	col2.style.display = "none";
@@ -94,14 +94,21 @@ window.onload=function(){
 		countrySelected(selectedCountry);
 	})
 
+	//-------------------------------------------------------------------------------------------------------------------------------------------------Click Event Listeners-//
+
 	climateDiv.addEventListener('click', function(event) {
 		console.log("climate");
 
+		//Capture previous content in var
 		divPrevContent = $(".col-sm-3").html();
+		
+		//Resize Columns
 		col2.classList.add('col-sm-9');
 		col1.classList.add('col-sm-3');
 		col2.classList.remove('col-sm-3');
 		col1.classList.remove('col-sm-9');
+
+		//Add Content
 		$(".col-sm-9").html("");
 		$(".col-sm-9").html("<div class='row'> <div class='col'> <h1>Brazil</h1> <h3>Today(Brasilia)</h3> </div> <h3>18&deg;C</h3> <h3>&#9728;</h3> </div> <div class='row bg-light'> <div class='col'> <h1>83</h1> <h4>HUMIDITY</h4> </div> <div class='col'> <h1>0</h1> <h4>PRECIPITATION</h4> </div> <div class='col'> <h1>N</h1> <h4>WIND DIRECTION</h4> </div> <div class='col'> <h1>3.8</h1> <h4>WIND SPEED</h4> </div> <div class='col'> <h1>3</h1> <h4>UV INDEX</h4> </div> </div> <br> <br> <h2>This Week</h2> <h3>Monday 12</h3> <div class='row' id='covidChart'> <div class='col' id='charttext'> <div id='bar1'></div> <h4>28c</h4> <h4>10%</h4> <h4>&darr;</h4> <h4>5mph</h4> </div> <div class='col' id='charttext'> <div id='bar2'></div> <h4>28c</h4> <h4>10%</h4> <h4>&darr;</h4> <h4>5mph</h4> </div> <div class='col' id='charttext'> <div id='bar3'></div> <h4>28c</h4> <h4>10%</h4> <h4>&darr;</h4> <h4>5mph</h4> </div> <div class='col' id='charttext'> <div id='bar4'></div> <h4>28c</h4> <h4>10%</h4> <h4>&darr;</h4> <h4>5mph</h4> </div> <div class='col' id='charttext'> <div id='bar5'></div> <h4>28c</h4> <h4>10%</h4> <h4>&darr;</h4> <h4>5mph</h4> </div> </div><p>Other days to be populated by api...</p> ");
 		
@@ -110,20 +117,28 @@ window.onload=function(){
 	economyDiv.addEventListener('click', function(event) {
 		console.log("economy");
 		divPrevContent = $(".col-sm-3").html();
+
+		//Resize Columns
 		col2.classList.add('col-sm-9');
 		col1.classList.add('col-sm-3');
 		col2.classList.remove('col-sm-3');
 		col1.classList.remove('col-sm-9');
+
+		//Add Content
 		$(".col-sm-9").html("");
-		$(".col-sm-9").html("<div class='container-fluid'> <div class='row'> <div class='col-md-3'> <div class='jumbotron'> <h2> Hello, world! </h2> <p> This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique. </p> <p> <a class='btn btn-primary btn-large' href='#'>Learn more</a> </p> </div> <h3> h3. Lorem ipsum dolor sit amet. </h3> </div> <div class='col-md-9'> <div class='row'> <div class='col-md-4'> </div> <div class='col-md-4'> </div> <div class='col-md-4'> </div> </div> <div class='row'> <div class='col-md-6'> </div> <div class='col-md-6'> </div> </div> </div> </div> </div>");
+		$(".col-sm-9").html("<div class='container-fluid'> <h1> Brazil </h1> <div class='row'> <div class='col-md-3'> <div class='jumbotron'> <div class='row'> <div class='col-md-4'> <p>1</p> <p>GBP</p> </div> <div class='col-md-4'>=</div> <div class='col-md-4'> <p>1</p> <p>GBP</p> </div> </div> </div> <div class='jumbotron'> <div class='row'> 10 GBP </div> <div class='row'> 10 GBP </div> <div class='row'> 10 GBP </div> <div class='row'> 10 GBP </div> <div class='row'> 10 GBP </div> <div class='row'> 10 GBP </div> <div class='row'> 10 GBP </div> </div> </div> <div class='col-md-9'> <div class='row'> <div class='col-md-4'> <div class='jumbotron'> </div> </div> <div class='col-md-4'> <div class='jumbotron'> </div> </div> <div class='col-md-4'> <div class='jumbotron'> </div> </div> </div> <div class='row'> <div class='col-md-6'> <div class='jumbotron'> </div> </div> <div class='col-md-6'> <div class='jumbotron'> </div> </div> </div> </div> </div> </div>");
 	})
 	cultureDiv.addEventListener('click', function(event) {
 		console.log("culture");
 		divPrevContent = $(".col-sm-3").html();
+
+		//Resize Columns
 		col2.classList.add('col-sm-9');
 		col1.classList.add('col-sm-3');
 		col2.classList.remove('col-sm-3');
 		col1.classList.remove('col-sm-9');
+
+		//Add Content
 		$(".col-sm-9").html("");
 		$(".col-sm-9").html("<div class='row'> <div class='col-md-3'> <div class='jumbotron'> <h2> Hello, world! </h2> <p> This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique. </p> <p> <a class='btn btn-primary btn-large' href='#'>Learn more</a> </p> </div> </div> <div class='col-md-9'> <div class='row'> <div class='col-md-4'> <h2> Heading </h2> <p> Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p> <p> <a class='btn' href='#'>View details »</a> </p> </div> <div class='col-md-8'> <h2> Heading </h2> <p> Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p> <p> <a class='btn' href='#'>View details »</a> </p> </div> </div> <div class='row'> <div class='col-md-8'> <h2> Heading </h2> <p> Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p> <p> <a class='btn' href='#'>View details »</a> </p> </div> <div class='col-md-4'> <h2> Heading </h2> <p> Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p> <p> <a class='btn' href='#'>View details »</a> </p> </div> </div> <div class='row'> <div class='col-md-4'> <h2> Heading </h2> <p> Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p> <p> <a class='btn' href='#'>View details »</a> </p> </div> <div class='col-md-8'> <h2> Heading </h2> <p> Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p> <p> <a class='btn' href='#'>View details »</a> </p> </div> </div> </div> </div>");
 	})
@@ -131,60 +146,84 @@ window.onload=function(){
 		console.log("news");
 		
 		divPrevContent = $(".col-sm-3").html();
+
+		//Resize Columns
 		col2.classList.add('col-sm-9');
 		col1.classList.add('col-sm-3');
 		col2.classList.remove('col-sm-3');
 		col1.classList.remove('col-sm-9');
+
+		//Add Content
 		$(".col-sm-9").html("");
 		$(".col-sm-9").html("<div class='row'> <div class='col-md-3'> <div class='jumbotron'> <h2> Hello, world! </h2> <p> This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique. </p> <p> <a class='btn btn-primary btn-large' href='#'>Learn more</a> </p> </div> </div> <div class='col-md-9'> <div class='row'> <div class='col-md-4'> <h2> Heading </h2> <p> Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p> <p> <a class='btn' href='#'>View details »</a> </p> </div> <div class='col-md-8'> <h2> Heading </h2> <p> Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p> <p> <a class='btn' href='#'>View details »</a> </p> </div> </div> <div class='row'> <div class='col-md-8'> <h2> Heading </h2> <p> Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p> <p> <a class='btn' href='#'>View details »</a> </p> </div> <div class='col-md-4'> <h2> Heading </h2> <p> Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p> <p> <a class='btn' href='#'>View details »</a> </p> </div> </div> <div class='row'> <div class='col-md-4'> <h2> Heading </h2> <p> Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p> <p> <a class='btn' href='#'>View details »</a> </p> </div> <div class='col-md-8'> <h2> Heading </h2> <p> Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p> <p> <a class='btn' href='#'>View details »</a> </p> </div> </div> </div> </div>");
 	})
 	healthDiv.addEventListener('click', function(event) {
 		console.log("health");
 		divPrevContent = $(".col-sm-3").html();
+
+		//Resize Columns
 		col2.classList.add('col-sm-9');
 		col1.classList.add('col-sm-3');
 		col2.classList.remove('col-sm-3');
 		col1.classList.remove('col-sm-9');
+
+		//Add Content
 		$(".col-sm-9").html("");
 		$(".col-sm-9").html("<div class='container-fluid'> <div class='row'> <div class='col-md-6'> <p> Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>. Aliquam eget sapien sapien. Curabitur in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et, pharetra in dolor. Sed iaculis posuere diam ut cursus. <em>Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam velit et dui.</em> Proin massa magna, vulputate nec bibendum nec, posuere nec lacus. <small>Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu.</small> </p> <div class='jumbotron'> <h2> Hello, world! </h2> <p> This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique. </p> <p> <a class='btn btn-primary btn-large' href='#'>Learn more</a> </p> </div> <div class='row'> <div class='col-md-4'> </div> <div class='col-md-4'> </div> <div class='col-md-4'> </div> </div> </div> <div class='col-md-6'> <div class='row'> <div class='col-md-8'> </div> <div class='col-md-4'> </div> </div> <div class='row'> <div class='col-md-4'> </div> <div class='col-md-8'> </div> </div> <div class='row'> <div class='col-md-8'> </div> <div class='col-md-4'> </div> </div> <div class='row'> <div class='col-md-4'> </div> <div class='col-md-8'> </div> </div> </div> </div> </div>");
 	}) 
 	environmentDiv.addEventListener('click', function(event) {
 		console.log("environment");
 		divPrevContent = $(".col-sm-3").html();
+
+		//Resize Columns
 		col2.classList.add('col-sm-9');
 		col1.classList.add('col-sm-3');
 		col2.classList.remove('col-sm-3');
 		col1.classList.remove('col-sm-9');
+
+		//Add Content
 		$(".col-sm-9").html("");
 		$(".col-sm-9").html("<div class='container-fluid'> <div class='row'> <div class='col-md-6'> <p> Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>. Aliquam eget sapien sapien. Curabitur in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et, pharetra in dolor. Sed iaculis posuere diam ut cursus. <em>Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam velit et dui.</em> Proin massa magna, vulputate nec bibendum nec, posuere nec lacus. <small>Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu.</small> </p> <div class='jumbotron'> <h2> Hello, world! </h2> <p> This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique. </p> <p> <a class='btn btn-primary btn-large' href='#'>Learn more</a> </p> </div> <div class='row'> <div class='col-md-4'> </div> <div class='col-md-4'> </div> <div class='col-md-4'> </div> </div> </div> <div class='col-md-6'> <div class='row'> <div class='col-md-8'> </div> <div class='col-md-4'> </div> </div> <div class='row'> <div class='col-md-4'> </div> <div class='col-md-8'> </div> </div> <div class='row'> <div class='col-md-8'> </div> <div class='col-md-4'> </div> </div> <div class='row'> <div class='col-md-4'> </div> <div class='col-md-8'> </div> </div> </div> </div> </div>");
 	})
 	educationDiv.addEventListener('click', function(event) {
 		console.log("education");
 		divPrevContent = $(".col-sm-3").html();
+
+		//Resize Columns
 		col2.classList.add('col-sm-9');
 		col1.classList.add('col-sm-3');
 		col2.classList.remove('col-sm-3');
 		col1.classList.remove('col-sm-9');
+
+		//Add Content
 		$(".col-sm-9").html("");
 		$(".col-sm-9").html("<div class='container-fluid'> <div class='row'> <div class='col-md-6'> <p> Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>. Aliquam eget sapien sapien. Curabitur in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et, pharetra in dolor. Sed iaculis posuere diam ut cursus. <em>Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam velit et dui.</em> Proin massa magna, vulputate nec bibendum nec, posuere nec lacus. <small>Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu.</small> </p> <div class='jumbotron'> <h2> Hello, world! </h2> <p> This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique. </p> <p> <a class='btn btn-primary btn-large' href='#'>Learn more</a> </p> </div> <div class='row'> <div class='col-md-4'> </div> <div class='col-md-4'> </div> <div class='col-md-4'> </div> </div> </div> <div class='col-md-6'> <div class='row'> <div class='col-md-8'> </div> <div class='col-md-4'> </div> </div> <div class='row'> <div class='col-md-4'> </div> <div class='col-md-8'> </div> </div> <div class='row'> <div class='col-md-8'> </div> <div class='col-md-4'> </div> </div> <div class='row'> <div class='col-md-4'> </div> <div class='col-md-8'> </div> </div> </div> </div> </div>");
 	})
 	crimeDiv.addEventListener('click', function(event) {
 		console.log("crime");
 		divPrevContent = $(".col-sm-3").html();
+
+		//Resize Columns
 		col2.classList.add('col-sm-9');
 		col1.classList.add('col-sm-3');
 		col2.classList.remove('col-sm-3');
 		col1.classList.remove('col-sm-9');
+
+		//Add Content
 		$(".col-sm-9").html("");
 		$(".col-sm-9").html("<div class='container-fluid'> <div class='row'> <div class='col-md-6'> <p> Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>. Aliquam eget sapien sapien. Curabitur in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et, pharetra in dolor. Sed iaculis posuere diam ut cursus. <em>Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam velit et dui.</em> Proin massa magna, vulputate nec bibendum nec, posuere nec lacus. <small>Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu.</small> </p> <div class='jumbotron'> <h2> Hello, world! </h2> <p> This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique. </p> <p> <a class='btn btn-primary btn-large' href='#'>Learn more</a> </p> </div> <div class='row'> <div class='col-md-4'> </div> <div class='col-md-4'> </div> <div class='col-md-4'> </div> </div> </div> <div class='col-md-6'> <div class='row'> <div class='col-md-8'> </div> <div class='col-md-4'> </div> </div> <div class='row'> <div class='col-md-4'> </div> <div class='col-md-8'> </div> </div> <div class='row'> <div class='col-md-8'> </div> <div class='col-md-4'> </div> </div> <div class='row'> <div class='col-md-4'> </div> <div class='col-md-8'> </div> </div> </div> </div> </div>");
 	})
 	tourismDiv.addEventListener('click', function(event) {
 		console.log("tourism");
 		divPrevContent = $(".col-sm-3").html();
+
+		//Resize Columns
 		col2.classList.add('col-sm-9');
 		col1.classList.add('col-sm-3');
 		col2.classList.remove('col-sm-3');
 		col1.classList.remove('col-sm-9');
+
+		//Add Content
 		$(".col-sm-9").html("");
 		$(".col-sm-9").html("<div class='container-fluid'> <div class='row'> <div class='col-md-4'> <div class='jumbotron'> <h2> Hello, world! </h2> <p> This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique. </p> <p> <a class='btn btn-primary btn-large' href='#'>Learn more</a> </p> </div> <div class='jumbotron'> <h2> Hello, world! </h2> <p> This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique. </p> <p> <a class='btn btn-primary btn-large' href='#'>Learn more</a> </p> </div> </div> <div class='col-md-4'> <div class='jumbotron'> <h2> Hello, world! </h2> <p> This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique. </p> <p> <a class='btn btn-primary btn-large' href='#'>Learn more</a> </p> </div> <div class='jumbotron'> <h2> Hello, world! </h2> <p> This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique. </p> <p> <a class='btn btn-primary btn-large' href='#'>Learn more</a> </p> </div> </div> <div class='col-md-4'> <div class='jumbotron'> <h2> Hello, world! </h2> <p> This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique. </p> <p> <a class='btn btn-primary btn-large' href='#'>Learn more</a> </p> </div> <div class='jumbotron'> <h2> Hello, world! </h2> <p> This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique. </p> <p> <a class='btn btn-primary btn-large' href='#'>Learn more</a> </p> </div> <div class='jumbotron'> <h2> Hello, world! </h2> <p> This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique. </p> <p> <a class='btn btn-primary btn-large' href='#'>Learn more</a> </p> </div> <div class='jumbotron'> <h2> Hello, world! </h2> <p> This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique. </p> <p> <a class='btn btn-primary btn-large' href='#'>Learn more</a> </p> </div> <div class='jumbotron'> <h2> Hello, world! </h2> <p> This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique. </p> <p> <a class='btn btn-primary btn-large' href='#'>Learn more</a> </p> </div> </div> </div> </div>");
 	})

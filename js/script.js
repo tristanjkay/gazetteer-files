@@ -115,7 +115,7 @@ window.onload=function(){
 		//Add Data from APIs
 		//Current
 		$("#countryname_ph").html(selectedCountry.name);
-		$("#todaycapital_ph").html(selectedCountry.capital.name);
+		$("#todaycapital_ph").html("Today(" + selectedCountry.capital.name + ")");
 		$("#temperature_ph").html(selectedCountry.capital.weather.temperature);
 		$("#weathericon_ph").html(selectedCountry.capital.weather.icon);
 		$("#humidity_ph").html(selectedCountry.capital.humidity);

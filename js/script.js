@@ -154,12 +154,13 @@ window.onload=function(){
 
 		//Add Layout
 		$(".col-sm-9").html("");
-		$(".col-sm-9").html("<h1> Brazil </h1> <div class='row'> <div class='col-md-3'> <div class='jumbotron'> <div class='row'> <div class='col-md-4'> <p>1</p> <p>GBP</p> </div> <div class='col-md-4'>=</div> <div class='col-md-4'> <p>1</p> <p>GBP</p> </div> </div> </div> <div class='jumbotron'> <h2>Other Currencies</h2><div id ='othercurrencies'> <div class='row'> <p>10 AUS DOLLAR</p> </div></div> </div> </div> <div class='col-md-9'> <div class='row'> <div class='col-md-4'> <div class='jumbotron'> <h2 id = 'gdp_ph'>10</h2> <h3>GDP</h3> </div> </div> <div class='col-md-4'> <div class='jumbotron'> <h2 id = 'inflationrate_ph'>10</h2> <h3>Inflation Rate</h3> </div> </div> <div class='col-md-4'> <div class='jumbotron'> <h2 id = 'annualbudget_ph'>10</h2> <h3>Annual Budget</h3> </div> </div> </div> <div class='row'> <div class='col-md-6'> <div class='jumbotron'> <h2>Top Exports</h2> <div id = 'exports'></div> <div class='row'> <p>1</p> <p>Fish</p> <p>10%</p> </div> </div> </div> <div class='col-md-6'> <div class='jumbotron'> <h2>Top Imports</h2> <div id = 'imports'> <div class='row'> <p>1</p> <p>Fish</p> <p>10%</p> </div> </div> </div> </div> </div> </div> </div>");
+		$(".col-sm-9").html("<h1 id = 'countryname_ph'> Brazil </h1> <div class='row'> <div class='col-md-3'> <div class='jumbotron'> <div class='row'> <div class='col-md-4'> <p>1</p> <p>GBP</p> </div> <div class='col-md-4'>=</div> <div class='col-md-4'> <p>1</p> <p>GBP</p> </div> </div> </div> <div class='jumbotron'> <h2>Other Currencies</h2><div id ='othercurrencies'> <div class='row'> <p>10 AUS DOLLAR</p> </div></div> </div> </div> <div class='col-md-9'> <div class='row'> <div class='col-md-4'> <div class='jumbotron'> <h2 id = 'gdp_ph'>10</h2> <h3>GDP</h3> </div> </div> <div class='col-md-4'> <div class='jumbotron'> <h2 id = 'inflationrate_ph'>10</h2> <h3>Inflation Rate</h3> </div> </div> <div class='col-md-4'> <div class='jumbotron'> <h2 id = 'annualbudget_ph'>10</h2> <h3>Annual Budget</h3> </div> </div> </div> <div class='row'> <div class='col-md-6'> <div class='jumbotron'> <h2>Top Exports</h2> <div id = 'exports'></div> <div class='row'> <p>1</p> <p>Fish</p> <p>10%</p> </div> </div> </div> <div class='col-md-6'> <div class='jumbotron'> <h2>Top Imports</h2> <div id = 'imports'> <div class='row'> <p>1</p> <p>Fish</p> <p>10%</p> </div> </div> </div> </div> </div> </div> </div>");
 
 		
 
 		//Add Data from APIs
-		//Current
+		$("#countryname_ph").html(selectedCountry.name);
+		
 		$("#gdp_ph").html("");
 		$("#inflationrate_ph").html("");
 		$("#annualbudget_ph").html("");
@@ -203,19 +204,55 @@ window.onload=function(){
 
 		//Add Layout 
 		$(".col-sm-9").html("");
-		$(".col-sm-9").html("<h1> Brazil </h1> <div class='row'> <div class='col-md-5'> <div class='jumbotron'> <h2> Top Site Title </h2> <p> This is where the description of the top site will go. </p><img src= '/images/placeholder.png'></img> </div> </div> <div class='col-md-7'> <div class='row'> <div class='col-md-4'> <h2> Heading </h2> <p> Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p> <p> <a class='btn' href='#'>View details »</a> </p> </div> <div class='col-md-8'> <h2> Heading </h2> <p> Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p> <p> <a class='btn' href='#'>View details »</a> </p> </div> </div> <div class='row'> <div class='col-md-8'> <h2> Heading </h2> <p> Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p> <p> <a class='btn' href='#'>View details »</a> </p> </div> <div class='col-md-4'> <h2> Heading </h2> <p> Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p> <p> <a class='btn' href='#'>View details »</a> </p> </div> </div> <div class='row'> <div class='col-md-4'> <h2> Heading </h2> <p> Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p> <p> <a class='btn' href='#'>View details »</a> </p> </div> <div class='col-md-8'> <h2> Heading </h2> <p> Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p> <p> <a class='btn' href='#'>View details »</a> </p> </div> </div> </div> </div>");
+		$(".col-sm-9").html("<h1 id = 'countryname_ph'> Brazil </h1> <div class='row'> <div class='col-md-5'> <div class='jumbotron'> <h2 id = 'culture_1title_ph'> Top Site Title </h2> <p id = 'culture_1description_ph'> This is where the description of the top site will go. </p><div id ='culture_1img_ph'></div> </div> </div> <div class='col-md-7'> <div class='row'> <div class='col-md-4'> <h2 id = 'culture_2title_ph'> Heading </h2> <p id = 'culture_2description_ph'> Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p> <p> <a class='btn' href='#'>Read</a> </p> </div> <div class='col-md-8'> <h2 id = 'culture_3title_ph'> Heading </h2> <p id = 'culture_3description_ph'> Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p> <p> <a class='btn' href='#'>Read</a> </p> </div> </div> <div class='row'> <div class='col-md-8'> <h2 id = 'culture_4title_ph'> Heading </h2> <p id = 'culture_4description_ph'> Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p> <p> <a class='btn' href='#'>Read</a> </p> </div> <div class='col-md-4'> <h2 id = 'culture_5title_ph'> Heading </h2> <p id = 'culture_5description_ph'> Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p> <p> <a class='btn' href='#'>Read</a> </p> </div> </div> <div class='row'> <div class='col-md-4'> <h2 id = 'culture_6title_ph'> Heading </h2> <p id = 'culture_6description_ph'> Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p> <p> <a class='btn' href='#'>Read</a> </p> </div> <div class='col-md-8'> <h2 id = 'culture_7title_ph'> Heading </h2> <p id = 'culture_7description_ph'> Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p> <p> <a class='btn' href='#'>Read</a> </p> </div> </div> </div> </div>");
 
 		//Add Data from APIs
-		//Current
+
 		$("#countryname_ph").html(selectedCountry.name);
-		$("#todaycapital_ph").html(selectedCountry.capital.name);
-		$("#temperature_ph").html("");
-		$("#weathericon_ph").html("");
-		$("#humidity_ph").html("");
-		$("#precipitation_ph").html("");
-		$("#winddirection_ph").html("");
-		$("#windspeed_ph").html("");
-		$("#uvindex_ph").html("");
+		
+		$("#culture_1title_ph").html(selectedCountry.sites);
+		$("#culture_1description_ph").html(selectedCountry.sites);
+		$("#culture_1img_ph").html("<img src = '"+ "x" + "'></img>");
+
+		$("#culture_2title_ph").html(selectedCountry.sites);
+		$("#culture_2description_ph").html(selectedCountry.sites);
+		$("#culture_2img_ph").html("<img src = '"+ "x" + "'></img>");
+
+		$("#culture_2title_ph").html(selectedCountry.sites);
+		$("#culture_2description_ph").html(selectedCountry.sites);
+		$("#culture_2img_ph").html("<img src = '"+ "x" + "'></img>");
+
+		$("#culture_3title_ph").html(selectedCountry.sites);
+		$("#culture_3description_ph").html(selectedCountry.sites);
+		$("#culture_3img_ph").html("<img src = '"+ "x" + "'></img>");
+
+		$("#culture_4title_ph").html(selectedCountry.sites);
+		$("#culture_4description_ph").html(selectedCountry.sites);
+		$("#culture_4img_ph").html("<img src = '"+ "x" + "'></img>");
+
+		$("#culture_5title_ph").html(selectedCountry.sites);
+		$("#culture_5description_ph").html(selectedCountry.sites);
+		$("#culture_5img_ph").html("<img src = '"+ "x" + "'></img>");
+
+		$("#culture_6title_ph").html(selectedCountry.sites);
+		$("#culture_6description_ph").html(selectedCountry.sites);
+		$("#culture_6img_ph").html("<img src = '"+ "x" + "'></img>");
+
+		$("#culture_7title_ph").html(selectedCountry.sites);
+		$("#culture_7description_ph").html(selectedCountry.sites);
+		$("#culture_7img_ph").html("<img src = '"+ "x" + "'></img>");
+
+		$("#culture_8title_ph").html(selectedCountry.sites);
+		$("#culture_8description_ph").html(selectedCountry.sites);
+		$("#culture_8img_ph").html("<img src = '"+ "x" + "'></img>");
+
+		$("#culture_9title_ph").html(selectedCountry.sites);
+		$("#culture_9description_ph").html(selectedCountry.sites);
+		$("#culture_9img_ph").html("<img src = '"+ "x" + "'></img>");
+
+		$("#culture_10title_ph").html(selectedCountry.sites);
+		$("#culture_10description_ph").html(selectedCountry.sites);
+		$("#culture_10img_ph").html("<img src = '"+ "x" + "'></img>");
 
 		//Loop for Each 
 		/*selectedCountry.capital.weather.forecast.forEach(day => {
@@ -241,19 +278,55 @@ window.onload=function(){
 
 		//Add Layout
 		$(".col-sm-9").html("");
-		$(".col-sm-9").html("<h1> Brazil </h1> <div class='row'> <div class='col-md-3'> <div class='jumbotron'> <h2> Hello, world! </h2> <p> This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique. </p> <p> <a class='btn btn-primary btn-large' href='#'>Learn more</a> </p> </div> </div> <div class='col-md-9'> <div class='row'> <div class='col-md-4'> <h2> Heading </h2> <p> Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p> <p> <a class='btn' href='#'>View details »</a> </p> </div> <div class='col-md-8'> <h2> Heading </h2> <p> Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p> <p> <a class='btn' href='#'>View details »</a> </p> </div> </div> <div class='row'> <div class='col-md-8'> <h2> Heading </h2> <p> Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p> <p> <a class='btn' href='#'>View details »</a> </p> </div> <div class='col-md-4'> <h2> Heading </h2> <p> Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p> <p> <a class='btn' href='#'>View details »</a> </p> </div> </div> <div class='row'> <div class='col-md-4'> <h2> Heading </h2> <p> Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p> <p> <a class='btn' href='#'>View details »</a> </p> </div> <div class='col-md-8'> <h2> Heading </h2> <p> Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p> <p> <a class='btn' href='#'>View details »</a> </p> </div> </div> </div> </div>");
+		$(".col-sm-9").html("<h1 id = 'countryname_ph'> Brazil </h1> <div class='row'> <div class='col-md-5'> <div class='jumbotron'> <h2 id = 'news_1title_ph'> Top Site Title </h2> <p id = 'news_1description_ph'> This is where the description of the top site will go. </p> <div id ='news_1img_ph'></div> </div> </div> <div class='col-md-7'> <div class='row'> <div class='col-md-4'> <h2 id = 'news_2title_ph'> Heading </h2> <p id = 'news_2description_ph'> Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p> <p> <a class='btn' href='#'>Read</a> </p> </div> <div class='col-md-8'> <h2 id = 'news_3title_ph'> Heading </h2> <p id = 'news_3description_ph'> Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p> <p> <a class='btn' href='#'>Read</a> </p> </div> </div> <div class='row'> <div class='col-md-8'> <h2 id = 'news_4title_ph'> Heading </h2> <p id = 'news_4description_ph'> Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p> <p> <a class='btn' href='#'>Read</a> </p> </div> <div class='col-md-4'> <h2 id = 'news_5title_ph'> Heading </h2> <p id = 'news_5description_ph'> Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p> <p> <a class='btn' href='#'>Read</a> </p> </div> </div> <div class='row'> <div class='col-md-4'> <h2 id = 'news_6title_ph'> Heading </h2> <p id = 'news_6description_ph'> Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p> <p> <a class='btn' href='#'>Read</a> </p> </div> <div class='col-md-8'> <h2 id = 'news_7title_ph'> Heading </h2> <p id = 'news_7description_ph'> Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p> <p> <a class='btn' href='#'>Read</a> </p> </div> </div> </div> </div>");
 
 		//Add Data from APIs
-		//Current
+
 		$("#countryname_ph").html(selectedCountry.name);
-		$("#todaycapital_ph").html(selectedCountry.capital.name);
-		$("#temperature_ph").html("");
-		$("#weathericon_ph").html("");
-		$("#humidity_ph").html("");
-		$("#precipitation_ph").html("");
-		$("#winddirection_ph").html("");
-		$("#windspeed_ph").html("");
-		$("#uvindex_ph").html("");
+		
+		$("#news_1title_ph").html(selectedCountry.sites);
+		$("#news_1description_ph").html(selectedCountry.sites);
+		$("#news_1img_ph").html("<img src = '"+ "/images/placeholder.png" + "'></img>");
+
+		$("#news_2title_ph").html(selectedCountry.sites);
+		$("#news_2description_ph").html(selectedCountry.sites);
+		$("#news_2img_ph").html("<img src = '"+ "x" + "'></img>");
+
+		$("#news_2title_ph").html(selectedCountry.sites);
+		$("#news_2description_ph").html(selectedCountry.sites);
+		$("#news_2img_ph").html("<img src = '"+ "x" + "'></img>");
+
+		$("#news_3title_ph").html(selectedCountry.sites);
+		$("#news_3description_ph").html(selectedCountry.sites);
+		$("#news_3img_ph").html("<img src = '"+ "x" + "'></img>");
+
+		$("#news_4title_ph").html(selectedCountry.sites);
+		$("#news_4description_ph").html(selectedCountry.sites);
+		$("#news_4img_ph").html("<img src = '"+ "x" + "'></img>");
+
+		$("#news_5title_ph").html(selectedCountry.sites);
+		$("#news_5description_ph").html(selectedCountry.sites);
+		$("#news_5img_ph").html("<img src = '"+ "x" + "'></img>");
+
+		$("#news_6title_ph").html(selectedCountry.sites);
+		$("#news_6description_ph").html(selectedCountry.sites);
+		$("#news_6img_ph").html("<img src = '"+ "x" + "'></img>");
+
+		$("#news_7title_ph").html(selectedCountry.sites);
+		$("#news_7description_ph").html(selectedCountry.sites);
+		$("#news_7img_ph").html("<img src = '"+ "x" + "'></img>");
+
+		$("#news_8title_ph").html(selectedCountry.sites);
+		$("#news_8description_ph").html(selectedCountry.sites);
+		$("#news_8img_ph").html("<img src = '"+ "x" + "'></img>");
+
+		$("#news_9title_ph").html(selectedCountry.sites);
+		$("#news_9description_ph").html(selectedCountry.sites);
+		$("#news_9img_ph").html("<img src = '"+ "x" + "'></img>");
+
+		$("#news_10title_ph").html(selectedCountry.sites);
+		$("#news_10description_ph").html(selectedCountry.sites);
+		$("#news _10img_ph").html("<img src = '"+ "x" + "'></img>");
 
 		//Loop for Each 
 		/*selectedCountry.capital.weather.forecast.forEach(day => {

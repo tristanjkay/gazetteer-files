@@ -113,6 +113,24 @@ window.onload=function(){
 		$(".col-sm-9").html("<div class='row'> <div class='col'> <h1 id = 'countryname_ph'>Brazil</h1> <h3 id = 'todaycapital_ph'>Today(Brasilia)</h3> </div> <h3 id = 'temperature_ph'>18&deg;C</h3> <h3 id = 'weathericon_ph'>&#9728;</h3> </div> <div class='row bg-light'> <div class='col'> <h1 id = 'humidity_ph'>83</h1> <h4>HUMIDITY</h4> </div> <div class='col'> <h1 id = 'precipitation_ph'>0</h1> <h4>PRECIPITATION</h4> </div> <div class='col'> <h1 id = 'winddirection_ph'>N</h1> <h4>WIND DIRECTION</h4> </div> <div class='col'> <h1 id = 'windspeed_ph'>3.8</h1> <h4>WIND SPEED</h4> </div> <div class='col'> <h1 id = 'uvindex_ph'>3</h1> <h4>UV INDEX</h4> </div> </div> <br> <br> <h2>This Week</h2> <h3>Monday 12</h3> <div class='row' id='covidChart'> <div class='col' id='charttext'> <div id='bar1'></div> <h4>28c</h4> <h4>10%</h4> <h4>&darr;</h4> <h4>5mph</h4> </div> <div class='col' id='charttext'> <div id='bar2'></div> <h4>28c</h4> <h4>10%</h4> <h4>&darr;</h4> <h4>5mph</h4> </div> <div class='col' id='charttext'> <div id='bar3'></div> <h4>28c</h4> <h4>10%</h4> <h4>&darr;</h4> <h4>5mph</h4> </div> <div class='col' id='charttext'> <div id='bar4'></div> <h4>28c</h4> <h4>10%</h4> <h4>&darr;</h4> <h4>5mph</h4> </div> <div class='col' id='charttext'> <div id='bar5'></div> <h4>28c</h4> <h4>10%</h4> <h4>&darr;</h4> <h4>5mph</h4> </div> </div> <p>Other days to be populated by api...</p>");
 		
 		//Add Data from APIs
+		//Current
+		$("#countryname_ph").html(selectedCountry.name);
+		$("#todaycapital_ph").html(selectedCountry.capital.name);
+		$("#temperature_ph").html(selectedCountry.capital.weather.temperature);
+		$("#weathericon_ph").html(selectedCountry.capital.weather.icon);
+		$("#humidity_ph").html(selectedCountry.capital.humidity);
+		$("#precipitation_ph").html(selectedCountry.capital.weather.precipitation);
+		$("#winddirection_ph").html(selectedCountry.capital.weather.windDirection);
+		$("#windspeed_ph").html(selectedCountry.capital.weather.windSpeed);
+		$("#uvindex_ph").html(selectedCountry.capital.weather.uvIndex);
+
+		//Loop for Each 
+
+
+
+		//Centre Map
+		map.setView([selectedCountry.capital.location[0], selectedCountry.capital.location[1]], 2);
+
 
 
 	})
@@ -126,9 +144,25 @@ window.onload=function(){
 		col2.classList.remove('col-sm-3');
 		col1.classList.remove('col-sm-9');
 
-		//Add Content
+		//Add Layout
 		$(".col-sm-9").html("");
 		$(".col-sm-9").html("<h1> Brazil </h1> <div class='row'> <div class='col-md-3'> <div class='jumbotron'> <div class='row'> <div class='col-md-4'> <p>1</p> <p>GBP</p> </div> <div class='col-md-4'>=</div> <div class='col-md-4'> <p>1</p> <p>GBP</p> </div> </div> </div> <div class='jumbotron'> <div class='row'> 10 GBP </div> <div class='row'> 10 GBP </div> <div class='row'> 10 GBP </div> <div class='row'> 10 GBP </div> <div class='row'> 10 GBP </div> <div class='row'> 10 GBP </div> <div class='row'> 10 GBP </div> </div> </div> <div class='col-md-9'> <div class='row'> <div class='col-md-4'> <div class='jumbotron'> </div> </div> <div class='col-md-4'> <div class='jumbotron'> </div> </div> <div class='col-md-4'> <div class='jumbotron'> </div> </div> </div> <div class='row'> <div class='col-md-6'> <div class='jumbotron'> </div> </div> <div class='col-md-6'> <div class='jumbotron'> </div> </div> </div> </div> </div>");
+
+		
+
+		//Add Data from APIs
+		//Current
+		$("#countryname_ph").html(selectedCountry.name);
+		$("#todaycapital_ph").html(selectedCountry.capital.name);
+		$("#temperature_ph").html("");
+		$("#weathericon_ph").html("");
+		$("#humidity_ph").html("");
+		$("#precipitation_ph").html("");
+		$("#winddirection_ph").html("");
+		$("#windspeed_ph").html("");
+		$("#uvindex_ph").html("");
+
+		//Loop for Each 
 
 		//Centre Map
 		map.setView([selectedCountry.capital.location[0], selectedCountry.capital.location[1]], 2);
@@ -143,9 +177,28 @@ window.onload=function(){
 		col2.classList.remove('col-sm-3');
 		col1.classList.remove('col-sm-9');
 
-		//Add Content
+		//Add Layout 
 		$(".col-sm-9").html("");
 		$(".col-sm-9").html("<h1> Brazil </h1> <div class='row'> <div class='col-md-5'> <div class='jumbotron'> <h2> Top Site Title </h2> <p> This is where the description of the top site will go. </p><img src= '/images/placeholder.png'></img> </div> </div> <div class='col-md-7'> <div class='row'> <div class='col-md-4'> <h2> Heading </h2> <p> Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p> <p> <a class='btn' href='#'>View details »</a> </p> </div> <div class='col-md-8'> <h2> Heading </h2> <p> Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p> <p> <a class='btn' href='#'>View details »</a> </p> </div> </div> <div class='row'> <div class='col-md-8'> <h2> Heading </h2> <p> Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p> <p> <a class='btn' href='#'>View details »</a> </p> </div> <div class='col-md-4'> <h2> Heading </h2> <p> Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p> <p> <a class='btn' href='#'>View details »</a> </p> </div> </div> <div class='row'> <div class='col-md-4'> <h2> Heading </h2> <p> Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p> <p> <a class='btn' href='#'>View details »</a> </p> </div> <div class='col-md-8'> <h2> Heading </h2> <p> Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p> <p> <a class='btn' href='#'>View details »</a> </p> </div> </div> </div> </div>");
+
+		//Add Data from APIs
+		//Current
+		$("#countryname_ph").html(selectedCountry.name);
+		$("#todaycapital_ph").html(selectedCountry.capital.name);
+		$("#temperature_ph").html("");
+		$("#weathericon_ph").html("");
+		$("#humidity_ph").html("");
+		$("#precipitation_ph").html("");
+		$("#winddirection_ph").html("");
+		$("#windspeed_ph").html("");
+		$("#uvindex_ph").html("");
+
+		//Loop for Each 
+
+
+
+		//Centre Map
+		map.setView([selectedCountry.capital.location[0], selectedCountry.capital.location[1]], 2);
 	})
 	newsDiv.addEventListener('click', function(event) {
 		console.log("news");
@@ -158,9 +211,28 @@ window.onload=function(){
 		col2.classList.remove('col-sm-3');
 		col1.classList.remove('col-sm-9');
 
-		//Add Content
+		//Add Layout
 		$(".col-sm-9").html("");
 		$(".col-sm-9").html("<h1> Brazil </h1> <div class='row'> <div class='col-md-3'> <div class='jumbotron'> <h2> Hello, world! </h2> <p> This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique. </p> <p> <a class='btn btn-primary btn-large' href='#'>Learn more</a> </p> </div> </div> <div class='col-md-9'> <div class='row'> <div class='col-md-4'> <h2> Heading </h2> <p> Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p> <p> <a class='btn' href='#'>View details »</a> </p> </div> <div class='col-md-8'> <h2> Heading </h2> <p> Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p> <p> <a class='btn' href='#'>View details »</a> </p> </div> </div> <div class='row'> <div class='col-md-8'> <h2> Heading </h2> <p> Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p> <p> <a class='btn' href='#'>View details »</a> </p> </div> <div class='col-md-4'> <h2> Heading </h2> <p> Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p> <p> <a class='btn' href='#'>View details »</a> </p> </div> </div> <div class='row'> <div class='col-md-4'> <h2> Heading </h2> <p> Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p> <p> <a class='btn' href='#'>View details »</a> </p> </div> <div class='col-md-8'> <h2> Heading </h2> <p> Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p> <p> <a class='btn' href='#'>View details »</a> </p> </div> </div> </div> </div>");
+
+		//Add Data from APIs
+		//Current
+		$("#countryname_ph").html(selectedCountry.name);
+		$("#todaycapital_ph").html(selectedCountry.capital.name);
+		$("#temperature_ph").html("");
+		$("#weathericon_ph").html("");
+		$("#humidity_ph").html("");
+		$("#precipitation_ph").html("");
+		$("#winddirection_ph").html("");
+		$("#windspeed_ph").html("");
+		$("#uvindex_ph").html("");
+
+		//Loop for Each 
+
+
+
+		//Centre Map
+		map.setView([selectedCountry.capital.location[0], selectedCountry.capital.location[1]], 2);
 	})
 	healthDiv.addEventListener('click', function(event) {
 		console.log("health");
@@ -172,9 +244,28 @@ window.onload=function(){
 		col2.classList.remove('col-sm-3');
 		col1.classList.remove('col-sm-9');
 
-		//Add Content
+		//Add Layout
 		$(".col-sm-9").html("");
 		$(".col-sm-9").html("<h1> Brazil </h1> <div class='row'> <div class='col-md-6'> <p> Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>. Aliquam eget sapien sapien. Curabitur in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et, pharetra in dolor. Sed iaculis posuere diam ut cursus. <em>Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam velit et dui.</em> Proin massa magna, vulputate nec bibendum nec, posuere nec lacus. <small>Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu.</small> </p> <div class='jumbotron'> <h2> Hello, world! </h2> <p> This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique. </p> <p> <a class='btn btn-primary btn-large' href='#'>Learn more</a> </p> </div> <div class='row'> <div class='col-md-4'> </div> <div class='col-md-4'> </div> <div class='col-md-4'> </div> </div> </div> <div class='col-md-6'> <div class='row'> <div class='col-md-8'> </div> <div class='col-md-4'> </div> </div> <div class='row'> <div class='col-md-4'> </div> <div class='col-md-8'> </div> </div> <div class='row'> <div class='col-md-8'> </div> <div class='col-md-4'> </div> </div> <div class='row'> <div class='col-md-4'> </div> <div class='col-md-8'> </div> </div> </div> </div>");
+
+		//Add Data from APIs
+		//Current
+		$("#countryname_ph").html(selectedCountry.name);
+		$("#todaycapital_ph").html(selectedCountry.capital.name);
+		$("#temperature_ph").html("");
+		$("#weathericon_ph").html("");
+		$("#humidity_ph").html("");
+		$("#precipitation_ph").html("");
+		$("#winddirection_ph").html("");
+		$("#windspeed_ph").html("");
+		$("#uvindex_ph").html("");
+
+		//Loop for Each 
+
+
+
+		//Centre Map
+		map.setView([selectedCountry.capital.location[0], selectedCountry.capital.location[1]], 2);
 	}) 
 	environmentDiv.addEventListener('click', function(event) {
 		console.log("environment");
@@ -186,9 +277,28 @@ window.onload=function(){
 		col2.classList.remove('col-sm-3');
 		col1.classList.remove('col-sm-9');
 
-		//Add Content
+		//Add Layout
 		$(".col-sm-9").html("");
 		$(".col-sm-9").html("<h1> Brazil </h1><div class='row'> <div class='col-md-6'> <p> Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>. Aliquam eget sapien sapien. Curabitur in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et, pharetra in dolor. Sed iaculis posuere diam ut cursus. <em>Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam velit et dui.</em> Proin massa magna, vulputate nec bibendum nec, posuere nec lacus. <small>Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu.</small> </p> <div class='jumbotron'> <h2> Hello, world! </h2> <p> This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique. </p> <p> <a class='btn btn-primary btn-large' href='#'>Learn more</a> </p> </div> <div class='row'> <div class='col-md-4'> </div> <div class='col-md-4'> </div> <div class='col-md-4'> </div> </div> </div> <div class='col-md-6'> <div class='row'> <div class='col-md-8'> </div> <div class='col-md-4'> </div> </div> <div class='row'> <div class='col-md-4'> </div> <div class='col-md-8'> </div> </div> <div class='row'> <div class='col-md-8'> </div> <div class='col-md-4'> </div> </div> <div class='row'> <div class='col-md-4'> </div> <div class='col-md-8'> </div> </div> </div> </div>");
+
+		//Add Data from APIs
+		//Current
+		$("#countryname_ph").html(selectedCountry.name);
+		$("#todaycapital_ph").html(selectedCountry.capital.name);
+		$("#temperature_ph").html("");
+		$("#weathericon_ph").html("");
+		$("#humidity_ph").html("");
+		$("#precipitation_ph").html("");
+		$("#winddirection_ph").html("");
+		$("#windspeed_ph").html("");
+		$("#uvindex_ph").html("");
+
+		//Loop for Each 
+
+
+
+		//Centre Map
+		map.setView([selectedCountry.capital.location[0], selectedCountry.capital.location[1]], 2);
 	})
 	educationDiv.addEventListener('click', function(event) {
 		console.log("education");
@@ -200,9 +310,28 @@ window.onload=function(){
 		col2.classList.remove('col-sm-3');
 		col1.classList.remove('col-sm-9');
 
-		//Add Content
+		//Add Layout
 		$(".col-sm-9").html("");
 		$(".col-sm-9").html("<h1> Brazil </h1><div class='row'> <div class='col-md-6'> <p> Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>. Aliquam eget sapien sapien. Curabitur in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et, pharetra in dolor. Sed iaculis posuere diam ut cursus. <em>Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam velit et dui.</em> Proin massa magna, vulputate nec bibendum nec, posuere nec lacus. <small>Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu.</small> </p> <div class='jumbotron'> <h2> Hello, world! </h2> <p> This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique. </p> <p> <a class='btn btn-primary btn-large' href='#'>Learn more</a> </p> </div> <div class='row'> <div class='col-md-4'> </div> <div class='col-md-4'> </div> <div class='col-md-4'> </div> </div> </div> <div class='col-md-6'> <div class='row'> <div class='col-md-8'> </div> <div class='col-md-4'> </div> </div> <div class='row'> <div class='col-md-4'> </div> <div class='col-md-8'> </div> </div> <div class='row'> <div class='col-md-8'> </div> <div class='col-md-4'> </div> </div> <div class='row'> <div class='col-md-4'> </div> <div class='col-md-8'> </div> </div> </div> </div>");
+
+		//Add Data from APIs
+		//Current
+		$("#countryname_ph").html(selectedCountry.name);
+		$("#todaycapital_ph").html(selectedCountry.capital.name);
+		$("#temperature_ph").html("");
+		$("#weathericon_ph").html("");
+		$("#humidity_ph").html("");
+		$("#precipitation_ph").html("");
+		$("#winddirection_ph").html("");
+		$("#windspeed_ph").html("");
+		$("#uvindex_ph").html("");
+
+		//Loop for Each 
+
+
+
+		//Centre Map
+		map.setView([selectedCountry.capital.location[0], selectedCountry.capital.location[1]], 2);
 	})
 	crimeDiv.addEventListener('click', function(event) {
 		console.log("crime");
@@ -214,9 +343,28 @@ window.onload=function(){
 		col2.classList.remove('col-sm-3');
 		col1.classList.remove('col-sm-9');
 
-		//Add Content
+		//Add Layout
 		$(".col-sm-9").html("");
 		$(".col-sm-9").html("<h1> Brazil </h1><div class='row'> <div class='col-md-6'> <p> Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>. Aliquam eget sapien sapien. Curabitur in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et, pharetra in dolor. Sed iaculis posuere diam ut cursus. <em>Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam velit et dui.</em> Proin massa magna, vulputate nec bibendum nec, posuere nec lacus. <small>Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu.</small> </p> <div class='jumbotron'> <h2> Hello, world! </h2> <p> This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique. </p> <p> <a class='btn btn-primary btn-large' href='#'>Learn more</a> </p> </div> <div class='row'> <div class='col-md-4'> </div> <div class='col-md-4'> </div> <div class='col-md-4'> </div> </div> </div> <div class='col-md-6'> <div class='row'> <div class='col-md-8'> </div> <div class='col-md-4'> </div> </div> <div class='row'> <div class='col-md-4'> </div> <div class='col-md-8'> </div> </div> <div class='row'> <div class='col-md-8'> </div> <div class='col-md-4'> </div> </div> <div class='row'> <div class='col-md-4'> </div> <div class='col-md-8'> </div> </div> </div> </div>");
+
+		//Add Data from APIs
+		//Current
+		$("#countryname_ph").html(selectedCountry.name);
+		$("#todaycapital_ph").html(selectedCountry.capital.name);
+		$("#temperature_ph").html("");
+		$("#weathericon_ph").html("");
+		$("#humidity_ph").html("");
+		$("#precipitation_ph").html("");
+		$("#winddirection_ph").html("");
+		$("#windspeed_ph").html("");
+		$("#uvindex_ph").html("");
+
+		//Loop for Each 
+
+
+
+		//Centre Map
+		map.setView([selectedCountry.capital.location[0], selectedCountry.capital.location[1]], 2);
 	})
 	tourismDiv.addEventListener('click', function(event) {
 		console.log("tourism");
@@ -228,9 +376,28 @@ window.onload=function(){
 		col2.classList.remove('col-sm-3');
 		col1.classList.remove('col-sm-9');
 
-		//Add Content
+		//Add Layout
 		$(".col-sm-9").html("");
 		$(".col-sm-9").html("<h1> Brazil </h1><div class='row'> <div class='col-md-4'> <div class='jumbotron'> <h2> Hello, world! </h2> <p> This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique. </p> <p> <a class='btn btn-primary btn-large' href='#'>Learn more</a> </p> </div> <div class='jumbotron'> <h2> Hello, world! </h2> <p> This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique. </p> <p> <a class='btn btn-primary btn-large' href='#'>Learn more</a> </p> </div> </div> <div class='col-md-4'> <div class='jumbotron'> <h2> Hello, world! </h2> <p> This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique. </p> <p> <a class='btn btn-primary btn-large' href='#'>Learn more</a> </p> </div> <div class='jumbotron'> <h2> Hello, world! </h2> <p> This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique. </p> <p> <a class='btn btn-primary btn-large' href='#'>Learn more</a> </p> </div> </div> <div class='col-md-4'> <div class='jumbotron'> <h2> Hello, world! </h2> <p> This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique. </p> <p> <a class='btn btn-primary btn-large' href='#'>Learn more</a> </p> </div> <div class='jumbotron'> <h2> Hello, world! </h2> <p> This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique. </p> <p> <a class='btn btn-primary btn-large' href='#'>Learn more</a> </p> </div> <div class='jumbotron'> <h2> Hello, world! </h2> <p> This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique. </p> <p> <a class='btn btn-primary btn-large' href='#'>Learn more</a> </p> </div> <div class='jumbotron'> <h2> Hello, world! </h2> <p> This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique. </p> <p> <a class='btn btn-primary btn-large' href='#'>Learn more</a> </p> </div> <div class='jumbotron'> <h2> Hello, world! </h2> <p> This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique. </p> <p> <a class='btn btn-primary btn-large' href='#'>Learn more</a> </p> </div> </div> </div>");
+
+		//Add Data from APIs
+		//Current
+		$("#countryname_ph").html(selectedCountry.name);
+		$("#todaycapital_ph").html(selectedCountry.capital.name);
+		$("#temperature_ph").html("");
+		$("#weathericon_ph").html("");
+		$("#humidity_ph").html("");
+		$("#precipitation_ph").html("");
+		$("#winddirection_ph").html("");
+		$("#windspeed_ph").html("");
+		$("#uvindex_ph").html("");
+
+		//Loop for Each 
+
+
+
+		//Centre Map
+		map.setView([selectedCountry.capital.location[0], selectedCountry.capital.location[1]], 2);
 	})
 		
 	

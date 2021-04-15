@@ -154,15 +154,15 @@ window.onload=function(){
 
 		//Add Layout
 		$(".col-sm-9").html("");
-		$(".col-sm-9").html("<h1> Brazil </h1> <div class='row'> <div class='col-md-3'> <div class='jumbotron'> <div class='row'> <div class='col-md-4'> <p>1</p> <p>GBP</p> </div> <div class='col-md-4'>=</div> <div class='col-md-4'> <p>1</p> <p>GBP</p> </div> </div> </div> <div class='jumbotron'> <h2>Other Currencies</h2> <div class='row'> <p>10 AUS DOLLAR</p> </div> </div> </div> <div class='col-md-9'> <div class='row'> <div class='col-md-4'> <div class='jumbotron'> <h2>10</h2> <h3>GDP</h3> </div> </div> <div class='col-md-4'> <div class='jumbotron'> <h2>10</h2> <h3>Inflation Rate</h3> </div> </div> <div class='col-md-4'> <div class='jumbotron'> <h2>10</h2> <h3>Annual Budget</h3> </div> </div> </div> <div class='row'> <div class='col-md-6'> <div class='jumbotron'> <h2>Top Exports</h2> <div id = 'exports'></div> <div class='row'> <p>1</p> <p>Fish</p> <p>10%</p> </div> </div> </div> <div class='col-md-6'> <div class='jumbotron'> <h2>Top Imports</h2> <div id = 'imports'> <div class='row'> <p>1</p> <p>Fish</p> <p>10%</p> </div> </div> </div> </div> </div> </div> </div>");
+		$(".col-sm-9").html("<h1> Brazil </h1> <div class='row'> <div class='col-md-3'> <div class='jumbotron'> <div class='row'> <div class='col-md-4'> <p>1</p> <p>GBP</p> </div> <div class='col-md-4'>=</div> <div class='col-md-4'> <p>1</p> <p>GBP</p> </div> </div> </div> <div class='jumbotron'> <h2>Other Currencies</h2><div id ='othercurrencies'> <div class='row'> <p>10 AUS DOLLAR</p> </div></div> </div> </div> <div class='col-md-9'> <div class='row'> <div class='col-md-4'> <div class='jumbotron'> <h2 id = 'gdp_ph'>10</h2> <h3>GDP</h3> </div> </div> <div class='col-md-4'> <div class='jumbotron'> <h2 id = 'inflationrate_ph'>10</h2> <h3>Inflation Rate</h3> </div> </div> <div class='col-md-4'> <div class='jumbotron'> <h2 id = 'annualbudget_ph'>10</h2> <h3>Annual Budget</h3> </div> </div> </div> <div class='row'> <div class='col-md-6'> <div class='jumbotron'> <h2>Top Exports</h2> <div id = 'exports'></div> <div class='row'> <p>1</p> <p>Fish</p> <p>10%</p> </div> </div> </div> <div class='col-md-6'> <div class='jumbotron'> <h2>Top Imports</h2> <div id = 'imports'> <div class='row'> <p>1</p> <p>Fish</p> <p>10%</p> </div> </div> </div> </div> </div> </div> </div>");
 
 		
 
 		//Add Data from APIs
 		//Current
-		$("#countryname_ph").html(selectedCountry.name);
-		$("#todaycapital_ph").html(selectedCountry.capital.name);
-		$("#temperature_ph").html("");
+		$("#gdp_ph").html("");
+		$("#inflationrate_ph").html("");
+		$("#annualbudget_ph").html("");
 		$("#weathericon_ph").html("");
 		$("#humidity_ph").html("");
 		$("#precipitation_ph").html("");
@@ -171,6 +171,22 @@ window.onload=function(){
 		$("#uvindex_ph").html("");
 
 		//Loop for Each 
+
+		/*selectedCountry.capital.weather.forecast.forEach(day => {
+
+			$( "#othercurrencies" ).append();
+		});
+
+		/*selectedCountry.capital.weather.forecast.forEach(day => {
+
+			$( "#exports" ).append();
+		});
+
+		/*selectedCountry.capital.weather.forecast.forEach(day => {
+
+			$( "#imports" ).append();
+		});
+		*/
 
 		//Centre Map
 		map.setView([selectedCountry.capital.location[0], selectedCountry.capital.location[1]], 2);
@@ -202,7 +218,11 @@ window.onload=function(){
 		$("#uvindex_ph").html("");
 
 		//Loop for Each 
+		/*selectedCountry.capital.weather.forecast.forEach(day => {
 
+			$( "#forecast" ).append();
+		});
+		*/
 
 
 		//Centre Map
@@ -236,7 +256,11 @@ window.onload=function(){
 		$("#uvindex_ph").html("");
 
 		//Loop for Each 
+		/*selectedCountry.capital.weather.forecast.forEach(day => {
 
+			$( "#forecast" ).append();
+		});
+		*/
 
 
 		//Centre Map
@@ -269,7 +293,11 @@ window.onload=function(){
 		$("#uvindex_ph").html("");
 
 		//Loop for Each 
+		/*selectedCountry.capital.weather.forecast.forEach(day => {
 
+			$( "#forecast" ).append();
+		});
+		*/
 
 
 		//Centre Map
@@ -302,7 +330,11 @@ window.onload=function(){
 		$("#uvindex_ph").html("");
 
 		//Loop for Each 
+		/*selectedCountry.capital.weather.forecast.forEach(day => {
 
+			$( "#forecast" ).append();
+		});
+		*/
 
 
 		//Centre Map
@@ -335,7 +367,11 @@ window.onload=function(){
 		$("#uvindex_ph").html("");
 
 		//Loop for Each 
+		/*selectedCountry.capital.weather.forecast.forEach(day => {
 
+			$( "#forecast" ).append();
+		});
+		*/
 
 
 		//Centre Map
@@ -368,7 +404,11 @@ window.onload=function(){
 		$("#uvindex_ph").html("");
 
 		//Loop for Each 
+		/*selectedCountry.capital.weather.forecast.forEach(day => {
 
+			$( "#forecast" ).append();
+		});
+		*/
 
 
 		//Centre Map
@@ -401,7 +441,11 @@ window.onload=function(){
 		$("#uvindex_ph").html("");
 
 		//Loop for Each 
+		/*selectedCountry.capital.weather.forecast.forEach(day => {
 
+			$( "#forecast" ).append();
+		});
+		*/
 
 
 		//Centre Map

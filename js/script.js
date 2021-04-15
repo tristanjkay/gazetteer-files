@@ -567,7 +567,7 @@ window.onload=function(){
 						//Set Data to Country Object
 
 						//Capital
-						//Weather
+						//Current Weather
 						selectedCountry.capital.weather.temperature = result['data']['current']['temp_c'];
 						selectedCountry.capital.weather.description = result['data']['current']['condition']['text'];
 						selectedCountry.capital.weather.windSpeed = result['data']['current']['wind_mph'];
@@ -581,6 +581,17 @@ window.onload=function(){
 						selectedCountry.capital.weather.visibility = result['data']['current']['vis_km'];
 						selectedCountry.capital.weather.isDay = result['data']['current']['is_day'];
 						selectedCountry.capital.weather.barPressure = result['data']['current']['pressure_mb'];
+
+						//Forecast for the Week
+						selectedCountry.capital.weather.forecast = {};
+
+
+						result['data']['forecast']['forecastday'].forEach(day => {
+							//indexInArray = result['data']['forecast']['forecastday'].indexOf(day);
+							selectedCountry.capital.weather.forecast.appendChild(day);
+							
+						
+						});
 
 						
 						

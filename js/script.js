@@ -588,7 +588,7 @@ window.onload=function(){
 
 						result['data']['forecast']['forecastday'].forEach(day => {
 							//indexInArray = result['data']['forecast']['forecastday'].indexOf(day);
-							selectedCountry.capital.weather.forecast.appendChild(day);
+							selectedCountry.capital.weather.forecast.push(day);
 							
 						
 						});

@@ -428,6 +428,9 @@ window.onload=function(){
 								"geometry": element['geometry'],
 								"capital": {
 									"weather":{
+										"forecast":{
+
+										}
 
 									}
 								},
@@ -588,7 +591,7 @@ window.onload=function(){
 
 						result['data']['forecast']['forecastday'].forEach(day => {
 							//indexInArray = result['data']['forecast']['forecastday'].indexOf(day);
-							selectedCountry.capital.weather.forecast.push(day);
+							(selectedCountry.capital.weather.forecast).push(day);
 							
 						
 						});

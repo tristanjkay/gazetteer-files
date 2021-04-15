@@ -586,15 +586,7 @@ window.onload=function(){
 						selectedCountry.capital.weather.barPressure = result['data']['current']['pressure_mb'];
 
 						//Forecast for the Week
-						selectedCountry.capital.weather.forecast = {};
-
-
-						result['data']['forecast']['forecastday'].forEach(day => {
-							//indexInArray = result['data']['forecast']['forecastday'].indexOf(day);
-							(selectedCountry.capital.weather.forecast).push(day);
-							
-						
-						});
+						selectedCountry.capital.weather.forecast = result['data']['forecast']['forecastday'];
 
 						
 						

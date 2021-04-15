@@ -117,7 +117,7 @@ window.onload=function(){
 		$("#countryname_ph").html(selectedCountry.name);
 		$("#todaycapital_ph").html("Today(" + selectedCountry.capital.name + ")");
 		$("#temperature_ph").html(selectedCountry.capital.weather.temperature);
-		$("#weathericon_ph").html(selectedCountry.capital.weather.icon);
+		$("#weathericon_ph").html("<img src ='" + selectedCountry.capital.weather.icon + "'></img>");
 		$("#humidity_ph").html(selectedCountry.capital.humidity);
 		$("#precipitation_ph").html(selectedCountry.capital.weather.precipitation);
 		$("#winddirection_ph").html(selectedCountry.capital.weather.windDirection);

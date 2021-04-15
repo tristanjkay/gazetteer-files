@@ -290,31 +290,31 @@ window.onload=function(){
 
 		$("#news_2title_ph").html(selectedCountry.sites);
 		$("#news_2description_ph").html(selectedCountry.sites);
-		$("#news_2img_ph").html("<img src = '"+ "x" + "'></img>");
+		//$("#news_2img_ph").html("<img src = '"+ "x" + "'></img>");
 
 		$("#news_2title_ph").html(selectedCountry.sites);
 		$("#news_2description_ph").html(selectedCountry.sites);
-		$("#news_2img_ph").html("<img src = '"+ "x" + "'></img>");
+		//$("#news_2img_ph").html("<img src = '"+ "x" + "'></img>");
 
 		$("#news_3title_ph").html(selectedCountry.sites);
 		$("#news_3description_ph").html(selectedCountry.sites);
-		$("#news_3img_ph").html("<img src = '"+ "x" + "'></img>");
+		//$("#news_3img_ph").html("<img src = '"+ "x" + "'></img>");
 
 		$("#news_4title_ph").html(selectedCountry.sites);
 		$("#news_4description_ph").html(selectedCountry.sites);
-		$("#news_4img_ph").html("<img src = '"+ "x" + "'></img>");
+		//$("#news_4img_ph").html("<img src = '"+ "x" + "'></img>");
 
 		$("#news_5title_ph").html(selectedCountry.sites);
 		$("#news_5description_ph").html(selectedCountry.sites);
-		$("#news_5img_ph").html("<img src = '"+ "x" + "'></img>");
+		//$("#news_5img_ph").html("<img src = '"+ "x" + "'></img>");
 
 		$("#news_6title_ph").html(selectedCountry.sites);
 		$("#news_6description_ph").html(selectedCountry.sites);
-		$("#news_6img_ph").html("<img src = '"+ "x" + "'></img>");
+		//$("#news_6img_ph").html("<img src = '"+ "x" + "'></img>");
 
 		$("#news_7title_ph").html(selectedCountry.sites);
 		$("#news_7description_ph").html(selectedCountry.sites);
-		$("#news_7img_ph").html("<img src = '"+ "x" + "'></img>");
+		//$("#news_7img_ph").html("<img src = '"+ "x" + "'></img>");
 
 		$("#news_8title_ph").html(selectedCountry.sites);
 		$("#news_8description_ph").html(selectedCountry.sites);
@@ -322,11 +322,11 @@ window.onload=function(){
 
 		$("#news_9title_ph").html(selectedCountry.sites);
 		$("#news_9description_ph").html(selectedCountry.sites);
-		$("#news_9img_ph").html("<img src = '"+ "x" + "'></img>");
+		//$("#news_9img_ph").html("<img src = '"+ "x" + "'></img>");
 
 		$("#news_10title_ph").html(selectedCountry.sites);
 		$("#news_10description_ph").html(selectedCountry.sites);
-		$("#news _10img_ph").html("<img src = '"+ "x" + "'></img>");
+		//$("#news _10img_ph").html("<img src = '"+ "x" + "'></img>");
 
 		//Loop for Each 
 		/*selectedCountry.capital.weather.forecast.forEach(day => {

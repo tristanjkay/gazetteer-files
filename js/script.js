@@ -856,6 +856,10 @@ window.onload=function(){
 						console.log(selectedCountry.exchangerate);
 						selectedCountry.othercurrencies = result['data']['rates'];
 
+						for (const [key, value] of Object.entries(selectedCountry.othercurrencies)) {
+							console.log(`${key}: ${value}`);
+						  };
+
 						$('#currency').html(selectedCountry.currency);
 						//TODO Make this work
 						$('#exchangeratevalue').html(selectedCountry.exchangerate);

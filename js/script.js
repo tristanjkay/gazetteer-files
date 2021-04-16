@@ -170,22 +170,19 @@ window.onload=function(){
 
 		//Add Layout
 		$(".col-sm-9").html("");
-		$(".col-sm-9").html("<h1 id = 'countryname_ph'> Brazil </h1> <div class='row'> <div class='col-md-3'> <div class='jumbotron'> <div class='row'> <div class='col-md-4'> <p>1</p> <p>GBP</p> </div> <div class='col-md-4'>=</div> <div class='col-md-4'> <p>1</p> <p>GBP</p> </div> </div> </div> <div class='jumbotron'> <h2>Other Currencies</h2><div id ='othercurrencies'> <div class='row'> <p>10 AUS DOLLAR</p> </div></div> </div> </div> <div class='col-md-9'> <div class='row'> <div class='col-md-4'> <div class='jumbotron'> <h2 id = 'gdp_ph'>10</h2> <h3>GDP</h3> </div> </div> <div class='col-md-4'> <div class='jumbotron'> <h2 id = 'inflationrate_ph'>10</h2> <h3>Inflation Rate</h3> </div> </div> <div class='col-md-4'> <div class='jumbotron'> <h2 id = 'annualbudget_ph'>10</h2> <h3>Annual Budget</h3> </div> </div> </div> <div class='row'> <div class='col-md-6'> <div class='jumbotron'> <h2>Top Exports</h2> <div id = 'exports'></div> <div class='row'> <p>1</p> <p>Fish</p> <p>10%</p> </div> </div> </div> <div class='col-md-6'> <div class='jumbotron'> <h2>Top Imports</h2> <div id = 'imports'> <div class='row'> <p>1</p> <p>Fish</p> <p>10%</p> </div> </div> </div> </div> </div> </div> </div>");
+		$(".col-sm-9").html("<h1 id = 'countryname_ph'> Brazil </h1> <div class='row'> <div class='col-md-3'> <div class='jumbotron'> <div class='row'> <div class='col-md-4'> <p>1</p> <p>GBP</p> </div> <div class='col-md-4'>=</div> <div class='col-md-4'> <p id = 'exchangerate_ph>1</p> <p id = 'currency_ph'>GBP</p> </div> </div> </div> <div class='jumbotron'> <h2>Other Currencies</h2><div id ='othercurrencies'> <div class='row'> <p>10 AUS DOLLAR</p> </div></div> </div> </div> <div class='col-md-9'> <div class='row'> <div class='col-md-4'> <div class='jumbotron'> <h2 id = 'gdp_ph'>10</h2> <h3>GDP</h3> </div> </div> <div class='col-md-4'> <div class='jumbotron'> <h2 id = 'inflationrate_ph'>10</h2> <h3>Inflation Rate</h3> </div> </div> <div class='col-md-4'> <div class='jumbotron'> <h2 id = 'annualbudget_ph'>10</h2> <h3>Annual Budget</h3> </div> </div> </div> <div class='row'> <div class='col-md-6'> <div class='jumbotron'> <h2>Top Exports</h2> <div id = 'exports'></div> <div class='row'> <p>1</p> <p>Fish</p> <p>10%</p> </div> </div> </div> <div class='col-md-6'> <div class='jumbotron'> <h2>Top Imports</h2> <div id = 'imports'> <div class='row'> <p>1</p> <p>Fish</p> <p>10%</p> </div> </div> </div> </div> </div> </div> </div>");
 
 		
 
 		//Add Data from APIs
 		$("#countryname_ph").html(selectedCountry.name);
 		
-		$("#gdp_ph").html("");
+		$("#gdp_ph").html(selectedCountry.gdp.value);
 		$("#inflationrate_ph").html("");
 		$("#annualbudget_ph").html("");
-		$("#weathericon_ph").html("");
-		$("#humidity_ph").html("");
-		$("#precipitation_ph").html("");
-		$("#winddirection_ph").html("");
-		$("#windspeed_ph").html("");
-		$("#uvindex_ph").html("");
+		$("#exchangerate_ph").html(selectedCountry.exchangerate);
+		$("#currency_ph").html(selectedCountry.currency);
+
 
 		//Loop for Each 
 
@@ -967,6 +964,39 @@ window.onload=function(){
 					
 					$("#climate-title").html("<b>Today (" + selectedCountry.capital.name + ")</b>");
 					$("#gdp_value").html(selectedCountry.gdp['value']);
+
+				}
+			
+			},
+			error: function(jqXHR, textStatus, errorThrown) {
+
+				console.log("WorldBank Fail")
+
+			}
+			
+		});
+
+		//Inflation Rate
+		$.ajax({
+			url: "php/worldbank/worldbankinflation.php",
+			type: 'POST',
+			dataType: 'json',
+			data: {
+				country: mycountry,
+			},
+			success: function(result) {
+
+				console.log("WorldBank INF Success")
+
+				if (result.status.name == "ok") {
+					selectedCountry.inflation = {
+						"value": result['data'][1][0]['value'],
+						"description": result['data'][1][0]['indicator']['value']
+						
+					};
+					
+					
+					$("#inf_value").html(selectedCountry.inflation['value']);
 
 				}
 			

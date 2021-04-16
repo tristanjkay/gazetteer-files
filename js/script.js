@@ -190,8 +190,8 @@ window.onload=function(){
 			//console.log(`${key}: ${value}`);
 
 			//1 in other currencies = x chosen country
-			selectedCountry.othercurrencies[key] = selectedCountry.exchangerate/value;
-			$( "#othercurrencies" ).append();
+			//selectedCountry.othercurrencies[key] = selectedCountry.exchangerate/value;
+			//$( "#othercurrencies" ).append();
 			
 			//Inverse
 			//selectedCountry.othercurrencies[key] = 1/value;

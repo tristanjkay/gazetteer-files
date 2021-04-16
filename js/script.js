@@ -133,9 +133,11 @@ window.onload=function(){
 
 		selectedCountry.capital.weather.forecast.forEach(day => {
 				
+			//Day Layout
+			
 			$( "#forecast" ).append("<h3 id = '"+ selectedCountry.capital.weather.forecast.indexOf(day)+ "_date_ph'>Monday 12</h3><div class='row bg-light'> <div class='col'> <h1 id = '"+ selectedCountry.capital.weather.forecast.indexOf(day)+ "_temperature_ph'>83</h1> <h4>TEMPERATURE</h4> </div> <div class='col'> <h1 id = '"+ selectedCountry.capital.weather.forecast.indexOf(day)+ "_humidity_ph'>0</h1> <h4>Humidity</h4> </div> <div class='col'> <h1 id = '"+ selectedCountry.capital.weather.forecast.indexOf(day)+ "_windspeed_ph'>N</h1> <h4>Wind Speed (Km)</h4> </div> <div class='col'> <h1 id = '"+ selectedCountry.capital.weather.forecast.indexOf(day)+ "_precipitation_ph'>3.8</h1> <h4>Precipitation</h4> </div> </div> <br> <br> <div class='row' id='covidChart'> <div class='col' id='charttext'> <div id='bar1'></div> <h4>28c</h4> <h4>10%</h4> <h4>&darr;</h4> <h4>5mph</h4> </div> <div class='col' id='charttext'> <div id='bar2'></div> <h4>28c</h4> <h4>10%</h4> <h4>&darr;</h4> <h4>5mph</h4> </div> <div class='col' id='charttext'> <div id='bar3'></div> <h4>28c</h4> <h4>10%</h4> <h4>&darr;</h4> <h4>5mph</h4> </div> <div class='col' id='charttext'> <div id='bar4'></div> <h4>28c</h4> <h4>10%</h4> <h4>&darr;</h4> <h4>5mph</h4> </div> <div class='col' id='charttext'> <div id='bar5'></div> <h4>28c</h4> <h4>10%</h4> <h4>&darr;</h4> <h4>5mph</h4> </div> </div>");
 
-			//Average Stats
+			//Day Average Stats
 			
 			$("#"+ selectedCountry.capital.weather.forecast.indexOf(day)+ "_temperature_ph").text(selectedCountry.capital.weather.forecast[selectedCountry.capital.weather.forecast.indexOf(day)].day.avgtemp_c);
 			$("#"+ selectedCountry.capital.weather.forecast.indexOf(day)+ "_humidity_ph").text(selectedCountry.capital.weather.forecast[selectedCountry.capital.weather.forecast.indexOf(day)].day.avghumidity);
@@ -143,11 +145,10 @@ window.onload=function(){
 			$("#"+ selectedCountry.capital.weather.forecast.indexOf(day)+ "_precipitation_ph").text(selectedCountry.capital.weather.forecast[selectedCountry.capital.weather.forecast.indexOf(day)].day.daily_chance_of_rain);
 			$("#"+ selectedCountry.capital.weather.forecast.indexOf(day)+ "_date_ph").text(selectedCountry.capital.weather.forecast[selectedCountry.capital.weather.forecast.indexOf(day)].date);
 
-			console.log(selectedCountry.capital.weather.forecast[selectedCountry.capital.weather.forecast.indexOf(day)]);
-			console.log("Temp: " + selectedCountry.capital.weather.forecast[selectedCountry.capital.weather.forecast.indexOf(day)].day.avgtemp_c);
+	
 			
-			//Temperature Graph
-
+			//Day Temperature Graph
+			//TODO
 
 		});
 
@@ -882,7 +883,7 @@ window.onload=function(){
 
 					if (result.status.name == "ok") {
 						document.getElementById('newsarticles').innerHTML = "";
-						selectedCountry.news = result['data']['articles']
+						selectedCountry.news = result['data']['articles'];
 						selectedCountry.news.forEach(article => {
 							if(selectedCountry.news.indexOf(article) <=2){
 								var articlediv = document.createElement('div');

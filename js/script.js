@@ -191,7 +191,7 @@ window.onload=function(){
 
 			//1 in other currencies = x chosen country
 			//selectedCountry.othercurrencies[key] = selectedCountry.exchangerate/value;
-			$( "#othercurrencies" ).append("<h4>" + key + ":" + value + "</h4>");
+			$( "#othercurrencies" ).append("<h4>" + key + ": " + value + "</h4>");
 			
 			//Inverse
 			//selectedCountry.othercurrencies[key] = 1/value;

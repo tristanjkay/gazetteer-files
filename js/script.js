@@ -300,20 +300,20 @@ window.onload=function(){
 
 		$("#countryname_ph").html(selectedCountry.name);
 		
-		$("#news_1title_ph").html(selectedCountry.sites);
-		$("#news_1description_ph").html(selectedCountry.sites);
-		$("#news_1img_ph").html("<img src = '"+ "/images/placeholder.png" + "'></img>");
+		$("#news_1title_ph").html(selectedCountry.news[0].title);
+		$("#news_1description_ph").html(selectedCountry.news[0].description);
+		$("#news_1img_ph").html("<img src = '"+ selectedCountry.news[0].urlToImage + "'></img>");
 
-		$("#news_2title_ph").html(selectedCountry.sites);
-		$("#news_2description_ph").html(selectedCountry.sites);
+		$("#news_2title_ph").html(selectedCountry.news[1].title);
+		$("#news_2description_ph").html(selectedCountry.news[1].description);
 		//$("#news_2img_ph").html("<img src = '"+ "x" + "'></img>");
 
-		$("#news_2title_ph").html(selectedCountry.sites);
-		$("#news_2description_ph").html(selectedCountry.sites);
+		$("#news_3title_ph").html(selectedCountry.news[2].title);
+		$("#news_3description_ph").html(selectedCountry.news[2].description);
 		//$("#news_2img_ph").html("<img src = '"+ "x" + "'></img>");
 
-		$("#news_3title_ph").html(selectedCountry.sites);
-		$("#news_3description_ph").html(selectedCountry.sites);
+		$("#news_4title_ph").html(selectedCountry.news[3].title);
+		$("#news_4description_ph").html(selectedCountry.news[3].description);
 		//$("#news_3img_ph").html("<img src = '"+ "x" + "'></img>");
 
 		$("#news_4title_ph").html(selectedCountry.sites);
@@ -577,7 +577,7 @@ window.onload=function(){
 
 								},
 								"news":{
-									
+
 								}
 							   }	
 

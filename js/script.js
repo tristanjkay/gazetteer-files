@@ -316,23 +316,23 @@ window.onload=function(){
 		$("#news_4description_ph").html(selectedCountry.news[3].description);
 		//$("#news_3img_ph").html("<img src = '"+ "x" + "'></img>");
 
-		$("#news_4title_ph").html(selectedCountry.sites);
-		$("#news_4description_ph").html(selectedCountry.sites);
+		$("#news_5title_ph").html(selectedCountry.news[4].title);
+		$("#news_5description_ph").html(selectedCountry.news[4].description);
 		//$("#news_4img_ph").html("<img src = '"+ "x" + "'></img>");
 
-		$("#news_5title_ph").html(selectedCountry.sites);
-		$("#news_5description_ph").html(selectedCountry.sites);
+		$("#news_6title_ph").html(selectedCountry.news[5].title);
+		$("#news_6description_ph").html(selectedCountry.news[5].description);
 		//$("#news_5img_ph").html("<img src = '"+ "x" + "'></img>");
 
-		$("#news_6title_ph").html(selectedCountry.sites);
-		$("#news_6description_ph").html(selectedCountry.sites);
+		$("#news_7title_ph").html(selectedCountry.news[6].title);
+		$("#news_7description_ph").html(selectedCountry.news[6].description);
 		//$("#news_6img_ph").html("<img src = '"+ "x" + "'></img>");
 
 		$("#news_7title_ph").html(selectedCountry.sites);
 		$("#news_7description_ph").html(selectedCountry.sites);
 		//$("#news_7img_ph").html("<img src = '"+ "x" + "'></img>");
 
-		$("#news_8title_ph").html(selectedCountry.sites);
+/* 		$("#news_8title_ph").html(selectedCountry.sites);
 		$("#news_8description_ph").html(selectedCountry.sites);
 		$("#news_8img_ph").html("<img src = '"+ "x" + "'></img>");
 
@@ -342,7 +342,7 @@ window.onload=function(){
 
 		$("#news_10title_ph").html(selectedCountry.sites);
 		$("#news_10description_ph").html(selectedCountry.sites);
-		//$("#news _10img_ph").html("<img src = '"+ "x" + "'></img>");
+		//$("#news _10img_ph").html("<img src = '"+ "x" + "'></img>"); */
 
 		//Loop for Each 
 		/*selectedCountry.capital.weather.forecast.forEach(day => {

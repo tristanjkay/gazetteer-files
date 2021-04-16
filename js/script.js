@@ -142,6 +142,8 @@ window.onload=function(){
 			$("#windspeed_ph").html(selectedCountry.capital.weather.forecast[selectedCountry.capital.weather.forecast.indexOf(day)].day.maxwind_kph);
 			$("#precipitation_ph").html(selectedCountry.capital.weather.forecast[selectedCountry.capital.weather.forecast.indexOf(day)].day.daily_chance_of_rain);
 
+			console.log(selectedCountry.capital.weather.forecast[selectedCountry.capital.weather.forecast.indexOf(day)])
+			
 			//Temperature Graph
 
 

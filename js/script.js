@@ -1042,6 +1042,35 @@ window.onload=function(){
 			
 		});
 
+		//Total Government Annual Expense (BUD)
+		$.ajax({
+			url: "php/worldbank/worldbankgovtotalexpensepercent.php",
+			type: 'POST',
+			dataType: 'json',
+			data: {
+				country: mycountry,
+			},
+			success: function(result) {
+
+				console.log("WorldBank BUD% Success")
+
+				if (result.status.name == "ok") {
+					selectedCountry.budget.percent = result['data'][1][0]['value']
+
+					
+					//$("#bud_value").html(selectedCountry.budget['value']);
+
+				}
+			
+			},
+			error: function(jqXHR, textStatus, errorThrown) {
+
+				console.log("WorldBank Fail")
+
+			}
+			
+		});
+
 		//Alcohol Consumption
 		$.ajax({
 			url: "php/worldbank/worldbankalcohol.php",

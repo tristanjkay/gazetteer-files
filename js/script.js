@@ -178,8 +178,8 @@ window.onload=function(){
 		$("#countryname_ph").html(selectedCountry.name);
 		
 		$("#gdp_ph").html(selectedCountry.gdp.value);
-		$("#inflationrate_ph").html("");
-		$("#annualbudget_ph").html("");
+		$("#inflationrate_ph").html(selectedCountry.inflation.value);
+		$("#annualbudget_ph").html(selectedCountry.budget.value);
 		$("#exchangerate_ph").html(selectedCountry.exchangerate);
 		$("#currency_ph").html(selectedCountry.currency);
 

@@ -137,10 +137,10 @@ window.onload=function(){
 
 			//Average Stats
 			
-			$("#temperature_ph").html(selectedCountry.capital.weather.forecast[selectedCountry.capital.weather.forecast.indexOf(day)].day.avgtemp_c);
-			$("#humidity_ph").html(selectedCountry.capital.weather.forecast[selectedCountry.capital.weather.forecast.indexOf(day)].day.avghumidity);
-			$("#windspeed_ph").html(selectedCountry.capital.weather.forecast[selectedCountry.capital.weather.forecast.indexOf(day)].day.maxwind_kph);
-			$("#precipitation_ph").html(selectedCountry.capital.weather.forecast[selectedCountry.capital.weather.forecast.indexOf(day)].day.daily_chance_of_rain);
+			$("#temperature_ph").text(selectedCountry.capital.weather.forecast[selectedCountry.capital.weather.forecast.indexOf(day)].day.avgtemp_c);
+			$("#humidity_ph").text(selectedCountry.capital.weather.forecast[selectedCountry.capital.weather.forecast.indexOf(day)].day.avghumidity);
+			$("#windspeed_ph").text(selectedCountry.capital.weather.forecast[selectedCountry.capital.weather.forecast.indexOf(day)].day.maxwind_kph);
+			$("#precipitation_ph").text(selectedCountry.capital.weather.forecast[selectedCountry.capital.weather.forecast.indexOf(day)].day.daily_chance_of_rain);
 
 			console.log(selectedCountry.capital.weather.forecast[selectedCountry.capital.weather.forecast.indexOf(day)]);
 			console.log("Temp: " + selectedCountry.capital.weather.forecast[selectedCountry.capital.weather.forecast.indexOf(day)].day.avgtemp_c);

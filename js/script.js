@@ -859,6 +859,7 @@ window.onload=function(){
 						for (const [key, value] of Object.entries(selectedCountry.othercurrencies)) {
 							//console.log(`${key}: ${value}`);
 
+							//1 in currency = x in other currencies
 							selectedCountry.othercurrencies[key] = selectedCountry.exchangerate/value;
 							
 							//Inverse

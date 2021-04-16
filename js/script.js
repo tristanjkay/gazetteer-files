@@ -96,6 +96,8 @@ window.onload=function(){
 
 	//-------------------------------------------------------------------------------------------------------------------------------------------------Click Event Listeners-//
 
+	//----------------------------------------------------------------------------------------------------------------------------------------WEATHER
+
 	climateDiv.addEventListener('click', function(event) {
 		console.log("climate");
 
@@ -113,7 +115,9 @@ window.onload=function(){
 		$(".col-sm-9").html("<div class='row'> <div class='col'> <h1 id = 'countryname_ph'>Brazil</h1> <h3 id = 'todaycapital_ph'>Today(Brasilia)</h3> </div> <h3 id = 'temperature_ph'>18&deg;C</h3> <h3 id = 'weathericon_ph'>&#9728;</h3> </div> <div class='row bg-light'> <div class='col'> <h1 id = 'humidity_ph'>83</h1> <h4>HUMIDITY</h4> </div> <div class='col'> <h1 id = 'precipitation_ph'>0</h1> <h4>PRECIPITATION</h4> </div> <div class='col'> <h1 id = 'winddirection_ph'>N</h1> <h4>WIND DIRECTION</h4> </div> <div class='col'> <h1 id = 'windspeed_ph'>3.8</h1> <h4>WIND SPEED</h4> </div> <div class='col'> <h1 id = 'uvindex_ph'>3</h1> <h4>UV INDEX</h4> </div> </div> <br> <br> <h2>This Week</h2><div id='forecast'></div>");
 		
 		//Add Data from APIs
-		//Current
+		
+		//Current Weather
+
 		$("#countryname_ph").html(selectedCountry.name);
 		$("#todaycapital_ph").html("Today(" + selectedCountry.capital.name + ")");
 		$("#temperature_ph").html(selectedCountry.capital.weather.temperature);
@@ -124,15 +128,22 @@ window.onload=function(){
 		$("#windspeed_ph").html(selectedCountry.capital.weather.windSpeed);
 		$("#uvindex_ph").html(selectedCountry.capital.weather.uvIndex);
 
-		//Loop for Each 
-
-		/*
-		<h3>Monday 12</h3> <div class='row' id='covidChart'> <div class='col' id='charttext'> <div id='bar1'></div> <h4>28c</h4> <h4>10%</h4> <h4>&darr;</h4> <h4>5mph</h4> </div> <div class='col' id='charttext'> <div id='bar2'></div> <h4>28c</h4> <h4>10%</h4> <h4>&darr;</h4> <h4>5mph</h4> </div> <div class='col' id='charttext'> <div id='bar3'></div> <h4>28c</h4> <h4>10%</h4> <h4>&darr;</h4> <h4>5mph</h4> </div> <div class='col' id='charttext'> <div id='bar4'></div> <h4>28c</h4> <h4>10%</h4> <h4>&darr;</h4> <h4>5mph</h4> </div> <div class='col' id='charttext'> <div id='bar5'></div> <h4>28c</h4> <h4>10%</h4> <h4>&darr;</h4> <h4>5mph</h4> </div> </div> <p>Other days to be populated by api...</p>
-		*/
+		
+		//Loop for Each Forecast Day
 
 		selectedCountry.capital.weather.forecast.forEach(day => {
 				
-			$( "#forecast" ).append("<h3>Monday 12</h3> <div class='row bg-light'> <div class='col'> <h1 id = 'humidity_ph'>83</h1> <h4>Temperature</h4> </div> <div class='col'> <h1 id = 'precipitation_ph'>0</h1> <h4>Humidity</h4> </div> <div class='col'> <h1 id = 'winddirection_ph'>N</h1> <h4>Wind Speed</h4> </div> <div class='col'> <h1 id = 'windspeed_ph'>3.8</h1> <h4>Precipitation</h4> </div> </div> <br> <br> <div class='row' id='covidChart'> <div class='col' id='charttext'> <div id='bar1'></div> <h4>28c</h4> <h4>10%</h4> <h4>&darr;</h4> <h4>5mph</h4> </div> <div class='col' id='charttext'> <div id='bar2'></div> <h4>28c</h4> <h4>10%</h4> <h4>&darr;</h4> <h4>5mph</h4> </div> <div class='col' id='charttext'> <div id='bar3'></div> <h4>28c</h4> <h4>10%</h4> <h4>&darr;</h4> <h4>5mph</h4> </div> <div class='col' id='charttext'> <div id='bar4'></div> <h4>28c</h4> <h4>10%</h4> <h4>&darr;</h4> <h4>5mph</h4> </div> <div class='col' id='charttext'> <div id='bar5'></div> <h4>28c</h4> <h4>10%</h4> <h4>&darr;</h4> <h4>5mph</h4> </div> </div>");
+			$( "#forecast" ).append("<h3>Monday 12</h3> <div class='row bg-light'> <div class='col'> <h1 id = 'temperature_ph'>83</h1> <h4>TEMPERATURE</h4> </div> <div class='col'> <h1 id = 'humidity_ph'>0</h1> <h4>Humidity</h4> </div> <div class='col'> <h1 id = 'windspeed_ph'>N</h1> <h4>Wind Speed (Km)</h4> </div> <div class='col'> <h1 id = 'precipitation_ph'>3.8</h1> <h4>Precipitation</h4> </div> </div> <br> <br> <div class='row' id='covidChart'> <div class='col' id='charttext'> <div id='bar1'></div> <h4>28c</h4> <h4>10%</h4> <h4>&darr;</h4> <h4>5mph</h4> </div> <div class='col' id='charttext'> <div id='bar2'></div> <h4>28c</h4> <h4>10%</h4> <h4>&darr;</h4> <h4>5mph</h4> </div> <div class='col' id='charttext'> <div id='bar3'></div> <h4>28c</h4> <h4>10%</h4> <h4>&darr;</h4> <h4>5mph</h4> </div> <div class='col' id='charttext'> <div id='bar4'></div> <h4>28c</h4> <h4>10%</h4> <h4>&darr;</h4> <h4>5mph</h4> </div> <div class='col' id='charttext'> <div id='bar5'></div> <h4>28c</h4> <h4>10%</h4> <h4>&darr;</h4> <h4>5mph</h4> </div> </div>");
+
+			//Average Stats
+			
+			$("#temperature_ph").html(selectedCountry.capital.weather.forecast[selectedCountry.capital.weather.forecast.indexOf(day)].day.avgtemp_c);
+			$("#humidity_ph").html(selectedCountry.capital.weather.forecast[selectedCountry.capital.weather.forecast.indexOf(day)].day.avghumidity);
+			$("#windspeed_ph").html(selectedCountry.capital.weather.forecast[selectedCountry.capital.weather.forecast.indexOf(day)].day.maxwind_kph);
+			$("#precipitation_ph").html(selectedCountry.capital.weather.forecast[selectedCountry.capital.weather.forecast.indexOf(day)].day.daily_chance_of_rain);
+
+			//Temperature Graph
+
 
 		});
 

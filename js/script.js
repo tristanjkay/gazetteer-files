@@ -879,9 +879,10 @@ window.onload=function(){
 				},
 				success: function(result) {
 
-					console.log("News Success");
+					
 
 					if (result.status.name == "ok") {
+						console.log("News Success");
 						document.getElementById('newsarticles').innerHTML = "";
 						selectedCountry.news = result['data']['articles'];
 						selectedCountry.news.forEach(article => {

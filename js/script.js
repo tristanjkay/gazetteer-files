@@ -179,7 +179,7 @@ window.onload=function(){
 		
 		$("#gdp_ph").html(selectedCountry.gdp.value);
 		$("#inflationrate_ph").html(selectedCountry.inflation.value);
-		$("#annualbudget_ph").html(selectedCountry.budget.value);
+		$("#annualbudget_ph").html(selectedCountry.budget.total);
 		$("#exchangerate_ph").html(selectedCountry.exchangerate);
 		$("#currency_ph").html(selectedCountry.currency);
 
@@ -854,6 +854,7 @@ window.onload=function(){
 						console.log(selectedCountry.currencycode);
 						selectedCountry.exchangerate = result['data']['rates'][selectedCountry.currencycode];
 						console.log(selectedCountry.exchangerate);
+						selectedCountry.othercurrencies = result['data']['rates'];
 
 						$('#currency').html(selectedCountry.currency);
 						//TODO Make this work

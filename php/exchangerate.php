@@ -2,7 +2,7 @@
 
 	$executionStartTime = microtime(true) / 1000;
 
-    $url='http://api.exchangeratesapi.io/v1/latest?access_key=54b526998f0966bf0d078441c47bd911&symbols=' . $_REQUEST['country'];
+    $url='http://api.exchangeratesapi.io/v1/latest?access_key=54b526998f0966bf0d078441c47bd911';
 
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);

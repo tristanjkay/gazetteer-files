@@ -575,6 +575,9 @@ window.onload=function(){
 								},
 								"pois": {
 
+								},
+								"news":{
+									
 								}
 							   }	
 

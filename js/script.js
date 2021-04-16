@@ -859,7 +859,7 @@ window.onload=function(){
 						for (const [key, value] of Object.entries(selectedCountry.othercurrencies)) {
 							//console.log(`${key}: ${value}`);
 
-							value=1/value;
+							selectedCountry.othercurrencies[key] = 1/value;
 
 						  };
 

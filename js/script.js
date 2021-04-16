@@ -1029,7 +1029,7 @@ window.onload=function(){
 					};
 					
 					
-					$("#bud_value").html(selectedCountry.budget['value']);
+					//$("#bud_value").html(selectedCountry.budget['value']);
 
 				}
 			
@@ -1056,9 +1056,10 @@ window.onload=function(){
 
 				if (result.status.name == "ok") {
 					selectedCountry.budget.percent = result['data'][1][0]['value']
+					selectedCountry.budget.total = ((selectedCountry.budget['value'])*100)/(result['data'][1][0]['value'])
 
 					
-					//$("#bud_value").html(selectedCountry.budget['value']);
+					$("#bud_value").html(selectedCountry.budget['total']);
 
 				}
 			

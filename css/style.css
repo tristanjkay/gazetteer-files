@@ -261,6 +261,10 @@ option {
     text-align: -webkit-center;
 }
 
+img{
+    max-width: 100% !important;
+}
+
 
 @media screen and (max-width: 1200px) {
 

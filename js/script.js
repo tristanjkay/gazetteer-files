@@ -857,7 +857,10 @@ window.onload=function(){
 						selectedCountry.othercurrencies = result['data']['rates'];
 
 						for (const [key, value] of Object.entries(selectedCountry.othercurrencies)) {
-							console.log(`${key}: ${value}`);
+							//console.log(`${key}: ${value}`);
+
+							value=1/value;
+
 						  };
 
 						$('#currency').html(selectedCountry.currency);

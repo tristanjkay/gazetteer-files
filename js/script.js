@@ -199,7 +199,7 @@ window.onload=function(){
 		  };
 
 
-
+		//https://data.wto.org/ >> For Export and Import Data. Waiting for API Key. M12 PWord https://apiportal.wto.org/developer
 		/*selectedCountry.capital.weather.forecast.forEach(day => {
 
 			$( "#exports" ).append();
@@ -702,7 +702,7 @@ window.onload=function(){
 
 			//Weather
 			$.ajax({
-				url: "php/weather/weather_current.php",
+				url: "php/weather/weather.php",
 				type: 'POST',
 				dataType: 'json',
 				data: {
@@ -801,26 +801,7 @@ window.onload=function(){
 				
 			});
 
-			$.ajax({
-				url: "php/weather/weather_forecast.php",
-				type: 'POST',
-				dataType: 'json',
-				data: {
-					country: selectedCountry.name,
-				},
-				success: function(result) {
-
-					console.log("Weather Forecast Success");
-					
-
-					
-				
-				},
-				error: function(jqXHR, textStatus, errorThrown) {
-					console.log("Weather Forecast Fail")
-				}
-				
-			});
+			
 
 
 			//DictionaryAPI

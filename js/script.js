@@ -553,7 +553,7 @@ window.onload=function(){
 
 			//GeoJSON
 			$.ajax({
-				url: "php/geojson-fileget.php",
+				url: "php/general/geojson-fileget.php",
 				type: 'POST',  
 				dataType: 'json',
 				data: {
@@ -628,7 +628,7 @@ window.onload=function(){
 
 			//Geonames
 				$.ajax({
-					url: "php/geonames.php",
+					url: "php/general/geonames.php",
 					type: 'POST',
 					dataType: 'json',
 					data: {
@@ -659,7 +659,7 @@ window.onload=function(){
 
 			//RESTCountries
 				$.ajax({
-					url: "php/restcountries.php",
+					url: "php/general/restcountries.php",
 					type: 'POST',
 					dataType: 'json',
 					data: {
@@ -702,7 +702,7 @@ window.onload=function(){
 
 			//Weather
 			$.ajax({
-				url: "php/weather/weather.php",
+				url: "php/climate/weather.php",
 				type: 'POST',
 				dataType: 'json',
 				data: {
@@ -806,7 +806,7 @@ window.onload=function(){
 
 			//DictionaryAPI
 			$.ajax({
-				url: "php/dictionary.php",
+				url: "php/general/dictionary.php",
 				type: 'POST',
 				dataType: 'json',
 				data: {
@@ -830,7 +830,7 @@ window.onload=function(){
 
 			//ExchangeRateAPI
 			$.ajax({
-				url: "php/exchangerate.php",
+				url: "php/economy/exchangerate.php",
 				type: 'POST',
 				dataType: 'json',
 				data: {
@@ -873,7 +873,7 @@ window.onload=function(){
 
 			//NewsAPI
 			$.ajax({
-				url: "php/news.php",
+				url: "php/events/news.php",
 				type: 'POST',
 				dataType: 'json',
 				data: {
@@ -920,7 +920,7 @@ window.onload=function(){
 
 			//POIs
 			$.ajax({
-				url: "php/pointsofinterest.php",
+				url: "php/culture/pointsofinterest.php",
 				type: 'POST',
 				dataType: 'json',
 				data: {

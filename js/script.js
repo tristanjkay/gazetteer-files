@@ -2101,6 +2101,286 @@ window.onload=function(){
 			
 		});
 
+		$.ajax({
+			url: "php/worldbank/worldbankgovedexpensesecondary.php",
+			type: 'POST',
+			dataType: 'json',
+			data: {
+				country: mycountry,
+			},
+			success: function(result) { 
+
+				//console.log(result);
+
+				if (result.status.name == "ok") {
+
+					selectedCountry.govedexpensesecondary = {
+						"value": result['data'][1][0]['value'],
+						"description": result['data'][1][0]['indicator']['value']
+					};
+					
+
+				}
+			
+			},
+			error: function(jqXHR, textStatus, errorThrown) {
+
+			}
+			
+		});
+
+		$.ajax({
+			url: "php/worldbank/worldbankgovedexpensetertiary.php",
+			type: 'POST',
+			dataType: 'json',
+			data: {
+				country: mycountry,
+			},
+			success: function(result) { 
+
+				//console.log(result);
+
+				if (result.status.name == "ok") {
+
+					selectedCountry.govedexpensetertiary = {
+						"value": result['data'][1][0]['value'],
+						"description": result['data'][1][0]['indicator']['value']
+					};
+					
+
+				}
+			
+			},
+			error: function(jqXHR, textStatus, errorThrown) {
+
+			}
+			
+		});
+
+		$.ajax({
+			url: "php/worldbank/worldbankprimaryedcompletion.php",
+			type: 'POST',
+			dataType: 'json',
+			data: {
+				country: mycountry,
+			},
+			success: function(result) { 
+
+				//console.log(result);
+
+				if (result.status.name == "ok") {
+
+					selectedCountry.primaryedcompletion = {
+						"value": result['data'][1][0]['value'],
+						"description": result['data'][1][0]['indicator']['value']
+					};
+					
+
+				}
+			
+			},
+			error: function(jqXHR, textStatus, errorThrown) {
+
+			}
+			
+		});
+
+		$.ajax({
+			url: "php/worldbank/worldbankprimaryteacherpupilratio.php",
+			type: 'POST',
+			dataType: 'json',
+			data: {
+				country: mycountry,
+			},
+			success: function(result) { 
+
+				//console.log(result);
+
+				if (result.status.name == "ok") {
+
+					selectedCountry.primaryteacherpupilratio = {
+						"value": result['data'][1][0]['value'],
+						"description": result['data'][1][0]['indicator']['value']
+					};
+					
+
+				}
+			
+			},
+			error: function(jqXHR, textStatus, errorThrown) {
+
+			}
+			
+		});
+
+		$.ajax({
+			url: "php/worldbank/worldbankenrollmentpreprimary.php",
+			type: 'POST',
+			dataType: 'json',
+			data: {
+				country: mycountry,
+			},
+			success: function(result) { 
+
+				//console.log(result);
+
+				if (result.status.name == "ok") {
+
+					selectedCountry.enrollmentpreprimary = {
+						"value": result['data'][1][0]['value'],
+						"description": result['data'][1][0]['indicator']['value']
+					};
+					
+
+				}
+			
+			},
+			error: function(jqXHR, textStatus, errorThrown) {
+
+			}
+			
+		});
+
+		$.ajax({
+			url: "php/worldbank/worldbankenrollmentprimary.php",
+			type: 'POST',
+			dataType: 'json',
+			data: {
+				country: mycountry,
+			},
+			success: function(result) { 
+
+				//console.log(result);
+
+				if (result.status.name == "ok") {
+
+					selectedCountry.enrollmentprimary = {
+						"value": result['data'][1][0]['value'],
+						"description": result['data'][1][0]['indicator']['value']
+					};
+					
+
+				}
+			
+			},
+			error: function(jqXHR, textStatus, errorThrown) {
+
+			}
+			
+		});
+
+		$.ajax({
+			url: "php/worldbank/worldbankenrollmentsecondary.php",
+			type: 'POST',
+			dataType: 'json',
+			data: {
+				country: mycountry,
+			},
+			success: function(result) { 
+
+				//console.log(result);
+
+				if (result.status.name == "ok") {
+
+					selectedCountry.enrollmentsecondary = {
+						"value": result['data'][1][0]['value'],
+						"description": result['data'][1][0]['indicator']['value']
+					};
+					
+
+				}
+			
+			},
+			error: function(jqXHR, textStatus, errorThrown) {
+
+			}
+			
+		});
+
+		$.ajax({
+			url: "php/worldbank/worldbankenrollmenttertiary.php",
+			type: 'POST',
+			dataType: 'json',
+			data: {
+				country: mycountry,
+			},
+			success: function(result) { 
+
+				//console.log(result);
+
+				if (result.status.name == "ok") {
+
+					selectedCountry.enrollmenttertiary = {
+						"value": result['data'][1][0]['value'],
+						"description": result['data'][1][0]['indicator']['value']
+					};
+					
+
+				}
+			
+			},
+			error: function(jqXHR, textStatus, errorThrown) {
+
+			}
+			
+		});
+
+		$.ajax({
+			url: "php/worldbank/worldbanktrainedteachersprimary.php",
+			type: 'POST',
+			dataType: 'json',
+			data: {
+				country: mycountry,
+			},
+			success: function(result) { 
+
+				//console.log(result);
+
+				if (result.status.name == "ok") {
+
+					selectedCountry.trainedteachersprimary = {
+						"value": result['data'][1][0]['value'],
+						"description": result['data'][1][0]['indicator']['value']
+					};
+					
+
+				}
+			
+			},
+			error: function(jqXHR, textStatus, errorThrown) {
+
+			}
+			
+		});
+
+		$.ajax({
+			url: "php/worldbank/worldbankunemployment.php",
+			type: 'POST',
+			dataType: 'json',
+			data: {
+				country: mycountry,
+			},
+			success: function(result) { 
+
+				//console.log(result);
+
+				if (result.status.name == "ok") {
+
+					selectedCountry.unemployment = {
+						"value": result['data'][1][0]['value'],
+						"description": result['data'][1][0]['indicator']['value']
+					};
+					
+
+				}
+			
+			},
+			error: function(jqXHR, textStatus, errorThrown) {
+
+			}
+			
+		});
+
 
 
 			

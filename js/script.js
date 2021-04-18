@@ -2036,6 +2036,8 @@ window.onload=function(){
 						"value": result['data'][1][0]['value'],
 						"description": result['data'][1][0]['indicator']['value']
 					};
+
+					$("#co2output_ph").html(selectedCountry.co2ouput['value']);
 					
 
 				}
@@ -2064,6 +2066,8 @@ window.onload=function(){
 						"value": result['data'][1][0]['value'],
 						"description": result['data'][1][0]['indicator']['value']
 					};
+
+					$("#airpollution_ph").html(selectedCountry.airpollution['value']);
 					
 
 				}
@@ -2092,6 +2096,8 @@ window.onload=function(){
 						"value": result['data'][1][0]['value'],
 						"description": result['data'][1][0]['indicator']['value']
 					};
+
+					$("#airpollution_ph").html(selectedCountry.electricityfromrenewables['value']);
 					
 
 				}

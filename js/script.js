@@ -2040,7 +2040,7 @@ window.onload=function(){
 
 				if (result.status.co2ouput == "ok") {
 
-					selectedCountry.endangeredplant = {
+					selectedCountry.co2ouput = {
 						"value": result['data'][1][0]['value'],
 						"description": result['data'][1][0]['indicator']['value']
 					};

@@ -1569,6 +1569,230 @@ window.onload=function(){
 			
 		});
 
+		$.ajax({
+			url: "php/worldbank/worldbankdiabetes.php",
+			type: 'POST',
+			dataType: 'json',
+			data: {
+				country: mycountry,
+			},
+			success: function(result) { 
+
+				//console.log(result);
+
+				if (result.status.name == "ok") {
+
+					selectedCountry.diabetes = {
+						"value": result['data'][1][0]['value'],
+						"description": result['data'][1][0]['indicator']['value']
+					};
+					
+
+				}
+			
+			},
+			error: function(jqXHR, textStatus, errorThrown) {
+
+			}
+			
+		});
+
+		$.ajax({
+			url: "php/worldbank/worldbankunderweight.php",
+			type: 'POST',
+			dataType: 'json',
+			data: {
+				country: mycountry,
+			},
+			success: function(result) { 
+
+				//console.log(result);
+
+				if (result.status.name == "ok") {
+
+					selectedCountry.underweight = {
+						"value": result['data'][1][0]['value'],
+						"description": result['data'][1][0]['indicator']['value']
+					};
+					
+
+				}
+			
+			},
+			error: function(jqXHR, textStatus, errorThrown) {
+
+			}
+			
+		});
+
+		$.ajax({
+			url: "php/worldbank/worldbankroaddeaths.php",
+			type: 'POST',
+			dataType: 'json',
+			data: {
+				country: mycountry,
+			},
+			success: function(result) { 
+
+				//console.log(result);
+
+				if (result.status.name == "ok") {
+
+					selectedCountry.deathsroad = {
+						"value": result['data'][1][0]['value'],
+						"description": result['data'][1][0]['indicator']['value']
+					};
+					
+
+				}
+			
+			},
+			error: function(jqXHR, textStatus, errorThrown) {
+
+			}
+			
+		});
+
+		$.ajax({
+			url: "php/worldbank/worldbankhiv.php",
+			type: 'POST',
+			dataType: 'json',
+			data: {
+				country: mycountry,
+			},
+			success: function(result) { 
+
+				//console.log(result);
+
+				if (result.status.name == "ok") {
+
+					selectedCountry.hiv = {
+						"value": result['data'][1][0]['value'],
+						"description": result['data'][1][0]['indicator']['value']
+					};
+					
+
+				}
+			
+			},
+			error: function(jqXHR, textStatus, errorThrown) {
+
+			}
+			
+		});
+
+		$.ajax({
+			url: "php/worldbank/worldbankunderoverweight.php",
+			type: 'POST',
+			dataType: 'json',
+			data: {
+				country: mycountry,
+			},
+			success: function(result) { 
+
+				//console.log(result);
+
+				if (result.status.name == "ok") {
+
+					selectedCountry.overweight = {
+						"value": result['data'][1][0]['value'],
+						"description": result['data'][1][0]['indicator']['value']
+					};
+					
+
+				}
+			
+			},
+			error: function(jqXHR, textStatus, errorThrown) {
+
+			}
+			
+		});
+
+		$.ajax({
+			url: "php/worldbank/worldbankundernourishment.php",
+			type: 'POST',
+			dataType: 'json',
+			data: {
+				country: mycountry,
+			},
+			success: function(result) { 
+
+				//console.log(result);
+
+				if (result.status.name == "ok") {
+
+					selectedCountry.undernourishment = {
+						"value": result['data'][1][0]['value'],
+						"description": result['data'][1][0]['indicator']['value']
+					};
+					
+
+				}
+			
+			},
+			error: function(jqXHR, textStatus, errorThrown) {
+
+			}
+			
+		});
+
+		$.ajax({
+			url: "php/worldbank/worldbankcontraception.php",
+			type: 'POST',
+			dataType: 'json',
+			data: {
+				country: mycountry,
+			},
+			success: function(result) { 
+
+				//console.log(result);
+
+				if (result.status.name == "ok") {
+
+					selectedCountry.contraception = {
+						"value": result['data'][1][0]['value'],
+						"description": result['data'][1][0]['indicator']['value']
+					};
+					
+
+				}
+			
+			},
+			error: function(jqXHR, textStatus, errorThrown) {
+
+			}
+			
+		});
+
+		$.ajax({
+			url: "php/worldbank/worldbankprenatal.php",
+			type: 'POST',
+			dataType: 'json',
+			data: {
+				country: mycountry,
+			},
+			success: function(result) { 
+
+				//console.log(result);
+
+				if (result.status.name == "ok") {
+
+					selectedCountry.prenatal = {
+						"value": result['data'][1][0]['value'],
+						"description": result['data'][1][0]['indicator']['value']
+					};
+					
+
+				}
+			
+			},
+			error: function(jqXHR, textStatus, errorThrown) {
+
+			}
+			
+		});
+
 
 
 			

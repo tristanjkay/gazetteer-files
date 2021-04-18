@@ -1120,6 +1120,10 @@ window.onload=function(){
 						"value": result['data'][1][0]['value'],
 						"description": result['data'][1][0]['indicator']['value']
 					};
+
+					$("#education_ph").html(selectedCountry.education['value']);
+
+					
 					
 
 				}
@@ -1174,6 +1178,8 @@ window.onload=function(){
 						"value": result['data'][1][0]['value'],
 						"description": result['data'][1][0]['indicator']['value']
 					};
+
+					$("#govedexpense_ph").html(selectedCountry.edExpense['value']);
 					
 
 				}
@@ -1228,6 +1234,8 @@ window.onload=function(){
 						"value": result['data'][1][0]['value'],
 						"description": result['data'][1][0]['indicator']['value']
 					};
+
+					$("#literacy_ph").html(selectedCountry.literacy['value']);
 					
 
 				}
@@ -2097,7 +2105,7 @@ window.onload=function(){
 						"description": result['data'][1][0]['indicator']['value']
 					};
 
-					$("#airpollution_ph").html(selectedCountry.electricityfromrenewables['value']);
+					$("#energyfromrenewables_ph").html(selectedCountry.electricityfromrenewables['value']);
 					
 
 				}

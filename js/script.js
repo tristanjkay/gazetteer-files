@@ -2353,33 +2353,7 @@ window.onload=function(){
 			
 		});
 
-		$.ajax({
-			url: "php/worldbank/worldbankunemployment.php",
-			type: 'POST',
-			dataType: 'json',
-			data: {
-				country: mycountry,
-			},
-			success: function(result) { 
-
-				//console.log(result);
-
-				if (result.status.name == "ok") {
-
-					selectedCountry.unemployment = {
-						"value": result['data'][1][0]['value'],
-						"description": result['data'][1][0]['indicator']['value']
-					};
-					
-
-				}
-			
-			},
-			error: function(jqXHR, textStatus, errorThrown) {
-
-			}
-			
-		});
+		
 
 
 

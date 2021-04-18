@@ -2,7 +2,7 @@
 
 	$executionStartTime = microtime(true) / 1000;
 
-    $url='http://api.worldbank.org/v2/country/' . $_REQUEST['country'] . '/indicator/SL.UEM.TOTL.ZS?date=2019&format=json';
+    $url='http://api.worldbank.org/v2/country/' . $_REQUEST['country'] . '/indicator/SE.SEC.ENRR?date=2019&format=json';
 
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);

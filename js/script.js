@@ -1793,6 +1793,230 @@ window.onload=function(){
 			
 		});
 
+		$.ajax({
+			url: "php/worldbank/worldbanktotalpowerconsumption.php",
+			type: 'POST',
+			dataType: 'json',
+			data: {
+				country: mycountry,
+			},
+			success: function(result) { 
+
+				//console.log(result);
+
+				if (result.status.name == "ok") {
+
+					selectedCountry.totalpowerconsumption = {
+						"value": result['data'][1][0]['value'],
+						"description": result['data'][1][0]['indicator']['value']
+					};
+					
+
+				}
+			
+			},
+			error: function(jqXHR, textStatus, errorThrown) {
+
+			}
+			
+		});
+
+		$.ajax({
+			url: "php/worldbank/worldbankrenewableelectricoutput.php",
+			type: 'POST',
+			dataType: 'json',
+			data: {
+				country: mycountry,
+			},
+			success: function(result) { 
+
+				//console.log(result);
+
+				if (result.status.name == "ok") {
+
+					selectedCountry.renewableelectricoutput = {
+						"value": result['data'][1][0]['value'],
+						"description": result['data'][1][0]['indicator']['value']
+					};
+					
+
+				}
+			
+			},
+			error: function(jqXHR, textStatus, errorThrown) {
+
+			}
+			
+		});
+
+		$.ajax({
+			url: "php/worldbank/worldbankelectricoilgascoal.php",
+			type: 'POST',
+			dataType: 'json',
+			data: {
+				country: mycountry,
+			},
+			success: function(result) { 
+
+				//console.log(result);
+
+				if (result.status.name == "ok") {
+
+					selectedCountry.oilgascoal = {
+						"value": result['data'][1][0]['value'],
+						"description": result['data'][1][0]['indicator']['value']
+					};
+					
+
+				}
+			
+			},
+			error: function(jqXHR, textStatus, errorThrown) {
+
+			}
+			
+		});
+
+		$.ajax({
+			url: "php/worldbank/worldbankdeathspollution.php",
+			type: 'POST',
+			dataType: 'json',
+			data: {
+				country: mycountry,
+			},
+			success: function(result) { 
+
+				//console.log(result);
+
+				if (result.status.name == "ok") {
+
+					selectedCountry.deathspollution = {
+						"value": result['data'][1][0]['value'],
+						"description": result['data'][1][0]['indicator']['value']
+					};
+					
+
+				}
+			
+			},
+			error: function(jqXHR, textStatus, errorThrown) {
+
+			}
+			
+		});
+
+		$.ajax({
+			url: "php/worldbank/worldbankendangeredbirds.php",
+			type: 'POST',
+			dataType: 'json',
+			data: {
+				country: mycountry,
+			},
+			success: function(result) { 
+
+				//console.log(result);
+
+				if (result.status.name == "ok") {
+
+					selectedCountry.endangeredbirds = {
+						"value": result['data'][1][0]['value'],
+						"description": result['data'][1][0]['indicator']['value']
+					};
+					
+
+				}
+			
+			},
+			error: function(jqXHR, textStatus, errorThrown) {
+
+			}
+			
+		});
+
+		$.ajax({
+			url: "php/worldbank/worldbankendangeredfish.php",
+			type: 'POST',
+			dataType: 'json',
+			data: {
+				country: mycountry,
+			},
+			success: function(result) { 
+
+				//console.log(result);
+
+				if (result.status.name == "ok") {
+
+					selectedCountry.endangeredfish = {
+						"value": result['data'][1][0]['value'],
+						"description": result['data'][1][0]['indicator']['value']
+					};
+					
+
+				}
+			
+			},
+			error: function(jqXHR, textStatus, errorThrown) {
+
+			}
+			
+		});
+
+		$.ajax({
+			url: "php/worldbank/worldbankendangeredmammal.php",
+			type: 'POST',
+			dataType: 'json',
+			data: {
+				country: mycountry,
+			},
+			success: function(result) { 
+
+				//console.log(result);
+
+				if (result.status.name == "ok") {
+
+					selectedCountry.endangeredmammal = {
+						"value": result['data'][1][0]['value'],
+						"description": result['data'][1][0]['indicator']['value']
+					};
+					
+
+				}
+			
+			},
+			error: function(jqXHR, textStatus, errorThrown) {
+
+			}
+			
+		});
+
+		$.ajax({
+			url: "php/worldbank/worldbankendangeredplant.php",
+			type: 'POST',
+			dataType: 'json',
+			data: {
+				country: mycountry,
+			},
+			success: function(result) { 
+
+				//console.log(result);
+
+				if (result.status.name == "ok") {
+
+					selectedCountry.endangeredplant = {
+						"value": result['data'][1][0]['value'],
+						"description": result['data'][1][0]['indicator']['value']
+					};
+					
+
+				}
+			
+			},
+			error: function(jqXHR, textStatus, errorThrown) {
+
+			}
+			
+		});
+
 
 
 			

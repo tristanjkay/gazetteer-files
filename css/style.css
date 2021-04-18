@@ -191,7 +191,7 @@ option {
 
 
 
-#value, #exchangeratevalue, #gdp_value, #inf_value, #bud_value {
+#value, #exchangeratevalue, #gdp_value, #inf_value, #bud_value, #hospitalbeds_ph, #lifeexpectancy_ph, #infantmortality_ph, #co2output_ph, #energyfromrenewables_ph, #airpollution_ph, #education_ph, #govedexpense_ph, #literacy_ph   {
     font-size: 3rem;
 }
 

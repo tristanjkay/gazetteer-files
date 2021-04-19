@@ -382,10 +382,13 @@ window.onload=function(){
 		$("#hospitalbeds_ph").text(selectedCountry.hospitalbeds['value']);
 		$("#lifeexpectancy_ph").text(selectedCountry.lifeexpectancy['value']);
 		$("#infantmortality_ph").text(selectedCountry.infantMortality['value']);
-		$("#precipitation_ph").html("");
-		$("#winddirection_ph").html("");
-		$("#windspeed_ph").html("");
-		$("#uvindex_ph").html("");
+		$("#deathrate_ph").text(selectedCountry.deathrate['value']);
+		$("#deathdisease_ph").html(selectedCountry.commdeaths['value']);
+		$("#deathtraffic_ph").html(selectedCountry.deathsroad['value']);
+		$("#diabetes_ph").html(selectedCountry.diabetes['value']);
+		$("#overweight_ph").html(selectedCountry.overweight['value']);
+		$("#undernourishment_ph").html(selectedCountry.undernourishment['value']);
+		$("#underweight_ph").html(selectedCountry.underweight['value']);
 
 		//Loop for Each 
 		/*selectedCountry.capital.weather.forecast.forEach(day => {

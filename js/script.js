@@ -383,12 +383,12 @@ window.onload=function(){
 		$("#lifeexpectancy_ph").text(selectedCountry.lifeexpectancy['value']);
 		$("#infantmortality_ph").text(selectedCountry.infantMortality['value']);
 		$("#deathrate_ph").text(selectedCountry.deathrate['value']);
-		$("#deathdisease_ph").html(selectedCountry.commdeaths['value']);
-		$("#deathtraffic_ph").html(selectedCountry.deathsroad['value']);
-		$("#diabetes_ph").html(selectedCountry.diabetes['value']);
-		$("#overweight_ph").html(selectedCountry.overweight['value']);
-		$("#undernourishment_ph").html(selectedCountry.undernourishment['value']);
-		$("#underweight_ph").html(selectedCountry.underweight['value']);
+		$("#deathdisease_ph").text(selectedCountry.commdeaths['value']);
+		$("#deathtraffic_ph").text(selectedCountry.deathsroad['value']);
+		$("#diabetes_ph").text(selectedCountry.diabetes['value']);
+		$("#overweight_ph").text(selectedCountry.overweight['value']);
+		$("#undernourishment_ph").text(selectedCountry.undernourishment['value']);
+		$("#underweight_ph").text(selectedCountry.underweight['value']);
 
 		//Loop for Each 
 		/*selectedCountry.capital.weather.forecast.forEach(day => {

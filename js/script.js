@@ -379,9 +379,9 @@ window.onload=function(){
 		//Current
 		$("#countryname_ph").text(selectedCountry.name);
 		$("#page_description_ph").text(selectedCountry.capital.name);
-		$("#hospitalbeds_ph").text(selectedCountry.hospitalbeds);
-		$("#lifeexpectancy_ph").text(selectedCountry.lifeexpectancy);
-		$("#infantmortality_ph").text(selectedCountry.infantMortality);
+		$("#hospitalbeds_ph").text(selectedCountry.hospitalbeds['value']);
+		$("#lifeexpectancy_ph").text(selectedCountry.lifeexpectancy['value']);
+		$("#infantmortality_ph").text(selectedCountry.infantMortality['value']);
 		$("#precipitation_ph").html("");
 		$("#winddirection_ph").html("");
 		$("#windspeed_ph").html("");

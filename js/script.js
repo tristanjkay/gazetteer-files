@@ -377,11 +377,11 @@ window.onload=function(){
 
 		//Add Data from APIs
 		//Current
-		$("#countryname_ph").html(selectedCountry.name);
-		$("#page_description_ph").html(selectedCountry.capital.name);
-		$("#hospitalbeds_ph").html(selectedCountry.hospitalbeds);
-		$("#lifeexpectancy_ph").html(selectedCountry.lifeexpectancy);
-		$("#infantmortality_ph").html(selectedCountry.infantMortality);
+		$("#countryname_ph").text(selectedCountry.name);
+		$("#page_description_ph").text(selectedCountry.capital.name);
+		$("#hospitalbeds_ph").text(selectedCountry.hospitalbeds);
+		$("#lifeexpectancy_ph").text(selectedCountry.lifeexpectancy);
+		$("#infantmortality_ph").text(selectedCountry.infantMortality);
 		$("#precipitation_ph").html("");
 		$("#winddirection_ph").html("");
 		$("#windspeed_ph").html("");

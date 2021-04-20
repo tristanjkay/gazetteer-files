@@ -413,19 +413,22 @@ window.onload=function(){
 
 		//Add Layout
 		$(".col-sm-9").html("");
-		$(".col-sm-9").html("<h1 id='countryname_ph'> Brazil </h1> <div class='row'> <div class='col-md-6'> <p id='page_description_ph'> Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>. Aliquam eget sapien sapien. Curabitur in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et, pharetra in dolor. Sed iaculis posuere diam ut cursus. <em>Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam velit et dui.</em> Proin massa magna, vulputate nec bibendum nec, posuere nec lacus. <small>Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu.</small> </p> <div class='row' id='covidChart'> <div class='col' id='charttext'> <div id='bar1'></div> January </div> <div class='col' id='charttext'> <div id='bar2'></div> February </div> <div class='col' id='charttext'> <div id='bar3'></div> March </div> <div class='col' id='charttext'> <div id='bar4'></div> April </div> <div class='col' id='charttext'> <div id='bar5'></div> May </div> <div class='col' id='charttext'> <div id='bar6'></div> June </div> </div> <div class='row'> <div class='col-md-4'> <div class='col'> <h2 id='hospitalbeds_ph'>10%</h2> <h3>Hospital Beds per 1000</h3> </div> </div> <div class='col-md-4'> <div class='col'> <h2 id='lifeexpectancy_ph'>10%</h2> <h3>Average Life Expectancy</h3> </div> </div> <div class='col-md-4'> <div class='col'> <h2 id='infantmortality_ph'>10%</h2> <h3>Infant Mortality</h3> </div> </div> </div> </div> <div class='col-md-6'> <div class='row'> <div class='col-md-8'> <div class='col'> <h2 id='deathrate_ph'>10%</h2> <h3>Death Rate</h3> </div> </div> <div class='col-md-4'> <div class='col'> <h2 id='surgical procedures_ph'>10%</h2> <h3>Surgical procedures per 1000 </h3> </div> </div> </div> <div class='row'> <div class='col-md-4'> <div class='col'> <h2 id='deathdisease_ph'>10%</h2> <h3>Deaths by Communicable Disease</h3> </div> </div> <div class='col-md-8'> <div class='col'> <h2 id='deathtraffic_ph'>10%</h2> <h3>Deaths by Road Traffic</h3> </div> </div> </div> <div class='row'> <div class='col-md-8'> <div class='col'> <h2 id='diabetes_ph'>10%</h2> <h3>Diabetes</h3> </div> </div> <div class='col-md-4'> <div class='col'> <h2 id='overweight_ph'>10%</h2> <h3>Overweight</h3> </div> </div> </div> <div class='row'> <div class='col-md-4'> <div class='col'> <h2 id='undernourishment_ph'>10%</h2> <h3>Undernourishment</h3> </div> </div> <div class='col-md-8'> <div class='col'> <h2 id='underweight_ph'>10%</h2> <h3>Underweight</h3> </div> </div> </div> </div> </div>");
+		$(".col-sm-9").html("<h1 id='countryname_ph'> Brazil </h1> <div class='row'> <div class='col-md-6'> <p id='page_description_ph'> Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>. Aliquam eget sapien sapien. Curabitur in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et, pharetra in dolor. Sed iaculis posuere diam ut cursus. <em>Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam velit et dui.</em> Proin massa magna, vulputate nec bibendum nec, posuere nec lacus. <small>Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu.</small> </p> <div class='row' id='covidChart'> <div class='col' id='charttext'> <div id='bar1'></div> January </div> <div class='col' id='charttext'> <div id='bar2'></div> February </div> <div class='col' id='charttext'> <div id='bar3'></div> March </div> <div class='col' id='charttext'> <div id='bar4'></div> April </div> <div class='col' id='charttext'> <div id='bar5'></div> May </div> <div class='col' id='charttext'> <div id='bar6'></div> June </div> </div> <div class='row'> <div class='col-md-4'> <div class='col'> <h2 id='co2output_ph'>10%</h2> <h3>CO2 Ouput</h3> </div> </div> <div class='col-md-4'> <div class='col'> <h2 id='energyrenewables_ph'>10%</h2> <h3>Energy from Renewables</h3> </div> </div> <div class='col-md-4'> <div class='col'> <h2 id='airpollution_ph'>10%</h2> <h3>Air Pollution</h3> </div> </div> </div> </div> <div class='col-md-6'> <div class='row'> <div class='col-md-8'> <div class='col'> <h2 id='deathrate_ph'>10%</h2> <h3>Death Rate</h3> </div> </div> <div class='col-md-4'> <div class='col'> <h2 id='surgical procedures_ph'>10%</h2> <h3>Surgical procedures per 1000 </h3> </div> </div> </div> <div class='row'> <div class='col-md-4'> <div class='col'> <h2 id='deathdisease_ph'>10%</h2> <h3>Deaths by Communicable Disease</h3> </div> </div> <div class='col-md-8'> <div class='col'> <h2 id='deathtraffic_ph'>10%</h2> <h3>Deaths by Road Traffic</h3> </div> </div> </div> <div class='row'> <div class='col-md-8'> <div class='col'> <h2 id='diabetes_ph'>10%</h2> <h3>Diabetes</h3> </div> </div> <div class='col-md-4'> <div class='col'> <h2 id='overweight_ph'>10%</h2> <h3>Overweight</h3> </div> </div> </div> <div class='row'> <div class='col-md-4'> <div class='col'> <h2 id='undernourishment_ph'>10%</h2> <h3>Undernourishment</h3> </div> </div> <div class='col-md-8'> <div class='col'> <h2 id='underweight_ph'>10%</h2> <h3>Underweight</h3> </div> </div> </div> </div> </div>");
 
 		//Add Data from APIs
 		//Current
-		$("#countryname_ph").html(selectedCountry.name);
-		$("#todaycapital_ph").html(selectedCountry.capital.name);
-		$("#temperature_ph").html("");
-		$("#weathericon_ph").html("");
-		$("#humidity_ph").html("");
-		$("#precipitation_ph").html("");
-		$("#winddirection_ph").html("");
-		$("#windspeed_ph").html("");
-		$("#uvindex_ph").html("");
+		$("#countryname_ph").text(selectedCountry.name);
+		$("#page_description_ph").text(selectedCountry.capital.name);
+		$("#co2output_ph").text(selectedCountry.co2ouput['value']);
+		$("#energyrenewables_ph").text(selectedCountry.renewableelectricoutput['value']);
+		$("#airpollution_ph").text(selectedCountry.airpollution['value']);
+		$("#deathrate_ph").text(selectedCountry.deathrate['value']);
+		$("#deathdisease_ph").text(selectedCountry.commdeaths['value']);
+		$("#deathtraffic_ph").text(selectedCountry.deathsroad['value']);
+		$("#diabetes_ph").text(selectedCountry.diabetes['value']);
+		$("#overweight_ph").text(selectedCountry.overweight['value']);
+		$("#undernourishment_ph").text(selectedCountry.undernourishment['value']);
+		$("#underweight_ph").text(selectedCountry.underweight['value']);
 
 		//Loop for Each 
 		/*selectedCountry.capital.weather.forecast.forEach(day => {
@@ -454,15 +457,18 @@ window.onload=function(){
 
 		//Add Data from APIs
 		//Current
-		$("#countryname_ph").html(selectedCountry.name);
-		$("#todaycapital_ph").html(selectedCountry.capital.name);
-		$("#temperature_ph").html("");
-		$("#weathericon_ph").html("");
-		$("#humidity_ph").html("");
-		$("#precipitation_ph").html("");
-		$("#winddirection_ph").html("");
-		$("#windspeed_ph").html("");
-		$("#uvindex_ph").html("");
+		$("#countryname_ph").text(selectedCountry.name);
+		$("#page_description_ph").text(selectedCountry.capital.name);
+		$("#hospitalbeds_ph").text(selectedCountry.hospitalbeds['value']);
+		$("#lifeexpectancy_ph").text(selectedCountry.lifeexpectancy['value']);
+		$("#infantmortality_ph").text(selectedCountry.infantMortality['value']);
+		$("#deathrate_ph").text(selectedCountry.deathrate['value']);
+		$("#deathdisease_ph").text(selectedCountry.commdeaths['value']);
+		$("#deathtraffic_ph").text(selectedCountry.deathsroad['value']);
+		$("#diabetes_ph").text(selectedCountry.diabetes['value']);
+		$("#overweight_ph").text(selectedCountry.overweight['value']);
+		$("#undernourishment_ph").text(selectedCountry.undernourishment['value']);
+		$("#underweight_ph").text(selectedCountry.underweight['value']);
 
 		//Loop for Each 
 		/*selectedCountry.capital.weather.forecast.forEach(day => {
@@ -487,19 +493,22 @@ window.onload=function(){
 
 		//Add Layout
 		$(".col-sm-9").html("");
-		$(".col-sm-9").html("<h1 id='countryname_ph'> Brazil </h1> <div class='row'> <div class='col-md-6'> <p id='page_description_ph'> Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>. Aliquam eget sapien sapien. Curabitur in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et, pharetra in dolor. Sed iaculis posuere diam ut cursus. <em>Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam velit et dui.</em> Proin massa magna, vulputate nec bibendum nec, posuere nec lacus. <small>Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu.</small> </p> <div class='row' id='covidChart'> <div class='col' id='charttext'> <div id='bar1'></div> January </div> <div class='col' id='charttext'> <div id='bar2'></div> February </div> <div class='col' id='charttext'> <div id='bar3'></div> March </div> <div class='col' id='charttext'> <div id='bar4'></div> April </div> <div class='col' id='charttext'> <div id='bar5'></div> May </div> <div class='col' id='charttext'> <div id='bar6'></div> June </div> </div> <div class='row'> <div class='col-md-4'> <div class='col'> <h2 id='hospitalbeds_ph'>10%</h2> <h3>Hospital Beds per 1000</h3> </div> </div> <div class='col-md-4'> <div class='col'> <h2 id='lifeexpectancy_ph'>10%</h2> <h3>Average Life Expectancy</h3> </div> </div> <div class='col-md-4'> <div class='col'> <h2 id='infantmortality_ph'>10%</h2> <h3>Infant Mortality</h3> </div> </div> </div> </div> <div class='col-md-6'> <div class='row'> <div class='col-md-8'> <div class='col'> <h2 id='deathrate_ph'>10%</h2> <h3>Death Rate</h3> </div> </div> <div class='col-md-4'> <div class='col'> <h2 id='surgical procedures_ph'>10%</h2> <h3>Surgical procedures per 1000 </h3> </div> </div> </div> <div class='row'> <div class='col-md-4'> <div class='col'> <h2 id='deathdisease_ph'>10%</h2> <h3>Deaths by Communicable Disease</h3> </div> </div> <div class='col-md-8'> <div class='col'> <h2 id='deathtraffic_ph'>10%</h2> <h3>Deaths by Road Traffic</h3> </div> </div> </div> <div class='row'> <div class='col-md-8'> <div class='col'> <h2 id='diabetes_ph'>10%</h2> <h3>Diabetes</h3> </div> </div> <div class='col-md-4'> <div class='col'> <h2 id='overweight_ph'>10%</h2> <h3>Overweight</h3> </div> </div> </div> <div class='row'> <div class='col-md-4'> <div class='col'> <h2 id='undernourishment_ph'>10%</h2> <h3>Undernourishment</h3> </div> </div> <div class='col-md-8'> <div class='col'> <h2 id='underweight_ph'>10%</h2> <h3>Underweight</h3> </div> </div> </div> </div> </div>");
+		$(".col-sm-9").html("<h1 id='countryname_ph'> Brazil </h1> <div class='row'> <div class='col-md-6'> <p id='page_description_ph'> Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>. Aliquam eget sapien sapien. Curabitur in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et, pharetra in dolor. Sed iaculis posuere diam ut cursus. <em>Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam velit et dui.</em> Proin massa magna, vulputate nec bibendum nec, posuere nec lacus. <small>Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu.</small> </p> <div class='row' id='covidChart'> <div class='col' id='charttext'> <div id='bar1'></div> January </div> <div class='col' id='charttext'> <div id='bar2'></div> February </div> <div class='col' id='charttext'> <div id='bar3'></div> March </div> <div class='col' id='charttext'> <div id='bar4'></div> April </div> <div class='col' id='charttext'> <div id='bar5'></div> May </div> <div class='col' id='charttext'> <div id='bar6'></div> June </div> </div> <div class='row'> <div class='col-md-4'> <div class='col'> <h2 id='co2output_ph'>10%</h2> <h3>Hospital Beds per 1000</h3> </div> </div> <div class='col-md-4'> <div class='col'> <h2 id='lifeexpectancy_ph'>10%</h2> <h3>Average Life Expectancy</h3> </div> </div> <div class='col-md-4'> <div class='col'> <h2 id='infantmortality_ph'>10%</h2> <h3>Infant Mortality</h3> </div> </div> </div> </div> <div class='col-md-6'> <div class='row'> <div class='col-md-8'> <div class='col'> <h2 id='deathrate_ph'>10%</h2> <h3>Death Rate</h3> </div> </div> <div class='col-md-4'> <div class='col'> <h2 id='surgical procedures_ph'>10%</h2> <h3>Surgical procedures per 1000 </h3> </div> </div> </div> <div class='row'> <div class='col-md-4'> <div class='col'> <h2 id='deathdisease_ph'>10%</h2> <h3>Deaths by Communicable Disease</h3> </div> </div> <div class='col-md-8'> <div class='col'> <h2 id='deathtraffic_ph'>10%</h2> <h3>Deaths by Road Traffic</h3> </div> </div> </div> <div class='row'> <div class='col-md-8'> <div class='col'> <h2 id='diabetes_ph'>10%</h2> <h3>Diabetes</h3> </div> </div> <div class='col-md-4'> <div class='col'> <h2 id='overweight_ph'>10%</h2> <h3>Overweight</h3> </div> </div> </div> <div class='row'> <div class='col-md-4'> <div class='col'> <h2 id='undernourishment_ph'>10%</h2> <h3>Undernourishment</h3> </div> </div> <div class='col-md-8'> <div class='col'> <h2 id='underweight_ph'>10%</h2> <h3>Underweight</h3> </div> </div> </div> </div> </div>");
 
 		//Add Data from APIs
 		//Current
-		$("#countryname_ph").html(selectedCountry.name);
-		$("#todaycapital_ph").html(selectedCountry.capital.name);
-		$("#temperature_ph").html("");
-		$("#weathericon_ph").html("");
-		$("#humidity_ph").html("");
-		$("#precipitation_ph").html("");
-		$("#winddirection_ph").html("");
-		$("#windspeed_ph").html("");
-		$("#uvindex_ph").html("");
+		$("#co2output_ph").text(selectedCountry.name);
+		$("#page_description_ph").text(selectedCountry.capital.name);
+		$("#hospitalbeds_ph").text(selectedCountry.hospitalbeds['value']);
+		$("#lifeexpectancy_ph").text(selectedCountry.lifeexpectancy['value']);
+		$("#infantmortality_ph").text(selectedCountry.infantMortality['value']);
+		$("#deathrate_ph").text(selectedCountry.deathrate['value']);
+		$("#deathdisease_ph").text(selectedCountry.commdeaths['value']);
+		$("#deathtraffic_ph").text(selectedCountry.deathsroad['value']);
+		$("#diabetes_ph").text(selectedCountry.diabetes['value']);
+		$("#overweight_ph").text(selectedCountry.overweight['value']);
+		$("#undernourishment_ph").text(selectedCountry.undernourishment['value']);
+		$("#underweight_ph").text(selectedCountry.underweight['value']);
 
 		//Loop for Each 
 		/*selectedCountry.capital.weather.forecast.forEach(day => {

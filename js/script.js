@@ -419,7 +419,7 @@ window.onload=function(){
 		//Current
 		$("#countryname_ph").text(selectedCountry.name);
 		$("#page_description_ph").text(selectedCountry.capital.name);
-		$("#co2output_ph").text(selectedCountry.co2ouput['value']);
+		$("#co2output_ph").text(selectedCountry.co2output['value']);
 		$("#energyrenewables_ph").text(selectedCountry.electricityfromrenewables['value']);
 		$("#airpollution_ph").text(selectedCountry.airpollution['value']);
 		$("#deathspollution_ph").text(selectedCountry.deathspollution['value']);

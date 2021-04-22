@@ -2,7 +2,7 @@
 
 	$executionStartTime = microtime(true) / 1000;
 
-    $url='https://raw.githubusercontent.com/tristanjkay/gazetteer/main/airports.json?token=AD62AGAJ4DRUWAANY2FL3U3AQGTFS';
+    $url='https://raw.githubusercontent.com/algolia/datasets/master/airports/airports.json';
 
 	$result = file_get_contents($url);
 

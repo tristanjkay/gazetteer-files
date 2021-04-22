@@ -693,7 +693,7 @@ window.onload=function(){
 						if (result.status.name == "ok") {
 
 							//Set Data to Country Object
-							selectedCountry.capital.name = (result['data']['capital']).toLocaleLowerCase('en-US');
+							selectedCountry.capital.name = (result['data']['capital']).toLocaleLowerCase('tr');
 							selectedCountry.region = result['data']['region'];
 							//selectedCountry.continent = result['data']['subregion'];
 							selectedCountry.population = result['data']['population'];

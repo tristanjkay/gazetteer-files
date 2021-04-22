@@ -860,7 +860,7 @@ window.onload=function(){
 					if (result.status.name == "ok") {
 						result['data'].forEach(element => {
 						if(element.country == selectedCountry.name){
-							selectedCountry.flights.push(element);
+							selectedCountry.airports.push(element);
 						}
 						
 						});

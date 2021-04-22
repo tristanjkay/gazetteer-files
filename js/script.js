@@ -897,11 +897,22 @@ window.onload=function(){
 					console.log("Flights Success");
 
 					if (result.status.name == "ok") {
-						selectedCountry.airports.forEach(element => {
-							selectedCountry.flights.push(element);
 
+						count = 0;
+						maxTries = 3;
+						while(true) {
+    						try {
+								selectedCountry.airports.forEach(element => {
+									selectedCountry.flights.push(element);
+		
+								
+								});
+    							} catch (e) {
+        							// handle exception
+        							if (++count == maxTries) throw e;
+    									}
+									}
 						
-						});
 						
 				}
 			},

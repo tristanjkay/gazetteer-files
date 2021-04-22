@@ -2,7 +2,7 @@
 	$epochTime = time();
 	$executionStartTime = microtime(true) / 1000;
 
-    $url='http://api.geonames.org/countryInfoJSON?formatted=true&lang=en&country=' . $_REQUEST['country'] . '&username=tristanjkay&style=full';
+    $url='http://airlabs.co/api/v6/airports?api_key=a6e92fe4-2d6b-4456-b2b6-ec9c12e96a66&country=' . $_REQUEST['country'];
 
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);

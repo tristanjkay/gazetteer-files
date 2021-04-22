@@ -898,20 +898,13 @@ window.onload=function(){
 
 					if (result.status.name == "ok") {
 
-						count = 0;
-						maxTries = 3;
-						while(true) {
-    						try {
-								selectedCountry.airports.forEach(element => {
-									selectedCountry.flights.push(element);
-									return;
-								
-								});
-    							} catch (e) {
-        							// handle exception
-        							if (++count == maxTries) throw e;
-    									}
-									}
+						if(selectedCountry.airports.length > 0){
+							selectedCountry.airports.forEach(element => {
+								selectedCountry.flights.push(element);
+	
+							
+							});
+						}
 						
 						
 				}

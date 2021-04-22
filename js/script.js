@@ -885,11 +885,11 @@ window.onload=function(){
 
 			//Flights
 			$.ajax({
-				url: "php/flights/airports-fileget.php",
+				url: "php/flights/flights.php",
 				type: 'POST',
 				dataType: 'json',
 				data: {
-					country: selectedCountry.iso2,
+					country: selectedCountry.capital.airport.iata_code,
 				},
 				success: function(result) {
 					selectedCountry.flights = [];

@@ -854,6 +854,7 @@ window.onload=function(){
 					country: selectedCountry.iso2,
 				},
 				success: function(result) {
+					selectedCountry.airports = [];
 
 					console.log("FlightDestination Success");
 

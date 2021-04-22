@@ -873,6 +873,41 @@ window.onload=function(){
 							selectedCountry.capital.airport = element;
 						}
 						});
+
+						//Flights
+		$.ajax({
+			url: "php/flights/flights.php",
+			type: 'POST',
+			dataType: 'json',
+			data: {
+				country: selectedCountry.capital.airport.iata_code,
+			},
+			success: function(result) {
+				selectedCountry.flights = [];
+
+				console.log("Flights Success");
+
+				if (result.status.name == "ok") {
+
+					if(selectedCountry.airports.length > 0){
+						selectedCountry.airports.forEach(element => {
+							selectedCountry.flights.push(element);
+
+
+							if(element.city == selectedCountry.capital.name){
+								selectedCountry.capital.airport = element.name;
+							}	
+						});
+					}
+					
+					
+			}
+		},
+			error: function(jqXHR, textStatus, errorThrown) {
+				console.log("Dictionary Fail")
+			}
+			
+		});
 						
 						
 				}
@@ -2426,40 +2461,7 @@ window.onload=function(){
 			
 		});
 
-		//Flights
-		/* $.ajax({
-			url: "php/flights/flights.php",
-			type: 'POST',
-			dataType: 'json',
-			data: {
-				country: selectedCountry.capital.airport.iata_code,
-			},
-			success: function(result) {
-				selectedCountry.flights = [];
-
-				console.log("Flights Success");
-
-				if (result.status.name == "ok") {
-
-					if(selectedCountry.airports.length > 0){
-						selectedCountry.airports.forEach(element => {
-							selectedCountry.flights.push(element);
-
-
-							if(element.city == selectedCountry.capital.name){
-								selectedCountry.capital.airport = element.name;
-							}	
-						});
-					}
-					
-					
-			}
-		},
-			error: function(jqXHR, textStatus, errorThrown) {
-				console.log("Dictionary Fail")
-			}
-			
-		}); */
+		
 
 		
 

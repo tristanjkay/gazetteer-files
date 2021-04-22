@@ -867,12 +867,13 @@ window.onload=function(){
 						if(element.country == selectedCountry.name){
 							selectedCountry.airports.push(element);
 
-							if(element.city == selectedCountry.capital.name){
-								selectedCountry.capital.airport = element;
-							}
+							
 						}
 						
 						});
+						if(element.city == selectedCountry.capital.name){
+							selectedCountry.capital.airport = element;
+						}
 						
 				}
 			},

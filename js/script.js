@@ -903,7 +903,7 @@ window.onload=function(){
 								selectedCountry.flights.push(element);
 								console.log("element.city is " + element.city);
 	
-								if(element.city.localeCompare(selectedCountry.capital.name)){
+								if((element.city.toLocaleLowerCase('en-US')) == (selectedCountry.capital.name.toLocaleLowerCase('en-US'))){
 									console.log("It matched")
 									selectedCountry.capital.airport = element.name;
 								}	

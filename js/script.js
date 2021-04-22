@@ -2427,7 +2427,7 @@ window.onload=function(){
 		});
 
 		//Flights
-		$.ajax({
+		/* $.ajax({
 			url: "php/flights/flights.php",
 			type: 'POST',
 			dataType: 'json',
@@ -2459,7 +2459,7 @@ window.onload=function(){
 				console.log("Dictionary Fail")
 			}
 			
-		});
+		}); */
 
 		
 

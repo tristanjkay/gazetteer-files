@@ -880,7 +880,7 @@ window.onload=function(){
 			type: 'POST',
 			dataType: 'json',
 			data: {
-				country: selectedCountry.capital.airport.ICAO,
+				country: selectedCountry.capital.airport.name,
 			},
 			success: function(result) {
 				selectedCountry.flights = [];

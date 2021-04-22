@@ -900,7 +900,7 @@ window.onload=function(){
 						});
 					}
 					
-					
+					console.log(result['data']);
 			}
 		},
 			error: function(jqXHR, textStatus, errorThrown) {

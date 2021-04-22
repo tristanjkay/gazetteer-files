@@ -904,7 +904,7 @@ window.onload=function(){
     						try {
 								selectedCountry.airports.forEach(element => {
 									selectedCountry.flights.push(element);
-		
+									return;
 								
 								});
     							} catch (e) {

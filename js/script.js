@@ -866,6 +866,10 @@ window.onload=function(){
 						result['data'].forEach(element => {
 						if(element.country == selectedCountry.name){
 							selectedCountry.airports.push(element);
+
+							if(element.city == selectedCountry.capital.name){
+								selectedCountry.capital.airport = element;
+							}
 						}
 						
 						});
@@ -893,9 +897,8 @@ window.onload=function(){
 
 					if (result.status.name == "ok") {
 						selectedCountry.airports.forEach(element => {
-						if(element.country == selectedCountry.name){
 							selectedCountry.flights.push(element);
-						}
+
 						
 						});
 						

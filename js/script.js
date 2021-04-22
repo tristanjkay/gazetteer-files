@@ -869,11 +869,11 @@ window.onload=function(){
 
 							
 						}
-						
-						});
 						if(element.city == selectedCountry.capital.name){
 							selectedCountry.capital.airport = element;
 						}
+						});
+						
 						
 				}
 			},

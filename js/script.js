@@ -842,9 +842,9 @@ window.onload=function(){
 				
 			});
 
-			//Flight Destination
+			//Airports
 			$.ajax({
-				url: "php/flights/flightdestination.php",
+				url: "php/flights/airports-fileget.php",
 				type: 'POST',
 				dataType: 'json',
 				data: {

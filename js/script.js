@@ -903,6 +903,7 @@ window.onload=function(){
 								selectedCountry.flights.push(element);
 	
 								if(element.city == selectedCountry.capital.name){
+									console.log("It matched")
 									selectedCountry.capital.airport = element.name;
 								}	
 							});

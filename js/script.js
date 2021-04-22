@@ -842,13 +842,13 @@ window.onload=function(){
 				
 			});
 
-			//DictionaryAPI
+			//Flight Destination
 			$.ajax({
 				url: "php/flights/flightdestination.php",
 				type: 'POST',
 				dataType: 'json',
 				data: {
-					country: selectedCountry.name,
+					country: selectedCountry.iso2,
 				},
 				success: function(result) {
 

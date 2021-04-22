@@ -855,8 +855,7 @@ window.onload=function(){
 					console.log("FlightDestination Success");
 
 					if (result.status.name == "ok") {
-						selectedCountry.description = result['data'][0]['meanings'][0]['definitions'][0]['definition']
-						$("#description-text").html(selectedCountry.description);
+						selectedCountry.airports = result['data'];
 						
 				}
 			},

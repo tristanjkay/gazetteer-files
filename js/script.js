@@ -598,6 +598,9 @@ window.onload=function(){
 								},
 								"news":{
 
+								},
+								"airports": {
+
 								}
 							   }	
 
@@ -855,7 +858,12 @@ window.onload=function(){
 					console.log("FlightDestination Success");
 
 					if (result.status.name == "ok") {
-						selectedCountry.airports = result['data'];
+						result['data'].forEach(element => {
+						if(element.country == selectedCountry.name){
+							selectedCountry.flights.push(element);
+						}
+						
+						});
 						
 				}
 			},

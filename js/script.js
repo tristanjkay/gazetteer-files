@@ -883,40 +883,7 @@ window.onload=function(){
 				
 			});
 
-			//Flights
-			$.ajax({
-				url: "php/flights/flights.php",
-				type: 'POST',
-				dataType: 'json',
-				data: {
-					country: selectedCountry.capital.airport.iata_code,
-				},
-				success: function(result) {
-					selectedCountry.flights = [];
-
-					console.log("Flights Success");
-
-					if (result.status.name == "ok") {
-
-						if(selectedCountry.airports.length > 0){
-							selectedCountry.airports.forEach(element => {
-								selectedCountry.flights.push(element);
-
-	
-								if(element.city == selectedCountry.capital.name){
-									selectedCountry.capital.airport = element.name;
-								}	
-							});
-						}
-						
-						
-				}
-			},
-				error: function(jqXHR, textStatus, errorThrown) {
-					console.log("Dictionary Fail")
-				}
-				
-			});
+			
 
 			//ExchangeRateAPI
 			$.ajax({
@@ -2455,6 +2422,41 @@ window.onload=function(){
 			},
 			error: function(jqXHR, textStatus, errorThrown) {
 
+			}
+			
+		});
+
+		//Flights
+		$.ajax({
+			url: "php/flights/flights.php",
+			type: 'POST',
+			dataType: 'json',
+			data: {
+				country: selectedCountry.capital.airport.iata_code,
+			},
+			success: function(result) {
+				selectedCountry.flights = [];
+
+				console.log("Flights Success");
+
+				if (result.status.name == "ok") {
+
+					if(selectedCountry.airports.length > 0){
+						selectedCountry.airports.forEach(element => {
+							selectedCountry.flights.push(element);
+
+
+							if(element.city == selectedCountry.capital.name){
+								selectedCountry.capital.airport = element.name;
+							}	
+						});
+					}
+					
+					
+			}
+		},
+			error: function(jqXHR, textStatus, errorThrown) {
+				console.log("Dictionary Fail")
 			}
 			
 		});

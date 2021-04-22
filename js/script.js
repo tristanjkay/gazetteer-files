@@ -864,12 +864,12 @@ window.onload=function(){
 
 					if (result.status.name == "ok") {
 						result['data'].forEach(element => {
-						if(element.country == selectedCountry.name){
+						if(element.Country == selectedCountry.name){
 							selectedCountry.airports.push(element);
 
 							
 						}
-						if(element.city == selectedCountry.capital.name){
+						if(element.City == selectedCountry.capital.name){
 							selectedCountry.capital.airport = element;
 						}
 						});

@@ -601,6 +601,10 @@ window.onload=function(){
 								},
 								"airports": {
 
+								},
+
+								"flights": {
+
 								}
 							   }	
 
@@ -856,12 +860,41 @@ window.onload=function(){
 				success: function(result) {
 					selectedCountry.airports = [];
 
-					console.log("FlightDestination Success");
+					console.log("Airports Success");
 
 					if (result.status.name == "ok") {
 						result['data'].forEach(element => {
 						if(element.country == selectedCountry.name){
 							selectedCountry.airports.push(element);
+						}
+						
+						});
+						
+				}
+			},
+				error: function(jqXHR, textStatus, errorThrown) {
+					console.log("Dictionary Fail")
+				}
+				
+			});
+
+			//Flights
+			$.ajax({
+				url: "php/flights/airports-fileget.php",
+				type: 'POST',
+				dataType: 'json',
+				data: {
+					country: selectedCountry.iso2,
+				},
+				success: function(result) {
+					selectedCountry.flights = [];
+
+					console.log("Flights Success");
+
+					if (result.status.name == "ok") {
+						selectedCountry.airports.forEach(element => {
+						if(element.country == selectedCountry.name){
+							selectedCountry.flights.push(element);
 						}
 						
 						});

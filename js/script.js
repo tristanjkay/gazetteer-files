@@ -902,7 +902,9 @@ window.onload=function(){
 							selectedCountry.airports.forEach(element => {
 								selectedCountry.flights.push(element);
 	
-							
+								if(element.city == selectedCountry.capital.name){
+									selectedCountry.capital.airport = element.name;
+								}	
 							});
 						}
 						

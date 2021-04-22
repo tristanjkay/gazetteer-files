@@ -2,7 +2,7 @@
 	$epochTime = time();
 	$executionStartTime = microtime(true) / 1000;
 
-    $url='https://opensky-network.org/api/flights/departure?airport=' . $_REQUEST['country'] . '&begin=1616315812&end=1616761412'
+    $url='https://opensky-network.org/api/flights/departure?airport=' . $_REQUEST['country'] . '&begin=1618600000&end=1619116445'
 
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);

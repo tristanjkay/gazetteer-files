@@ -901,12 +901,9 @@ window.onload=function(){
 						if(selectedCountry.airports.length > 0){
 							selectedCountry.airports.forEach(element => {
 								selectedCountry.flights.push(element);
-								console.log("element.city is " + element.city);
 
-								var capitalnamecheck = "";
 	
-								if(element.city /= selectedCountry.capital.name){
-									console.log("It matched")
+								if(element.city == selectedCountry.capital.name){
 									selectedCountry.capital.airport = element.name;
 								}	
 							});

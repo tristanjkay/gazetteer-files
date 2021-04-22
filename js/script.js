@@ -693,7 +693,7 @@ window.onload=function(){
 						if (result.status.name == "ok") {
 
 							//Set Data to Country Object
-							selectedCountry.capital.name = (result['data']['capital']).toLocaleLowerCase('tr');
+							selectedCountry.capital.name = result['data']['capital'];
 							selectedCountry.region = result['data']['region'];
 							//selectedCountry.continent = result['data']['subregion'];
 							selectedCountry.population = result['data']['population'];
@@ -903,7 +903,7 @@ window.onload=function(){
 								selectedCountry.flights.push(element);
 								console.log("element.city is " + element.city);
 	
-								if((element.city.toLocaleLowerCase('en-US')) == (selectedCountry.capital.name.toLocaleLowerCase('en-US'))){
+								if(element.city /= selectedCountry.capital.name){
 									console.log("It matched")
 									selectedCountry.capital.airport = element.name;
 								}	

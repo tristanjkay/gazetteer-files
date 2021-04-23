@@ -2507,7 +2507,7 @@ window.onload=function(){
 						"description": result['data'][1][0]['indicator']['value']
 					};
 
-					$("#departures").html(selectedCountry.departures['value']);
+					$("#departures_ph").html(selectedCountry.departures['value']);
 					
 
 				}

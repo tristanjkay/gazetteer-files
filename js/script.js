@@ -2461,6 +2461,64 @@ window.onload=function(){
 			
 		});
 
+		$.ajax({
+			url: "php/worldbank/worldbankarrivals.php",
+			type: 'POST',
+			dataType: 'json',
+			data: {
+				country: mycountry,
+			},
+			success: function(result) { 
+
+				//console.log(result);
+
+				if (result.status.name == "ok") {
+
+					selectedCountry.arrivals = {
+						"value": result['data'][1][0]['value'],
+						"description": result['data'][1][0]['indicator']['value']
+					};
+					$("#arrivals_ph").html(selectedCountry.arrivals['value']);
+
+				}
+			
+			},
+			error: function(jqXHR, textStatus, errorThrown) {
+
+			}
+			
+		});
+
+		$.ajax({
+			url: "php/worldbank/worldbankdepartures.php",
+			type: 'POST',
+			dataType: 'json',
+			data: {
+				country: mycountry,
+			},
+			success: function(result) { 
+
+				//console.log(result);
+
+				if (result.status.name == "ok") {
+
+					selectedCountry.departures = {
+						"value": result['data'][1][0]['value'],
+						"description": result['data'][1][0]['indicator']['value']
+					};
+
+					$("#departures").html(selectedCountry.departures['value']);
+					
+
+				}
+			
+			},
+			error: function(jqXHR, textStatus, errorThrown) {
+
+			}
+			
+		});
+
 		
 
 		

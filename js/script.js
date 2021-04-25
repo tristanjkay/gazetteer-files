@@ -1053,39 +1053,40 @@ window.onload=function(){
 				var rounded0 = result['data'][1][0]['value'].toFixed();
 				var length = rounded0.toString().length;
 				var thousands = (length/3).toFixed();
+				var suffix;
 				console.log(thousands);
 
 				switch (thousands) {
 					case 0:
-						var suffix = "test";
+						return suffix = "test";
 						break;
 
 					case 1:
-						var suffix = "test";
+						return suffix = "test";
 						break;
 
 					case 2:
-						var suffix = "test";
+						return suffix = "test";
 						break;
 
 					case 3:
-						var suffix = "test";
+						return suffix = "test";
 						break;
 					
 					case 4:
-						var suffix = "test";
+						return suffix = "test";
 						break;
 
 					case 5:
-						var suffix = "test";
+						return suffix = "test";
 						break;
 
 					case 6:
-						var suffix = "test";
+						return suffix = "test";
 						break;
 					
 					case 7:
-						var suffix = "test";
+						return suffix = "test";
 						break;
 
 					default:

@@ -1049,10 +1049,16 @@ window.onload=function(){
 
 				console.log("WorldBank Success")
 
+				//Formatting String
+				var rounded0 = result['data'][1][0]['value'].toFixed();
+				var length = rounded0.toString().length;
+				console.log("Length:" + length/3);
+
 				if (result.status.name == "ok") {
 					selectedCountry.gdp = {
 						"value": result['data'][1][0]['value'],
-						"description": result['data'][1][0]['indicator']['value']
+						"description": result['data'][1][0]['indicator']['value'],
+						"string": "test"
 						
 					};
 					

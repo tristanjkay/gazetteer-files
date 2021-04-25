@@ -1113,7 +1113,7 @@ window.onload=function(){
 					
 					
 					$("#climate-title").html("<b>Today (" + selectedCountry.capital.name + ")</b>");
-					$("#gdp_value").html(selectedCountry.gdp['value']);
+					$("#gdp_value").html(selectedCountry.gdp['string']);
 
 				}
 			

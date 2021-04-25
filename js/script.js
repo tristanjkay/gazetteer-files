@@ -1053,7 +1053,7 @@ window.onload=function(){
 				var rounded0 = result['data'][1][0]['value'].toFixed();
 				var length = rounded0.toString().length;
 				var thousands = (length/3).toFixed();
-				var suffix;
+				var suffix = 2;
 				console.log(thousands);
 
 				switch (thousands) {

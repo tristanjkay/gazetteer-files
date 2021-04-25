@@ -1056,44 +1056,45 @@ window.onload=function(){
 				var suffix = 2;
 				console.log(thousands);
 
-				switch (thousands) {
-					case 0:
-						return suffix = "test";
-						break;
-
-					case 1:
-						return suffix = "test";
-						break;
-
-					case 2:
-						return suffix = "test";
-						break;
-
-					case 3:
-						return suffix = "test";
-						break;
-					
-					case 4:
-						return suffix = "test";
-						break;
-
-					case 5:
-						return suffix = "test";
-						break;
-
-					case 6:
-						return suffix = "test";
-						break;
-					
-					case 7:
-						return suffix = "test";
-						break;
-
-					default:
-						break;
-				}
+				
 
 				if (result.status.name == "ok") {
+					switch (thousands) {
+						case 0:
+							return suffix = "test";
+							break;
+	
+						case 1:
+							return suffix = "test";
+							break;
+	
+						case 2:
+							return suffix = "test";
+							break;
+	
+						case 3:
+							return suffix = "test";
+							break;
+						
+						case 4:
+							return suffix = "test";
+							break;
+	
+						case 5:
+							return suffix = "test";
+							break;
+	
+						case 6:
+							return suffix = "test";
+							break;
+						
+						case 7:
+							return suffix = "test";
+							break;
+	
+						default:
+							break;
+					}
 					selectedCountry.gdp = {
 						"value": result['data'][1][0]['value'],
 						"description": result['data'][1][0]['indicator']['value'],

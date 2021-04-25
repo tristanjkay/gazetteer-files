@@ -1049,17 +1049,17 @@ window.onload=function(){
 
 				console.log("WorldBank Success")
 
-				//Formatting String
-				var rounded0 = result['data'][1][0]['value'].toFixed();
-				var length = rounded0.toString().length;
-				var thousands = (length/3).toFixed();
+				
 				
 				console.log(thousands);
 
 				
 
 				if (result.status.name == "ok") {
-					var suffix = 2;
+					//Formatting String
+				var rounded0 = result['data'][1][0]['value'].toFixed();
+				var length = rounded0.toString().length;
+				var thousands = (length/3).toFixed();
 					
 					selectedCountry.gdp = {
 						"value": result['data'][1][0]['value'],

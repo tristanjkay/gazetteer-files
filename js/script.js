@@ -1060,48 +1060,49 @@ window.onload=function(){
 
 				if (result.status.name == "ok") {
 					var suffix = 2;
-					switch (thousands) {
-						case 0:
-							return suffix = "test";
-							break;
-	
-						case 1:
-							return suffix = "test";
-							break;
-	
-						case 2:
-							return suffix = "test";
-							break;
-	
-						case 3:
-							return suffix = "test";
-							break;
-						
-						case 4:
-							return suffix = "test";
-							break;
-	
-						case 5:
-							return suffix = "test";
-							break;
-	
-						case 6:
-							return suffix = "test";
-							break;
-						
-						case 7:
-							return suffix = "test";
-							break;
-	
-						default:
-							break;
-					}
+					
 					selectedCountry.gdp = {
 						"value": result['data'][1][0]['value'],
 						"description": result['data'][1][0]['indicator']['value'],
 						"string": "test"
 						
 					};
+					switch (thousands) {
+						case 0:
+							return selectedCountry.gdp.string = "1";
+							break;
+	
+						case 1:
+							return selectedCountry.gdp.string = "1";
+							break;
+	
+						case 2:
+							return selectedCountry.gdp.string = "1";
+							break;
+	
+						case 3:
+							return selectedCountry.gdp.string = "1";
+							break;
+						
+						case 4:
+							return selectedCountry.gdp.string = "1";
+							break;
+	
+						case 5:
+							return selectedCountry.gdp.string = "1";
+							break;
+	
+						case 6:
+							return selectedCountry.gdp.string = "1";
+							break;
+						
+						case 7:
+							return selectedCountry.gdp.string = "1";
+							break;
+	
+						default:
+							break;
+					}
 					
 					
 					$("#climate-title").html("<b>Today (" + selectedCountry.capital.name + ")</b>");

@@ -1055,6 +1055,43 @@ window.onload=function(){
 				var thousands = (length/3).toFixed();
 				console.log(thousands);
 
+				switch (thousands) {
+					case 0:
+						var suffix = "test";
+						break;
+
+					case 1:
+						var suffix = "test";
+						break;
+
+					case 2:
+						var suffix = "test";
+						break;
+
+					case 3:
+						var suffix = "test";
+						break;
+					
+					case 4:
+						var suffix = "test";
+						break;
+
+					case 5:
+						var suffix = "test";
+						break;
+
+					case 6:
+						var suffix = "test";
+						break;
+					
+					case 7:
+						var suffix = "test";
+						break;
+
+					default:
+						break;
+				}
+
 				if (result.status.name == "ok") {
 					selectedCountry.gdp = {
 						"value": result['data'][1][0]['value'],

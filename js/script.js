@@ -1147,7 +1147,8 @@ window.onload=function(){
 
 					selectedCountry.inflation = {
 						"value": result['data'][1][0]['value'],
-						"description": result['data'][1][0]['indicator']['value']
+						"description": result['data'][1][0]['indicator']['value'],
+						"string": "test"
 						
 					};
 

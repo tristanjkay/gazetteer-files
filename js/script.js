@@ -1139,14 +1139,64 @@ window.onload=function(){
 				console.log("WorldBank INF Success")
 
 				if (result.status.name == "ok") {
+					//Formatting String
+				var rounded0 = result['data'][1][0]['value'].toFixed();
+				var length = rounded0.toString().length;
+				var thousands = (length/3).toFixed();
+
+
 					selectedCountry.inflation = {
 						"value": result['data'][1][0]['value'],
 						"description": result['data'][1][0]['indicator']['value']
 						
 					};
+
+					switch (thousands) {
+						case "0":
+							//Less than 1000
+							
+							selectedCountry.inflation["string"] = result['data'][1][0]['value'];
+							break;
+	
+						case "1":
+							//Thousand
+							selectedCountry.inflation["string"] = result['data'][1][0]['value'].toString().charAt(0) + "." + result['data'][1][0]['value'].toString().charAt(1) + result['data'][1][0]['value'].toString().charAt(2) + "K";
+							break;
+	
+						case "2":
+							//Million
+							selectedCountry.inflation["string"] = result['data'][1][0]['value'].toString().charAt(0) + "." + result['data'][1][0]['value'].toString().charAt(1) + result['data'][1][0]['value'].toString().charAt(2) + "M";
+							break;
+	
+						case "3":
+							//Billion
+							selectedCountry.inflation["string"] = result['data'][1][0]['value'].toString().charAt(0) + "." + result['data'][1][0]['value'].toString().charAt(1) + result['data'][1][0]['value'].toString().charAt(2) + "B";
+							break;
+						
+						case "4":
+							//Trillion
+							selectedCountry.inflation["string"] = result['data'][1][0]['value'].toString().charAt(0) + "." + result['data'][1][0]['value'].toString().charAt(1) + result['data'][1][0]['value'].toString().charAt(2) + "T";
+							break;
+	
+						case "5":
+							selectedCountry.inflation["string"] = "5";
+							break;
+	
+						case "6":
+							selectedCountry.inflation["string"] = "6";
+							break;
+						
+						case "7":
+							selectedCountry.inflation["string"] = "7";
+							break;
+	
+						default:
+							console.log("It didnt work");
+							break;
+					}
 					
 					
-					$("#inf_value").html(selectedCountry.inflation['value']);
+					$("#inf_value").html(selectedCountry.inflation['string']);
 
 				}
 			

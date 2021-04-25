@@ -1076,22 +1076,22 @@ window.onload=function(){
 	
 						case "1":
 							//Thousand
-							selectedCountry.gdp["string"] = result['data'][1][0]['value'].toString().charAt(0) + "K";
+							selectedCountry.gdp["string"] = result['data'][1][0]['value'].toString().charAt(0) + "." + result['data'][1][0]['value'].toString().charAt(1) + result['data'][1][0]['value'].toString().charAt(2) + "K";
 							break;
 	
 						case "2":
 							//Million
-							selectedCountry.gdp["string"] = result['data'][1][0]['value'].toString().charAt(0) + "M";
+							selectedCountry.gdp["string"] = result['data'][1][0]['value'].toString().charAt(0) + "." + result['data'][1][0]['value'].toString().charAt(1) + result['data'][1][0]['value'].toString().charAt(2) + "M";
 							break;
 	
 						case "3":
 							//Billion
-							selectedCountry.gdp["string"] = result['data'][1][0]['value'].toString().charAt(0) + "B";
+							selectedCountry.gdp["string"] = result['data'][1][0]['value'].toString().charAt(0) + "." + result['data'][1][0]['value'].toString().charAt(1) + result['data'][1][0]['value'].toString().charAt(2) + "B";
 							break;
 						
 						case "4":
 							//Trillion
-							selectedCountry.gdp["string"] = result['data'][1][0]['value'].toString().charAt(0) + "T";
+							selectedCountry.gdp["string"] = result['data'][1][0]['value'].toString().charAt(0) + "." + result['data'][1][0]['value'].toString().charAt(1) + result['data'][1][0]['value'].toString().charAt(2) + "T";
 							break;
 	
 						case "5":

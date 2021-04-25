@@ -1070,27 +1070,28 @@ window.onload=function(){
 					switch (thousands) {
 						case "0":
 							//Less than 1000
+							
 							selectedCountry.gdp["string"] = result['data'][1][0]['value'];
 							break;
 	
 						case "1":
 							//Thousand
-							selectedCountry.gdp["string"] = (Integer.parseInt(Integer.toString(result['data'][1][0]['value']).substring(0, 1))).toString() + "K";
+							selectedCountry.gdp["string"] = result['data'][1][0]['value'].toString().charAt(0) + "K";
 							break;
 	
 						case "2":
 							//Million
-							selectedCountry.gdp["string"] = (Integer.parseInt(Integer.toString(result['data'][1][0]['value']).substring(0, 1))).toString() + "M";
+							selectedCountry.gdp["string"] = result['data'][1][0]['value'].toString().charAt(0) + "M";
 							break;
 	
 						case "3":
 							//Billion
-							selectedCountry.gdp["string"] = (Integer.parseInt(Integer.toString(result['data'][1][0]['value']).substring(0, 1))).toString() + "B";
+							selectedCountry.gdp["string"] = result['data'][1][0]['value'].toString().charAt(0) + "B";
 							break;
 						
 						case "4":
 							//Trillion
-							selectedCountry.gdp["string"] = (Integer.parseInt(Integer.toString(result['data'][1][0]['value']).substring(0, 1))).toString() + "T";
+							selectedCountry.gdp["string"] = result['data'][1][0]['value'].toString().charAt(0) + "T";
 							break;
 	
 						case "5":

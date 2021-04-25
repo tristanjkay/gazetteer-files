@@ -1075,22 +1075,22 @@ window.onload=function(){
 	
 						case "1":
 							//Thousand
-							selectedCountry.gdp["string"] = (Integer.parseInt(Integer.toString(result['data'][1][0]['value']).substring(0, 1))) + "K";
+							selectedCountry.gdp["string"] = (Integer.parseInt(Integer.toString(result['data'][1][0]['value']).substring(0, 1))).toString() + "K";
 							break;
 	
 						case "2":
 							//Million
-							selectedCountry.gdp["string"] = (Integer.parseInt(Integer.toString(result['data'][1][0]['value']).substring(0, 1))) + "M";
+							selectedCountry.gdp["string"] = (Integer.parseInt(Integer.toString(result['data'][1][0]['value']).substring(0, 1))).toString() + "M";
 							break;
 	
 						case "3":
 							//Billion
-							selectedCountry.gdp["string"] = (Integer.parseInt(Integer.toString(result['data'][1][0]['value']).substring(0, 1))) + "B";
+							selectedCountry.gdp["string"] = (Integer.parseInt(Integer.toString(result['data'][1][0]['value']).substring(0, 1))).toString() + "B";
 							break;
 						
 						case "4":
 							//Trillion
-							selectedCountry.gdp["string"] = (Integer.parseInt(Integer.toString(result['data'][1][0]['value']).substring(0, 1))) + "T";
+							selectedCountry.gdp["string"] = (Integer.parseInt(Integer.toString(result['data'][1][0]['value']).substring(0, 1))).toString() + "T";
 							break;
 	
 						case "5":

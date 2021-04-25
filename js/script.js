@@ -1069,35 +1069,35 @@ window.onload=function(){
 					};
 					switch (thousands) {
 						case 0:
-							return selectedCountry.gdp.string = "1";
+							selectedCountry.gdp.string = "1";
 							break;
 	
 						case 1:
-							return selectedCountry.gdp.string = "1";
+							selectedCountry.gdp.string = "1";
 							break;
 	
 						case 2:
-							return selectedCountry.gdp.string = "1";
+							selectedCountry.gdp.string = "1";
 							break;
 	
 						case 3:
-							return selectedCountry.gdp.string = "1";
+							selectedCountry.gdp.string = "1";
 							break;
 						
 						case 4:
-							return selectedCountry.gdp.string = "1";
+							selectedCountry.gdp.string = "1";
 							break;
 	
 						case 5:
-							return selectedCountry.gdp.string = "1";
+							selectedCountry.gdp.string = "1";
 							break;
 	
 						case 6:
-							return selectedCountry.gdp.string = "1";
+							selectedCountry.gdp.string = "1";
 							break;
 						
 						case 7:
-							return selectedCountry.gdp.string = "1";
+							selectedCountry.gdp.string = "1";
 							break;
 	
 						default:

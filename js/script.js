@@ -1084,10 +1084,12 @@ window.onload=function(){
 							break;
 	
 						case "3":
+							//Billion
 							selectedCountry.gdp["string"] = (Integer.parseInt(Integer.toString(result['data'][1][0]['value']).substring(0, 1))) + "B";
 							break;
 						
 						case "4":
+							//Trillion
 							selectedCountry.gdp["string"] = (Integer.parseInt(Integer.toString(result['data'][1][0]['value']).substring(0, 1))) + "T";
 							break;
 	

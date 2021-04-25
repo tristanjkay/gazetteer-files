@@ -1068,35 +1068,35 @@ window.onload=function(){
 						
 					};
 					switch (thousands) {
-						case 0:
+						case "0":
 							selectedCountry.gdp["string"] = "1";
 							break;
 	
-						case 1:
+						case "1":
 							selectedCountry.gdp["string"] = "1";
 							break;
 	
-						case 2:
+						case "2":
 							selectedCountry.gdp["string"] = "1";
 							break;
 	
-						case 3:
+						case "3":
 							selectedCountry.gdp["string"] = "1";
 							break;
 						
-						case 4:
+						case "4":
 							selectedCountry.gdp["string"] = "1";
 							break;
 	
-						case 5:
+						case "5":
 							selectedCountry.gdp["string"] = "1";
 							break;
 	
-						case 6:
+						case "6":
 							selectedCountry.gdp["string"] = "1";
 							break;
 						
-						case 7:
+						case "7":
 							selectedCountry.gdp["string"] = "1";
 							break;
 	

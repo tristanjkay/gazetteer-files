@@ -1052,7 +1052,8 @@ window.onload=function(){
 				//Formatting String
 				var rounded0 = result['data'][1][0]['value'].toFixed();
 				var length = rounded0.toString().length;
-				console.log("Length:" + length/3);
+				var thousands = (length/3).toFixed();
+				console.log(thousands);
 
 				if (result.status.name == "ok") {
 					selectedCountry.gdp = {

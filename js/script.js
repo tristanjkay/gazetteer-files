@@ -1069,23 +1069,26 @@ window.onload=function(){
 					};
 					switch (thousands) {
 						case "0":
-							selectedCountry.gdp["string"] = "0";
+							//Less than 1000
+							selectedCountry.gdp["string"] = result['data'][1][0]['value'];
 							break;
 	
 						case "1":
-							selectedCountry.gdp["string"] = "1";
+							//Thousand
+							selectedCountry.gdp["string"] = (Integer.parseInt(Integer.toString(result['data'][1][0]['value']).substring(0, 1))) + "K";
 							break;
 	
 						case "2":
-							selectedCountry.gdp["string"] = "2";
+							//Million
+							selectedCountry.gdp["string"] = (Integer.parseInt(Integer.toString(result['data'][1][0]['value']).substring(0, 1))) + "M";
 							break;
 	
 						case "3":
-							selectedCountry.gdp["string"] = "3";
+							selectedCountry.gdp["string"] = (Integer.parseInt(Integer.toString(result['data'][1][0]['value']).substring(0, 1))) + "B";
 							break;
 						
 						case "4":
-							selectedCountry.gdp["string"] = "4";
+							selectedCountry.gdp["string"] = (Integer.parseInt(Integer.toString(result['data'][1][0]['value']).substring(0, 1))) + "T";
 							break;
 	
 						case "5":

@@ -1101,6 +1101,7 @@ window.onload=function(){
 							break;
 	
 						default:
+							console.log("It didnt work");
 							break;
 					}
 					

@@ -1053,12 +1053,13 @@ window.onload=function(){
 				var rounded0 = result['data'][1][0]['value'].toFixed();
 				var length = rounded0.toString().length;
 				var thousands = (length/3).toFixed();
-				var suffix = 2;
+				
 				console.log(thousands);
 
 				
 
 				if (result.status.name == "ok") {
+					var suffix = 2;
 					switch (thousands) {
 						case 0:
 							return suffix = "test";

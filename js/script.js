@@ -124,7 +124,11 @@ window.onload=function(){
 		document.getElementById("backButton").addEventListener('click', function(event) {
 			console.log("backToMain");
 			divExpContent = $(".col-sm-9").html();
-	
+
+			col2.classList.add('col-sm-3');
+			col1.classList.add('col-sm-9');
+			col2.classList.remove('col-sm-9');
+			col1.classList.remove('col-sm-3');
 		});
 		
 		//Add Data from APIs

@@ -110,6 +110,7 @@ window.onload=function(){
 			col1.classList.remove('col-sm-3');
 
 			$(".col-sm-3").html(divPrevContent);
+			countrySelected(selectedCountry);
 			map.setView([selectedCountry.capital.location[0], selectedCountry.capital.location[1]], 6);
 
 

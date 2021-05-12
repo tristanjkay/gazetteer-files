@@ -133,7 +133,7 @@ window.onload=function(){
 			col1.classList.remove('col-sm-3');
 
 			$(".col-sm-3").html(divPrevContent);
-			map.setView([selectedCountry.capital.location[0], selectedCountry.capital.location[1]], 6);
+			map.setView([selectedCountry.capital.location[0], selectedCountry.capital.location[1]], 4);
 		});
 		
 		//Add Data from APIs

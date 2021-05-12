@@ -118,7 +118,7 @@ window.onload=function(){
 
 		//Add Layout
 		$(".col-sm-9").html("");
-		$(".col-sm-9").html("<button>BA CK</button><div class='row'> <div class='col'> <h1 id = 'countryname_ph'>Brazil</h1> <h3 id = 'todaycapital_ph'>Today(Brasilia)</h3> </div> <h3 id = 'temperature_ph'>18&deg;C</h3> <h3 id = 'weathericon_ph'>&#9728;</h3> </div> <div class='row bg-light'> <div class='col'> <h1 id = 'humidity_ph'>83</h1> <h4>HUMIDITY</h4> </div> <div class='col'> <h1 id = 'precipitation_ph'>0</h1> <h4>PRECIPITATION</h4> </div> <div class='col'> <h1 id = 'winddirection_ph'>N</h1> <h4>WIND DIRECTION</h4> </div> <div class='col'> <h1 id = 'windspeed_ph'>3.8</h1> <h4>WIND SPEED</h4> </div> <div class='col'> <h1 id = 'uvindex_ph'>3</h1> <h4>UV INDEX</h4> </div> </div> <br> <br> <h2>This Week</h2><div id='forecast'></div>");
+		$(".col-sm-9").html("<button id='backButton'>BACK</button><div class='row'> <div class='col'> <h1 id = 'countryname_ph'>Brazil</h1> <h3 id = 'todaycapital_ph'>Today(Brasilia)</h3> </div> <h3 id = 'temperature_ph'>18&deg;C</h3> <h3 id = 'weathericon_ph'>&#9728;</h3> </div> <div class='row bg-light'> <div class='col'> <h1 id = 'humidity_ph'>83</h1> <h4>HUMIDITY</h4> </div> <div class='col'> <h1 id = 'precipitation_ph'>0</h1> <h4>PRECIPITATION</h4> </div> <div class='col'> <h1 id = 'winddirection_ph'>N</h1> <h4>WIND DIRECTION</h4> </div> <div class='col'> <h1 id = 'windspeed_ph'>3.8</h1> <h4>WIND SPEED</h4> </div> <div class='col'> <h1 id = 'uvindex_ph'>3</h1> <h4>UV INDEX</h4> </div> </div> <br> <br> <h2>This Week</h2><div id='forecast'></div>");
 		
 		//Add Data from APIs
 		

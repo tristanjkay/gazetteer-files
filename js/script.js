@@ -53,6 +53,8 @@ var col1;
 var col2 = document.querySelector('.col-sm-3');
 var epochTime = Date.now();
 var divPrevContent;
+
+var divExpContent;
 var countries = [];
 var debugActive;
 var debugLog; 

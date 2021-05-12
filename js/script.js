@@ -97,6 +97,9 @@ window.onload=function(){
 	dropdown.addEventListener('change', function(event) {
 		selectedCountry = $('#countriesDropdown').val();
 		countrySelected(selectedCountry);
+		if(document.getElementById("backButton") = null){
+			console.log("null");
+		}
 	})
 
 	//-------------------------------------------------------------------------------------------------------------------------------------------------Click Event Listeners-//

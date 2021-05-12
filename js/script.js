@@ -95,10 +95,10 @@ window.onload=function(){
 	col2.style.display = "none";
 	//Retrieve iso2 code of selected Country
 	dropdown.addEventListener('change', function(event) {
-		selectedCountry = $('#countriesDropdown').val();
-		countrySelected(selectedCountry);
+		
 		if(document.getElementById("backButton") == null){
-			console.log("null");
+			selectedCountry = $('#countriesDropdown').val();
+			countrySelected(selectedCountry);
 		}
 	})
 

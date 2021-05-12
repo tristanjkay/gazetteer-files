@@ -97,11 +97,16 @@ window.onload=function(){
 
 	//-------------------------------------------------------------------------------------------------------------------------------------------------Click Event Listeners-//
 
-	backButton.addEventListener('click', function(event) {
-		console.log("backToMain");
-		divExpContent = $(".col-sm-9").html();
+	if(!!document.getElementById("backButton")){
 
-	});
+		document.getElementById("backButton").addEventListener('click', function(event) {
+			console.log("backToMain");
+			divExpContent = $(".col-sm-9").html();
+	
+		});
+
+	}
+	
 	
 	//----------------------------------------------------------------------------------------------------------------------------------------WEATHER
 

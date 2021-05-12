@@ -98,6 +98,7 @@ window.onload=function(){
 	//-------------------------------------------------------------------------------------------------------------------------------------------------Click Event Listeners-//
 
 	if(!!document.getElementById("backButton")){
+		console.log("backtoMain");
 
 		document.getElementById("backButton").addEventListener('click', function(event) {
 			console.log("backToMain");

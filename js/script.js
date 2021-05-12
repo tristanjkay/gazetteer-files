@@ -38,6 +38,7 @@
 
 var map = L.map('map').fitWorld();
 var dropdown = document.getElementById("countriesDropdown");
+var backButton = document.getElementById("backButton");
 var climateDiv = document.getElementById("climate");
 var economyDiv = document.getElementById("economy");
 var cultureDiv = document.getElementById("culture");

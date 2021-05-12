@@ -97,7 +97,7 @@ window.onload=function(){
 
 	//-------------------------------------------------------------------------------------------------------------------------------------------------Click Event Listeners-//
 
-	if(!!document.getElementById("backButton")){
+	if(document.getElementById("backButton") != null){
 		console.log("backtoMain");
 
 		document.getElementById("backButton").addEventListener('click', function(event) {

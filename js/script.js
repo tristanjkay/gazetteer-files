@@ -101,7 +101,16 @@ window.onload=function(){
 			countrySelected(selectedCountry);
 		} else {
 			//Go back to unexpanded view
-			console.log(divPrevContent);
+			console.log("backToMain");
+			divExpContent = $(".col-sm-9").html();
+
+			col2.classList.add('col-sm-3');
+			col1.classList.add('col-sm-9');
+			col2.classList.remove('col-sm-9');
+			col1.classList.remove('col-sm-3');
+
+			$(".col-sm-3").html(divPrevContent);
+			map.setView([selectedCountry.capital.location[0], selectedCountry.capital.location[1]], 6);
 
 
 		}

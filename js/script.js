@@ -129,6 +129,8 @@ window.onload=function(){
 			col1.classList.add('col-sm-9');
 			col2.classList.remove('col-sm-9');
 			col1.classList.remove('col-sm-3');
+
+			$(".col-sm-3").html(divPrevContent);
 		});
 		
 		//Add Data from APIs

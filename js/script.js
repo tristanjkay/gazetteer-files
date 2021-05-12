@@ -134,7 +134,7 @@ window.onload=function(){
 
 			$(".col-sm-3").html(divPrevContent);
 			//map.setView([selectedCountry.capital.location[0], selectedCountry.capital.location[1]], 5);
-			map.fitBounds(selectedCountryBoundary.getBounds());
+			map.fitBounds(L.geoJSON().addTo(map).getBounds());
 		});
 		
 		//Add Data from APIs

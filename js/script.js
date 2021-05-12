@@ -87,6 +87,8 @@ map.on('locationerror', onLocationError);
 
 map.locate({setView: true, maxZoom: 16});
 
+$('document').bind("DOMSubtreeModified", console.log("It changed!"));
+
 //------------------------------------------------------------------------------------------------------------------------------------------------------------WHEN PAGE LOADS-//
 window.onload=function(){
 
@@ -100,7 +102,7 @@ window.onload=function(){
 	//-------------------------------------------------------------------------------------------------------------------------------------------------Click Event Listeners-//
 
 
-	$('document').bind("DOMSubtreeModified", console.log("It changed!"));
+	
 	
 	//----------------------------------------------------------------------------------------------------------------------------------------WEATHER
 

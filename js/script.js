@@ -610,7 +610,7 @@ window.onload=function(){
 		//Centre Map
 		map.setView([selectedCountry.capital.location[0], selectedCountry.capital.location[1]], 2);
 	})
-	crimeDiv.addEventListener('click', function(event) {
+	/* crimeDiv.addEventListener('click', function(event) {
 		console.log("crime");
 		divPrevContent = $(".col-sm-3").html();
 
@@ -656,16 +656,16 @@ window.onload=function(){
 		$("#underweight_ph").text(selectedCountry.underweight['value']);
 
 		//Loop for Each 
-		/*selectedCountry.capital.weather.forecast.forEach(day => {
+		selectedCountry.capital.weather.forecast.forEach(day => {
 
 			$( "#forecast" ).append();
 		});
-		*/
+		
 
 
 		//Centre Map
 		map.setView([selectedCountry.capital.location[0], selectedCountry.capital.location[1]], 2);
-	})
+	}) */
 	tourismDiv.addEventListener('click', function(event) {
 		console.log("tourism");
 		divPrevContent = $(".col-sm-3").html();

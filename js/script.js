@@ -642,7 +642,7 @@ window.onload=function(){
 		//Add Data from APIs
 		//Current
 		$("#countryname_ph").text(selectedCountry.name);
-		$("#co2output_ph").text(selectedCountry.name);
+		//$("#co2output_ph").text(selectedCountry.name);
 		$("#page_description_ph").text(selectedCountry.capital.name);
 		$("#hospitalbeds_ph").text(selectedCountry.hospitalbeds['value']);
 		$("#lifeexpectancy_ph").text(selectedCountry.lifeexpectancy['value']);

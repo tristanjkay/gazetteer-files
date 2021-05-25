@@ -2,7 +2,7 @@
 
 	$executionStartTime = microtime(true) / 1000;
 
-    $url='https://raw.githubusercontent.com/tristanjkay/gazetteer/main/countryBorders.geo.json?token=AD62AGHTO2Z55HISWIGZRFDAVTAMU';
+    $url='https://raw.githubusercontent.com/tristanjkay/gazetteer/main/countryBorders.geo.json';
 
 	$result = file_get_contents($url);
 

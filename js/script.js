@@ -2550,11 +2550,11 @@ window.onload=function(){
 			type: 'POST',
 			dataType: 'json',
 			data: {
-				country: mycountry,
+				country: selectedCountry.iso3,
 			},
 			success: function(result) { 
 
-				
+				//BUG: NOT RETURNING AS "OK"
 
 				if (result.status.co2ouput == "ok") {
 

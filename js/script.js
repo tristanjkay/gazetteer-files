@@ -87,7 +87,7 @@ map.on('locationerror', onLocationError);
 
 map.locate({setView: true, maxZoom: 16});
 
-$('document').bind("DOMSubtreeModified", console.log("It changed!"));
+//$('document').bind("DOMSubtreeModified", //console.log("It changed!"));
 
 //------------------------------------------------------------------------------------------------------------------------------------------------------------WHEN PAGE LOADS-//
 window.onload=function(){
@@ -101,7 +101,7 @@ window.onload=function(){
 			countrySelected(selectedCountry);
 		} else {
 			//Go back to unexpanded view
-			console.log("backToMain");
+			////console.log("backToMain");
 			divExpContent = $(".col-sm-9").html();
 
 			col2.classList.add('col-sm-3');
@@ -126,7 +126,7 @@ window.onload=function(){
 	//----------------------------------------------------------------------------------------------------------------------------------------WEATHER
 
 	climateDiv.addEventListener('click', function(event) {
-		console.log("climate");
+		//console.log("climate");
 
 		//Capture previous content in var
 		divPrevContent = $(".col-sm-3").html();
@@ -143,7 +143,7 @@ window.onload=function(){
 
 		//Back Button
 		document.getElementById("backButton").addEventListener('click', function(event) {
-			console.log("backToMain");
+			////console.log("backToMain");
 			divExpContent = $(".col-sm-9").html();
 
 			col2.classList.add('col-sm-3');
@@ -201,7 +201,7 @@ window.onload=function(){
 
 	})
 	economyDiv.addEventListener('click', function(event) {
-		console.log("economy");
+		//console.log("economy");
 		divPrevContent = $(".col-sm-3").html();
 
 		//Resize Columns
@@ -216,7 +216,7 @@ window.onload=function(){
 
 		//Back Button
 		document.getElementById("backButton").addEventListener('click', function(event) {
-			console.log("backToMain");
+			//console.log("backToMain");
 			divExpContent = $(".col-sm-9").html();
 
 			col2.classList.add('col-sm-3');
@@ -242,7 +242,7 @@ window.onload=function(){
 		//Loop for Each 
 
 		for (const [key, value] of Object.entries(selectedCountry.othercurrencies)) {
-			//console.log(`${key}: ${value}`);
+			////console.log(`${key}: ${value}`);
 
 			//1 in other currencies = x chosen country
 			//selectedCountry.othercurrencies[key] = selectedCountry.exchangerate/value;
@@ -270,7 +270,7 @@ window.onload=function(){
 		map.setView([selectedCountry.capital.location[0], selectedCountry.capital.location[1]], 2);
 	})
 	cultureDiv.addEventListener('click', function(event) {
-		console.log("culture");
+		//console.log("culture");
 		divPrevContent = $(".col-sm-3").html();
 
 		//Resize Columns
@@ -285,7 +285,7 @@ window.onload=function(){
 
 		//Back Button
 		document.getElementById("backButton").addEventListener('click', function(event) {
-			console.log("backToMain");
+			//console.log("backToMain");
 			divExpContent = $(".col-sm-9").html();
 
 			col2.classList.add('col-sm-3');
@@ -358,7 +358,7 @@ window.onload=function(){
 		map.setView([selectedCountry.capital.location[0], selectedCountry.capital.location[1]], 2);
 	})
 	newsDiv.addEventListener('click', function(event) {
-		console.log("news");
+		//console.log("news");
 		
 		divPrevContent = $(".col-sm-3").html();
 
@@ -374,7 +374,7 @@ window.onload=function(){
 
 		//Back Button
 		document.getElementById("backButton").addEventListener('click', function(event) {
-			console.log("backToMain");
+			//console.log("backToMain");
 			divExpContent = $(".col-sm-9").html();
 
 			col2.classList.add('col-sm-3');
@@ -447,7 +447,7 @@ window.onload=function(){
 		map.setView([selectedCountry.capital.location[0], selectedCountry.capital.location[1]], 2);
 	})
 	healthDiv.addEventListener('click', function(event) {
-		console.log("health");
+		//console.log("health");
 		divPrevContent = $(".col-sm-3").html();
 
 		//Resize Columns
@@ -462,7 +462,7 @@ window.onload=function(){
 
 		//Back Button
 		document.getElementById("backButton").addEventListener('click', function(event) {
-			console.log("backToMain");
+			//console.log("backToMain");
 			divExpContent = $(".col-sm-9").html();
 
 			col2.classList.add('col-sm-3');
@@ -504,7 +504,7 @@ window.onload=function(){
 	
 	
 	environmentDiv.addEventListener('click', function(event) {
-		console.log("environment");
+		//console.log("environment");
 		divPrevContent = $(".col-sm-3").html();
 
 		//Resize Columns
@@ -519,7 +519,7 @@ window.onload=function(){
 
 		//Back Button
 		document.getElementById("backButton").addEventListener('click', function(event) {
-			console.log("backToMain");
+			//console.log("backToMain");
 			divExpContent = $(".col-sm-9").html();
 
 			col2.classList.add('col-sm-3');
@@ -555,7 +555,7 @@ window.onload=function(){
 		map.setView([selectedCountry.capital.location[0], selectedCountry.capital.location[1]], 2);
 	})
 	educationDiv.addEventListener('click', function(event) {
-		console.log("education");
+		//console.log("education");
 		divPrevContent = $(".col-sm-3").html();
 
 		//Resize Columns
@@ -570,7 +570,7 @@ window.onload=function(){
 
 		//Back Button
 		document.getElementById("backButton").addEventListener('click', function(event) {
-			console.log("backToMain");
+			//console.log("backToMain");
 			divExpContent = $(".col-sm-9").html();
 
 			col2.classList.add('col-sm-3');
@@ -611,7 +611,7 @@ window.onload=function(){
 		map.setView([selectedCountry.capital.location[0], selectedCountry.capital.location[1]], 2);
 	})
 	/* crimeDiv.addEventListener('click', function(event) {
-		console.log("crime");
+		//console.log("crime");
 		divPrevContent = $(".col-sm-3").html();
 
 		//Resize Columns
@@ -626,7 +626,7 @@ window.onload=function(){
 
 		//Back Button
 		document.getElementById("backButton").addEventListener('click', function(event) {
-			console.log("backToMain");
+			//console.log("backToMain");
 			divExpContent = $(".col-sm-9").html();
 
 			col2.classList.add('col-sm-3');
@@ -667,7 +667,7 @@ window.onload=function(){
 		map.setView([selectedCountry.capital.location[0], selectedCountry.capital.location[1]], 2);
 	}) */
 	tourismDiv.addEventListener('click', function(event) {
-		console.log("tourism");
+		//console.log("tourism");
 		divPrevContent = $(".col-sm-3").html();
 
 		//Resize Columns
@@ -682,7 +682,7 @@ window.onload=function(){
 
 		//Back Button
 		document.getElementById("backButton").addEventListener('click', function(event) {
-			console.log("backToMain");
+			//console.log("backToMain");
 			divExpContent = $(".col-sm-9").html();
 
 			col2.classList.add('col-sm-3');
@@ -732,7 +732,7 @@ window.onload=function(){
 
 				},
 				success: function(result) {
-					console.log("GeoJSON Success")
+					//console.log("GeoJSON Success")
 					
 	
 					if (result.status.name == "ok") {
@@ -784,7 +784,7 @@ window.onload=function(){
 				
 				},
 				error: function(jqXHR, textStatus, errorThrown) {
-					console.log("GeoJSON Fail")
+					//console.log("GeoJSON Fail")
 				}
 				
 			})
@@ -815,7 +815,7 @@ window.onload=function(){
 					},
 					success: function(result) {
 
-						console.log("GeoNames Success")
+						//console.log("GeoNames Success")
 
 
 						if (result.status.name == "ok") {
@@ -830,7 +830,7 @@ window.onload=function(){
 					
 					},
 					error: function(jqXHR, textStatus, errorThrown) {
-						console.log("GeoNames Fail")
+						//console.log("GeoNames Fail")
 
 					}
 					
@@ -846,7 +846,7 @@ window.onload=function(){
 					},
 					success: function(result) {
 
-						console.log("RESTCountries Success");
+						//console.log("RESTCountries Success");
 
 						if (result.status.name == "ok") {
 
@@ -873,7 +873,7 @@ window.onload=function(){
 					
 					},
 					error: function(jqXHR, textStatus, errorThrown) {
-						console.log("RESTCountries Fail")
+						//console.log("RESTCountries Fail")
 
 					}
 					
@@ -889,7 +889,7 @@ window.onload=function(){
 				},
 				success: function(result) {
 
-					console.log("Weather Current Success");
+					//console.log("Weather Current Success");
 					
 
 					if (result.status.name == "ok") {
@@ -1136,7 +1136,7 @@ window.onload=function(){
 				
 				},
 				error: function(jqXHR, textStatus, errorThrown) {
-					console.log("Weather Current Fail")
+					//console.log("Weather Current Fail")
 				}
 				
 			});
@@ -1154,7 +1154,7 @@ window.onload=function(){
 				},
 				success: function(result) {
 
-					console.log("Dictionary Success");
+					//console.log("Dictionary Success");
 
 					if (result.status.name == "ok") {
 						selectedCountry.description = result['data'][0]['meanings'][0]['definitions'][0]['definition']
@@ -1164,7 +1164,7 @@ window.onload=function(){
 				}
 			},
 				error: function(jqXHR, textStatus, errorThrown) {
-					console.log("Dictionary Fail")
+					//console.log("Dictionary Fail")
 				}
 				
 			});
@@ -1180,7 +1180,7 @@ window.onload=function(){
 				success: function(result) {
 					selectedCountry.airports = [];
 
-					console.log("Airports Success");
+					//console.log("Airports Success");
 
 					if (result.status.name == "ok") {
 						result['data'].forEach(element => {
@@ -1205,7 +1205,7 @@ window.onload=function(){
 			success: function(result) {
 				selectedCountry.flights = [];
 
-				console.log("Flights Success");
+				//console.log("Flights Success");
 
 				if (result.status.name == "ok") {
 
@@ -1220,11 +1220,11 @@ window.onload=function(){
 						});
 					}
 					
-					console.log(result['data']);
+					//console.log(result['data']);
 			}
 		},
 			error: function(jqXHR, textStatus, errorThrown) {
-				console.log("Dictionary Fail")
+				//console.log("Dictionary Fail")
 			}
 			
 		});
@@ -1233,7 +1233,7 @@ window.onload=function(){
 				}
 			},
 				error: function(jqXHR, textStatus, errorThrown) {
-					console.log("Dictionary Fail")
+					//console.log("Dictionary Fail")
 				}
 				
 			});
@@ -1250,16 +1250,16 @@ window.onload=function(){
 				},
 				success: function(result) {
 
-					console.log("Exchange Rate Success");
+					//console.log("Exchange Rate Success");
 
 					if (result.status.name == "ok") {
-						console.log(selectedCountry.currencycode);
+						//console.log(selectedCountry.currencycode);
 						selectedCountry.exchangerate = result['data']['rates'][selectedCountry.currencycode].toFixed(2);
-						console.log(selectedCountry.exchangerate);
+						//console.log(selectedCountry.exchangerate);
 						selectedCountry.othercurrencies = result['data']['rates'];
 
 						for (const [key, value] of Object.entries(selectedCountry.othercurrencies)) {
-							//console.log(`${key}: ${value}`);
+							////console.log(`${key}: ${value}`);
 
 							//1 in other currencies = x chosen country
 							selectedCountry.othercurrencies[key] = selectedCountry.exchangerate/value;
@@ -1277,7 +1277,7 @@ window.onload=function(){
 				}
 			},
 				error: function(jqXHR, textStatus, errorThrown) {
-					console.log("Exchange Rate Fail")
+					//console.log("Exchange Rate Fail")
 
 				}
 				
@@ -1296,7 +1296,7 @@ window.onload=function(){
 					
 
 					if (result.status.name == "ok") {
-						console.log("News Success");
+						//console.log("News Success");
 						document.getElementById('newsarticles').innerHTML = "";
 						selectedCountry.news = result['data']['articles'];
 						selectedCountry.news.forEach(article => {
@@ -1324,7 +1324,7 @@ window.onload=function(){
 			},
 				error: function(jqXHR, textStatus, errorThrown) {
 
-					console.log("News Fail")
+					//console.log("News Fail")
 
 				}
 				
@@ -1341,7 +1341,7 @@ window.onload=function(){
 				beforeSend: function(xhr){xhr.setRequestHeader('x-api-key', 'WeEOSzCLt3vmpbsXBjEc9ZRmh57ToW126jJau9Mf');},
 				success: function(result) {
 
-					console.log("POI Success")
+					//console.log("POI Success")
 
 					if (result.status.name == "ok") {
 						selectedCountry.pois = result['data'];
@@ -1349,7 +1349,7 @@ window.onload=function(){
 				}
 			},
 				error: function(jqXHR, textStatus, errorThrown) {
-					console.log("POI Fail")
+					//console.log("POI Fail")
 
 				}
 				
@@ -1366,11 +1366,11 @@ window.onload=function(){
 			},
 			success: function(result) {
 
-				console.log("WorldBank Success")
+				//console.log("WorldBank Success")
 
 				
 				
-				console.log(thousands);
+				//console.log(thousands);
 
 				
 
@@ -1426,7 +1426,7 @@ window.onload=function(){
 							break;
 	
 						default:
-							console.log("It didnt work");
+							//console.log("It didnt work");
 							break;
 					}
 					
@@ -1439,7 +1439,7 @@ window.onload=function(){
 			},
 			error: function(jqXHR, textStatus, errorThrown) {
 
-				console.log("WorldBank Fail")
+				//console.log("WorldBank Fail")
 
 			}
 			
@@ -1455,7 +1455,7 @@ window.onload=function(){
 			},
 			success: function(result) {
 
-				console.log("WorldBank INF Success")
+				//console.log("WorldBank INF Success")
 
 				if (result.status.name == "ok") {
 					//Formatting String
@@ -1511,7 +1511,7 @@ window.onload=function(){
 							break;
 	
 						default:
-							console.log("It didnt work");
+							//console.log("It didnt work");
 							break;
 					};
 					
@@ -1523,7 +1523,7 @@ window.onload=function(){
 			},
 			error: function(jqXHR, textStatus, errorThrown) {
 
-				console.log("WorldBank Fail")
+				//console.log("WorldBank Fail")
 
 			}
 			
@@ -1539,7 +1539,7 @@ window.onload=function(){
 			},
 			success: function(result) {
 
-				console.log("WorldBank BUD Success")
+				//console.log("WorldBank BUD Success")
 
 				if (result.status.name == "ok") {
 					selectedCountry.budget = {
@@ -1556,7 +1556,7 @@ window.onload=function(){
 			},
 			error: function(jqXHR, textStatus, errorThrown) {
 
-				console.log("WorldBank Failed")
+				//console.log("WorldBank Failed")
 
 			}
 			
@@ -1572,7 +1572,7 @@ window.onload=function(){
 			},
 			success: function(result) {
 
-				console.log("WorldBank BUD% Success")
+				//console.log("WorldBank BUD% Success")
 
 				if (result.status.name == "ok") {
 					selectedCountry.budget.percent = result['data'][1][0]['value']
@@ -1586,7 +1586,7 @@ window.onload=function(){
 			},
 			error: function(jqXHR, textStatus, errorThrown) {
 
-				console.log("WorldBank Fail")
+				//console.log("WorldBank Fail")
 
 			}
 			
@@ -1602,7 +1602,7 @@ window.onload=function(){
 			},
 			success: function(result) {
 
-				//console.log(result);
+				////console.log(result);
 
 				if (result.status.name == "ok") {
 
@@ -1630,7 +1630,7 @@ window.onload=function(){
 			},
 			success: function(result) {
 
-				//console.log(result);
+				////console.log(result);
 
 				if (result.status.name == "ok") {
 
@@ -1661,7 +1661,7 @@ window.onload=function(){
 			},
 			success: function(result) {
 
-				//console.log(result);
+				////console.log(result);
 
 				if (result.status.name == "ok") {
 
@@ -1688,7 +1688,7 @@ window.onload=function(){
 			},
 			success: function(result) {
 
-				//console.log(result);
+				////console.log(result);
 
 				if (result.status.name == "ok") {
 
@@ -1717,7 +1717,7 @@ window.onload=function(){
 			},
 			success: function(result) {
 
-				//console.log(result);
+				////console.log(result);
 
 				if (result.status.name == "ok") {
 
@@ -1744,7 +1744,7 @@ window.onload=function(){
 			},
 			success: function(result) {
 
-				//console.log(result);
+				////console.log(result);
 
 				if (result.status.name == "ok") {
 
@@ -1773,7 +1773,7 @@ window.onload=function(){
 			},
 			success: function(result) {
 
-				//console.log(result);
+				////console.log(result);
 
 				if (result.status.name == "ok") {
 
@@ -1800,7 +1800,7 @@ window.onload=function(){
 			},
 			success: function(result) {
 
-				//console.log(result);
+				////console.log(result);
 
 				if (result.status.name == "ok") {
 
@@ -1827,7 +1827,7 @@ window.onload=function(){
 			},
 			success: function(result) {
 
-				//console.log(result);
+				////console.log(result);
 
 				if (result.status.name == "ok") {
 
@@ -1854,7 +1854,7 @@ window.onload=function(){
 			},
 			success: function(result) {
 
-				//console.log(result);
+				////console.log(result);
 
 				if (result.status.name == "ok") {
 
@@ -1881,7 +1881,7 @@ window.onload=function(){
 			},
 			success: function(result) {
 
-				//console.log(result);
+				////console.log(result);
 
 				if (result.status.name == "ok") {
 
@@ -1908,7 +1908,7 @@ window.onload=function(){
 			},
 			success: function(result) { 
 
-				//console.log(result);
+				////console.log(result);
 
 				if (result.status.name == "ok") {
 
@@ -1936,7 +1936,7 @@ window.onload=function(){
 			},
 			success: function(result) { 
 
-				//console.log(result);
+				////console.log(result);
 
 				if (result.status.name == "ok") {
 
@@ -1964,7 +1964,7 @@ window.onload=function(){
 			},
 			success: function(result) { 
 
-				//console.log(result);
+				////console.log(result);
 
 				if (result.status.name == "ok") {
 
@@ -1994,7 +1994,7 @@ window.onload=function(){
 			},
 			success: function(result) { 
 
-				//console.log(result);
+				////console.log(result);
 
 				if (result.status.name == "ok") {
 
@@ -2022,7 +2022,7 @@ window.onload=function(){
 			},
 			success: function(result) { 
 
-				//console.log(result);
+				////console.log(result);
 
 				if (result.status.name == "ok") {
 
@@ -2050,7 +2050,7 @@ window.onload=function(){
 			},
 			success: function(result) { 
 
-				//console.log(result);
+				////console.log(result);
 
 				if (result.status.name == "ok") {
 
@@ -2078,7 +2078,7 @@ window.onload=function(){
 			},
 			success: function(result) { 
 
-				//console.log(result);
+				////console.log(result);
 
 				if (result.status.name == "ok") {
 
@@ -2106,7 +2106,7 @@ window.onload=function(){
 			},
 			success: function(result) { 
 
-				//console.log(result);
+				////console.log(result);
 
 				if (result.status.name == "ok") {
 
@@ -2134,7 +2134,7 @@ window.onload=function(){
 			},
 			success: function(result) { 
 
-				//console.log(result);
+				////console.log(result);
 
 				if (result.status.name == "ok") {
 
@@ -2162,7 +2162,7 @@ window.onload=function(){
 			},
 			success: function(result) { 
 
-				//console.log(result);
+				////console.log(result);
 
 				if (result.status.name == "ok") {
 
@@ -2190,7 +2190,7 @@ window.onload=function(){
 			},
 			success: function(result) { 
 
-				//console.log(result);
+				////console.log(result);
 
 				if (result.status.name == "ok") {
 
@@ -2218,7 +2218,7 @@ window.onload=function(){
 			},
 			success: function(result) { 
 
-				//console.log(result);
+				////console.log(result);
 
 				if (result.status.name == "ok") {
 
@@ -2246,7 +2246,7 @@ window.onload=function(){
 			},
 			success: function(result) { 
 
-				//console.log(result);
+				////console.log(result);
 
 				if (result.status.name == "ok") {
 
@@ -2274,7 +2274,7 @@ window.onload=function(){
 			},
 			success: function(result) { 
 
-				//console.log(result);
+				////console.log(result);
 
 				if (result.status.name == "ok") {
 
@@ -2302,7 +2302,7 @@ window.onload=function(){
 			},
 			success: function(result) { 
 
-				//console.log(result);
+				////console.log(result);
 
 				if (result.status.name == "ok") {
 
@@ -2330,7 +2330,7 @@ window.onload=function(){
 			},
 			success: function(result) { 
 
-				//console.log(result);
+				////console.log(result);
 
 				if (result.status.name == "ok") {
 
@@ -2358,7 +2358,7 @@ window.onload=function(){
 			},
 			success: function(result) { 
 
-				//console.log(result);
+				////console.log(result);
 
 				if (result.status.name == "ok") {
 
@@ -2386,7 +2386,7 @@ window.onload=function(){
 			},
 			success: function(result) { 
 
-				//console.log(result);
+				////console.log(result);
 
 				if (result.status.name == "ok") {
 
@@ -2414,7 +2414,7 @@ window.onload=function(){
 			},
 			success: function(result) { 
 
-				//console.log(result);
+				////console.log(result);
 
 				if (result.status.name == "ok") {
 
@@ -2442,7 +2442,7 @@ window.onload=function(){
 			},
 			success: function(result) { 
 
-				//console.log(result);
+				////console.log(result);
 
 				if (result.status.name == "ok") {
 
@@ -2470,7 +2470,7 @@ window.onload=function(){
 			},
 			success: function(result) { 
 
-				//console.log(result);
+				////console.log(result);
 
 				if (result.status.name == "ok") {
 
@@ -2498,7 +2498,7 @@ window.onload=function(){
 			},
 			success: function(result) { 
 
-				//console.log(result);
+				////console.log(result);
 
 				if (result.status.name == "ok") {
 
@@ -2526,7 +2526,7 @@ window.onload=function(){
 			},
 			success: function(result) { 
 
-				//console.log(result);
+				////console.log(result);
 
 				if (result.status.name == "ok") {
 
@@ -2554,7 +2554,7 @@ window.onload=function(){
 			},
 			success: function(result) { 
 
-				//console.log(result);
+				console.log("co2 worked!");
 
 				if (result.status.co2ouput == "ok") {
 
@@ -2584,7 +2584,7 @@ window.onload=function(){
 			},
 			success: function(result) { 
 
-				//console.log(result);
+				////console.log(result);
 
 				if (result.status.name == "ok") {
 
@@ -2614,7 +2614,7 @@ window.onload=function(){
 			},
 			success: function(result) { 
 
-				//console.log(result);
+				////console.log(result);
 
 				if (result.status.name == "ok") {
 
@@ -2644,7 +2644,7 @@ window.onload=function(){
 			},
 			success: function(result) { 
 
-				//console.log(result);
+				////console.log(result);
 
 				if (result.status.name == "ok") {
 
@@ -2672,7 +2672,7 @@ window.onload=function(){
 			},
 			success: function(result) { 
 
-				//console.log(result);
+				////console.log(result);
 
 				if (result.status.name == "ok") {
 
@@ -2700,7 +2700,7 @@ window.onload=function(){
 			},
 			success: function(result) { 
 
-				//console.log(result);
+				////console.log(result);
 
 				if (result.status.name == "ok") {
 
@@ -2728,7 +2728,7 @@ window.onload=function(){
 			},
 			success: function(result) { 
 
-				//console.log(result);
+				////console.log(result);
 
 				if (result.status.name == "ok") {
 
@@ -2756,7 +2756,7 @@ window.onload=function(){
 			},
 			success: function(result) { 
 
-				//console.log(result);
+				////console.log(result);
 
 				if (result.status.name == "ok") {
 
@@ -2784,7 +2784,7 @@ window.onload=function(){
 			},
 			success: function(result) { 
 
-				//console.log(result);
+				////console.log(result);
 
 				if (result.status.name == "ok") {
 
@@ -2812,7 +2812,7 @@ window.onload=function(){
 			},
 			success: function(result) { 
 
-				//console.log(result);
+				////console.log(result);
 
 				if (result.status.name == "ok") {
 
@@ -2840,7 +2840,7 @@ window.onload=function(){
 			},
 			success: function(result) { 
 
-				//console.log(result);
+				////console.log(result);
 
 				if (result.status.name == "ok") {
 
@@ -2868,7 +2868,7 @@ window.onload=function(){
 			},
 			success: function(result) { 
 
-				//console.log(result);
+				////console.log(result);
 
 				if (result.status.name == "ok") {
 
@@ -2896,7 +2896,7 @@ window.onload=function(){
 			},
 			success: function(result) { 
 
-				//console.log(result);
+				////console.log(result);
 
 				if (result.status.name == "ok") {
 
@@ -2924,7 +2924,7 @@ window.onload=function(){
 			},
 			success: function(result) { 
 
-				//console.log(result);
+				////console.log(result);
 
 				if (result.status.name == "ok") {
 
@@ -2954,7 +2954,7 @@ window.onload=function(){
 			},
 			success: function(result) { 
 
-				//console.log(result);
+				////console.log(result);
 
 				if (result.status.name == "ok") {
 
@@ -3003,7 +3003,7 @@ window.onload=function(){
 				col1 = document.querySelector('.col-sm-9')
 				col2.style.display = "block";
 			} catch (error) {
-				console.log("Country has been chosen")
+				//console.log("Country has been chosen")
 			}
 			document.querySelector('.col-sm-3').style.maxHeight = "calc(100vh - 9rem)";
 			document.querySelector('.col-sm-3').style.height = "calc(100vh - 9rem)";

@@ -2554,9 +2554,11 @@ window.onload=function(){
 			},
 			success: function(result) { 
 
-				console.log("co2 worked!");
+				
 
 				if (result.status.co2ouput == "ok") {
+
+					console.log("co2 worked!");
 
 					selectedCountry.co2ouput = {
 						"value": result['data'][1][0]['value'],
